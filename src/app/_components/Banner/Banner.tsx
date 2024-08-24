@@ -1,9 +1,12 @@
 "use client"
 import Image from "next/image";
-import {useSearchParams} from "next/navigation";
+import {usePathname, useSearchParams} from "next/navigation";
 
 export default function Banner() {
+    const pathname = usePathname()
     const searchParams = useSearchParams()
+    if(pathname==='' || pathname==='/')
+        return (<></>);
     const contextNum = searchParams.get('context')
     let context = ''
     if (contextNum=='1') {

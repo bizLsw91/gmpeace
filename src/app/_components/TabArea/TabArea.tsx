@@ -39,7 +39,6 @@ export default function TabArea() {
     const context = searchParams.get('context')
     let path = pathname+'?context='+context;
     const [value, setValue] = useState(path);
-    console.log("path = ", path);
     const router = useRouter();
 
     let options:any[]|undefined = []
@@ -56,7 +55,6 @@ export default function TabArea() {
             { label: item.label, value: item.to }
         ))
     }
-    console.log("options = ", options);
     const onChange = ({ target: { value } }: RadioChangeEvent) => {
         console.log('tab onchange')
         router.push(value)

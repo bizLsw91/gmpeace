@@ -1,12 +1,56 @@
-.wrapper{
+.container {
+    padding-bottom: 50px;
+    @media #{$md} {
+        padding-bottom: 70px;
+    }
+}
+
+.wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
-    padding: 0 2px;
+    padding: 0 5px;
     @media #{$xs} {
-        padding: 0 5px;
+        padding: 0 8px;
     }
     @media #{$md} {
         padding: 0 12px;
+    }
+}
+
+.info {
+
+    &__big-title {
+        position: relative;
+        color: #206edc;
+        font-family: 'Jua Regular', sans-serif;
+        font-size: 20px;
+        margin-bottom: 20px;
+        @media #{$xs} {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+        @media #{$md} {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            background-color: #2b89d3;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    &__data-title {
+
+    }
+
+    &__content {
+
     }
 }
