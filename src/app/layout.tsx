@@ -7,6 +7,7 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import "../assets/style/tailwind/index.css"
 import "../assets/style/scss/index.scss"
+import {Suspense} from "react";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -36,10 +37,10 @@ export const metadata: Metadata = {
         locale: 'ko_KR',
         images: [
             {
-                url: 'https://recodelog.com/og/og.png', // open graph image url
+                url: 'https://www.gmpeace.or.kr/_next/images/openGraphImg.png', // open graph image url
                 width: 800,
                 height: 600,
-                alt: '', // open graph image alt
+                alt: '광명시평화주간', // open graph image alt
             },
             // ... {} 여러개 추가 가능
         ],
@@ -55,8 +56,12 @@ export default function RootLayout({
         <html lang="kor">
         <body className={inter.className}>
         <Header/>
-        <Banner/>
-        <TabArea/>
+        <Suspense fallback={<div>Loading...</div>}>
+            <Banner/>
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+            <TabArea/>
+        </Suspense>
         <div className={'container'}>
             {children}
         </div>
