@@ -23,11 +23,11 @@ export default function Header() {
     return (
         <div className={'header fixed top-0 z-10 w-full h-[50px] xs:h-[70px]'}>
             <div className={'wrapper h-full'}>
-                <div className="header__area flex max-md:justify-between md:justify-center items-center h-full">
+                <div className="header__area flex justify-between items-center h-full">
                     <div className={'header-logo w-[230px] xs:w-[300px]'}>
                         <Link href={'/'}>
                             <Image
-                                src={'/images/함께하는시민웃는광명.png'}
+                                src={'/images/text-logo.png'}
                                 alt={'로고'}
                                 width={300}
                                 height={60}
@@ -67,6 +67,7 @@ export default function Header() {
                                 }))
                             }))}
                             onSelect={function ({key}){
+                                onClose()
                                 router.push(key)
                             }}
                         />

@@ -6,4 +6,7 @@
     @media #{$xs} {
         padding: 0 5px;
     }
+    @media #{$md} {
+        padding: 0 12px;
+    }
 }

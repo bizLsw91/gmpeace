@@ -1,0 +1,25 @@
+.footer{
+    background-color: #015faa;
+    width: 100vw;
+    min-height: 100px;
+
+    &__logo{
+        img{
+            width: 220px;
+            @media #{$xs} {
+                width: 250px;
+            }
+        }
+    }
+    &__info{
+        color:white;
+        font-size: 14px;
+        padding: 10px 20px;
+        @media #{$md} {
+            font-size: 16px;
+        }
+        @media #{$lg} {
+            font-size: 18px;
+        }
+    }
+}

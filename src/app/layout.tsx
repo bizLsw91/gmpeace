@@ -1,3 +1,6 @@
+import Banner from "@/app/_components/Banner/Banner";
+import TabArea from "@/app/_components/TabArea/TabArea";
+import Footer from "@/app/_components/Footer/Footer";
 import Header from "@/app/_components/Header/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -13,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -21,8 +24,12 @@ export default function RootLayout({
     <html lang="kor">
       <body className={inter.className}>
         <Header/>
-        <div className={'container mt-[50px] xs:mt-[70px]'}></div>
-        {children}
+        <Banner />
+        <TabArea/>
+        <div className={'container'}>
+          {children}
+        </div>
+        <Footer/>
       </body>
     </html>
   );

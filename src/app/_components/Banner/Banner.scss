@@ -1,0 +1,53 @@
+.banner{
+    position: relative;
+    padding: 20px 0;
+    width: 100vw;
+    &::before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../../../../public/images/picnic.jpg");
+        background-size: cover;
+        opacity: 0.2; /* 투명도 설정 */
+        z-index: -1;
+    }
+    .wrapper{
+        @media #{$xs} {
+            padding: 0 20px;
+        }
+        @media #{$md} {
+            padding: 0 30px;
+        }
+    }
+    &__logo{
+        img{
+            width: 240px;
+            height: 120px;
+            @media #{$sm} {
+                width: 280px;
+                height: 140px;
+            }
+            @media #{$md} {
+                width: 320px;
+                height: 160px;
+            }
+        }
+        @media #{$sm} {
+            padding: 20px 0;
+        }
+    }
+    &__context{
+        font-size: 28px;
+        @media #{$xs} {
+            font-size: 35px;
+        }
+        @media #{$sm} {
+            font-size: 50px;
+        }
+        color: #005faa;
+        font-family: 'Nanum Gothic ExtraBold', sans-serif;
+    }
+}
