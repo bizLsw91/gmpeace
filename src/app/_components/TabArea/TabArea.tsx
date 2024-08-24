@@ -17,10 +17,10 @@ const StyledRadioGroup = styled(Radio.Group)`
 
         @media (min-width: 480px) and (max-width: 768px) {
             /* md */
-            font-size: 26px;
+            font-size: 23px;
             font-weight: 700;
-            padding: 10px 15px;
-            height: 52px;
+            padding: 7px 15px;
+            height: 47px;
         }
 
         @media (min-width: 769px) {
@@ -67,27 +67,31 @@ export default function TabArea() {
     }, [path]);
 
     return (
-        <div className={'tabArea p-3'}>
-            <ConfigProvider
-                theme={{
-                    components: {
-                        Radio: {
-                            buttonSolidCheckedBg: '#206edc',
-                            buttonCheckedBgDisabled: 'rgba(0, 0, 0, 0.15)',
-                            buttonColor: 'rgba(0, 0, 0, 0.25)'
-                        },
-                    },
-                }}
-            >
-                <StyledRadioGroup
-                    options={options}
-                    onChange={onChange}
-                    defaultValue={path}
-                    value={value}
-                    optionType="button"
-                    buttonStyle="solid"
-                />
-            </ConfigProvider>
+        <div className={'tabArea'}>
+            <div className="wrapper">
+                <div className={'pt-3 pb-8 md:pt-7 md:pb-16'}>
+                    <ConfigProvider
+                        theme={{
+                            components: {
+                                Radio: {
+                                    buttonSolidCheckedBg: '#206edc',
+                                    buttonCheckedBgDisabled: 'rgba(0, 0, 0, 0.15)',
+                                    buttonColor: 'rgba(0, 0, 0, 0.25)'
+                                },
+                            },
+                        }}
+                    >
+                        <StyledRadioGroup
+                            options={options}
+                            onChange={onChange}
+                            defaultValue={path}
+                            value={value}
+                            optionType="button"
+                            buttonStyle="solid"
+                        />
+                    </ConfigProvider>
+                </div>
+            </div>
         </div>
     );
 }
