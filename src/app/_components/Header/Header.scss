@@ -1,0 +1,50 @@
+
+// 메인 메뉴 스타일
+.header{
+    & ul {
+        & li {
+            list-style: none;
+            position: relative; // 상대적 위치 설정
+            height: auto;
+            font-family: 'NotoSansKR', sans-serif;
+            font-weight: 700;
+            font-size: large;
+            color: #005faa;
+            a {
+                text-decoration: none;
+            }
+
+            // 하위 메뉴 스타일
+            .sub-menu {
+                display: none; // 기본적으로 보이지 않음
+                position: absolute;
+                left: 0;
+                top: 50px;
+                background: white; // 배경색 설정
+                box-shadow: 0 8px 16px rgba(0,0,0,0.15); // 그림자 효과
+                z-index: 1000;
+                width: max-content;
+
+                li {
+                    padding: 10px; // 패딩 설정
+                }
+                a{
+                    font-weight: normal;
+                    font-size: medium;
+                }
+            }
+
+            // 호버 효과
+            &:hover {
+                .sub-menu {
+                    display: block; // 호버시 하위 메뉴 보임
+                }
+            }
+        }
+    }
+    &__bottom{
+        width: 100%;
+        height: 1px;
+        background-color: #005faa;
+    }
+}

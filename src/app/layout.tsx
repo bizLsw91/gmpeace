@@ -1,7 +1,9 @@
-import Header from "@/app/_components/Header";
+import Header from "@/app/_components/Header/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "../assets/style/tailwind/index.css"
+import "../assets/style/scss/index.scss"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +21,7 @@ export default function RootLayout({
     <html lang="kor">
       <body className={inter.className}>
         <Header/>
+        <div className={'container mt-[50px] xs:mt-[70px]'}></div>
         {children}
       </body>
     </html>
