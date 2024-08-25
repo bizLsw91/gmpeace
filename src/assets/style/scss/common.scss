@@ -23,14 +23,14 @@
         position: relative;
         color: #206edc;
         font-family: 'Jua Regular', sans-serif;
-        font-size: 20px;
+        font-size: 40px;
         margin-bottom: 20px;
         @media #{$xs} {
-            font-size: 25px;
+            font-size: 45px;
             margin-bottom: 25px;
         }
         @media #{$md} {
-            font-size: 30px;
+            font-size: 50px;
             margin-bottom: 30px;
         }
 
@@ -42,6 +42,16 @@
             bottom: 0;
             left: 0;
             width: 100%;
+        }
+    }
+    &__title{
+        font-size: 25px;
+        font-weight: bold;
+        @media #{$xs} {
+            font-size: 28px;
+        }
+        @media #{$md} {
+            font-size: 36px;
         }
     }
     &__data{
@@ -107,4 +117,20 @@
 }
 .theme-color-4{
     color: $theme-color-4;
+}
+
+.theme-bg-color-1{
+    background-color: $theme-color-1;
+}
+.theme-bg-color-2{
+    background-color: $theme-color-2;
+}
+.theme-bg-color-3{
+    background-color: $theme-color-3;
+}
+.theme-bg-color-4{
+    background-color: $theme-color-4;
+}
+.theme-bg-color-5{
+    background-color: $theme-color-5;
 }
