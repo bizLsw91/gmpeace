@@ -1,8 +1,11 @@
 import ServerBuildingPage from "@/app/_components/ServerBuildingPage";
+import {Button} from "antd";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
     const open = true
+
     return (
         <main className="home">
             {!open && <ServerBuildingPage/>}
@@ -30,7 +33,12 @@ export default function Home() {
                             <div>평화, 광명이 잇다!</div>
                         </div>
                     </div>
+                    <div className="home__preRegiBtnArea flex justify-center">
+                        <Link href={'https://forms.gle/Aomv415weGSwVAW96'}>
+                            <Button type={'primary'} shape={'round'}><p>개막식 & 광명포럼<br/>사전신청</p></Button>
+                        </Link>
 
+                    </div>
                 </div>
             }
         </main>

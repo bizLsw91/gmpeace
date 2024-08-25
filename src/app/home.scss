@@ -57,4 +57,17 @@
             font-size: 70px;
         }
     }
+    &__preRegiBtnArea{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .ant-btn.ant-btn-round{
+            border-radius: 18px;
+            font-size: 20px;
+            font-weight: bold;
+            height: 82px;
+        }
+        .ant-btn-primary{
+            background: #1788e1;
+        }
+    }
 }
