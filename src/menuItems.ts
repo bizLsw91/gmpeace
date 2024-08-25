@@ -18,7 +18,7 @@ export const menuItems = [
     },
     {
         label: '참여행사',
-        to: '/peace-garden',
+        to: '/peace-garden?context=3',
         children: [
             { label: '평화정원 피크닉', to: '/peace-garden?context=3' },
             { label: '평화주간 학생 미술대회', to: '/art-contest?context=3'},
@@ -26,6 +26,6 @@ export const menuItems = [
     },
     {
         label: '만족도조사',
-        to: '/peace-garden',
+        to: '/',
     },
 ]

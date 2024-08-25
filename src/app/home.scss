@@ -1,3 +1,60 @@
-.home{
+.home {
+    width: 100%;
+    display: block;
+    min-height: 100vh; /* 화면 높이에 맞게 조정 */
+    @media screen and (orientation: landscape) {
+        min-height: 850px;
+    }
+    background: url(../../public/images/background1-1.jpg);
+    background-size: cover; /* 이미지가 배너 크기에 맞게 조정되도록 함 */
+    background-position: center; /* 중앙에 이미지를 위치시킴 */
 
+    &__logo {
+        img {
+            width: 300px;
+            height: 150px;
+            @media #{$sm} {
+                width: 320px;
+                height: 160px;
+            }
+            @media #{$md} {
+                width: 360px;
+                height: 180px;
+            }
+        }
+
+        @media #{$sm} {
+            padding: 20px 0;
+        }
+    }
+
+    &__signiture-logo {
+        img {
+            width: 300px;
+            @media #{$sm} {
+                width: 500px;
+
+            }
+            @media #{$md} {
+                width: 650px;
+            }
+        }
+
+        @media #{$sm} {
+            padding: 20px 0;
+        }
+    }
+
+    &__slogunText {
+        color: #2a6e9f;
+        font-size: 50px;
+        font-family: 'Nanum Pen Script', sans-serif;
+        @media #{$sm} {
+            font-size: 60px;
+
+        }
+        @media #{$md} {
+            font-size: 70px;
+        }
+    }
 }

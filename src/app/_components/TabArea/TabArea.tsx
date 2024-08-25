@@ -64,6 +64,9 @@ export default function TabArea() {
         setValue(path)
     }, [path]);
 
+    if(pathname==='' || pathname==='/')
+        return (<></>);
+
     return (
         <div className={'tabArea'}>
             <div className="wrapper">

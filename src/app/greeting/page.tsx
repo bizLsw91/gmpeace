@@ -3,7 +3,7 @@ import TabArea from "@/app/_components/TabArea/TabArea";
 export default function Greeting() {
 
     return (
-        <div className={'greeting'}>
+        <div className={'greeting page-pb'}>
             <div className="greeting__title info__big-title">
                 시장님 인사말
             </div>
