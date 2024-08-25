@@ -19,6 +19,7 @@
 }
 
 .info {
+    padding-bottom: 40px;
     &__big-title {
         position: relative;
         color: #206edc;
@@ -62,6 +63,19 @@
         @media #{$md} {
             font-size: 25px;
         }
+        ul{
+            margin-left: 30px;
+            list-style: circle;
+        }
+        &-bold{
+            font-weight: bold;
+            @media #{$xs} {
+                font-size: 20px;
+            }
+            @media #{$md} {
+                font-size: 25px;
+            }
+        }
     }
     &__data{
         padding-bottom: 20px;
@@ -73,6 +87,18 @@
         }
         @media #{$sm} {
             flex-direction: row;
+        }
+        @media #{$md} {
+            font-size: 30px;
+        }
+    }
+    &__data-col{
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        @media #{$xs} {
+            font-size: 25px;
         }
         @media #{$md} {
             font-size: 30px;

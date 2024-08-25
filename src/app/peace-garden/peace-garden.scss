@@ -1,0 +1,108 @@
+.peace-garden{
+    padding-bottom: 50px;
+    &__mainImage{
+        img{
+            border-radius: 20px;
+            @media #{$xs} {
+                border-radius: 25px;
+            }
+
+            @media #{$md} {
+                border-radius: 30px;
+            }
+        }
+    }
+    .picnic-zone-guide{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+    .eco-banner{
+        display: flex;
+        max-width: 650px;
+        align-items: center;
+        padding: 15px;
+        margin-bottom: 15px;
+        font-family: 'Arial', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #de526b;
+
+        &__icon {
+            padding-right: 10px;
+        }
+        .noParking{
+            width: 100px;
+            @media #{$xs} {
+                width: 120px;
+            }
+
+            @media #{$md} {
+                width: 136px;
+            }
+        }
+
+        &__text {
+            line-height: 2em;
+            font-size: 14px;
+            @media #{$xs} {
+                font-size: 20px;
+            }
+
+            @media #{$md} {
+                font-size: 25px;
+            }
+            span {
+                position: relative;
+                color: #4caf50; // Green color for the "탄소발자국" text
+                font-weight: bold;
+                &::before{
+                    position: absolute;
+                    content:'';
+                    top: -9px;
+                    left: -18px;
+                    width: 18px;
+                    height: 31px;
+                    background-image: url("../../../public/images/greenFoot.png");
+                    background-size: cover;
+                    @media #{$xs} {
+                        top: -11px;
+                        left: -23px;
+                        width: 23px;
+                        height: 40px;
+                    }
+
+                    @media #{$md} {
+                        top: -11px;
+                        left: -28px;
+                        width: 29px;
+                        height: 49px;
+                    }
+                }
+            }
+        }
+    }
+
+    .wrap{
+        @media #{$max-xs} {
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+        }
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .movie-profile{
+        img{
+            margin-bottom: 20px;
+        }
+        &__info{
+            color: #727171;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    }
+}

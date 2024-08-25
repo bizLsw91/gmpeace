@@ -122,7 +122,7 @@ export default function OverviewSchedule() {
                             <div className="info__data-title theme-bg-color-3">일 시</div>
                             <div className="info__data-content-col">
                                 <div className="flex flex-col">
-                                    <div className=""><p>2024년 9월 21일(토) 13:00~17:00</p></div>
+                                    <div className=""><p>2024년 9월 21일(토) 13:00~18:00</p></div>
                                     <div className=""><p>2024년 9월 22일(일) 13:00~18:00</p></div>
                                 </div>
                             </div>
