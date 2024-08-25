@@ -147,10 +147,11 @@ export default function Forum() {
                         <div className="info__title theme-color-t">크로스오버그룹‘포레스텔라’</div>
                         <div className="info__subtitle">통일부-불후의명곡‘ 평화가온다’ 편우승</div>
                         <Image
+                            className={'w-full'}
                             src={'/images/포레스텔라.png'}
                             alt={'포레스텔라'}
-                            width={800}
-                            height={400}
+                            width={500}
+                            height={250}
                         />
                     </div>
                 </div>

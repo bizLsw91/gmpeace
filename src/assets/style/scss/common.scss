@@ -172,6 +172,34 @@
     }
 }
 
+@mixin program-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    font-family: NotoSansKR, sans-serif;
+    th, td {
+        border: 1px solid #ddd;
+        padding: 5px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #003366;
+        color: white;
+    }
+
+    td {
+        background-color: #ffffff;
+        vertical-align: middle;
+    }
+    @media #{$xs} {
+        font-size: 19px;
+    }
+
+    @media #{$md} {
+        font-size: 25px;
+    }
+}
 
 .theme-color-1{
     color: $theme-color-1;

@@ -1,9 +1,8 @@
-.opening{
+.awards{
     padding-bottom: 50px;
     &__mainImage{
-        width: 100%;
-        margin-bottom: 50px;
         img{
+            width: 100%;
             border-radius: 20px;
             @media #{$xs} {
                 border-radius: 25px;
@@ -14,15 +13,12 @@
             }
         }
     }
-
+    &__performanceImage{
+        img{
+            width: 100%;
+        }
+    }
     &__program{
         @include program-table;
-        .time{
-            @media #{$max-xs} {
-                word-break: break-all; /* 줄바꿈을 강제로 적용 */
-                white-space: normal; /* 줄바꿈을 허용 */
-                width: 74px;
-            }
-        }
     }
 }

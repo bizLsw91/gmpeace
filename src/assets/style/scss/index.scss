@@ -1,4 +1,5 @@
 @import "variable";
+@import "common";
 @import "../../../app/_components/Header/Header.scss";
 @import "../../../app/_components/Footer/Footer.scss";
 @import "../../../app/_components/Banner/Banner.scss";
@@ -6,6 +7,6 @@
 @import "../../../app/overview-schedule/overview-schedule";
 @import "../../../app/opening-ceremony/opening-ceremony";
 @import "../../../app/forum/forum";
+@import "../../../app/awards/awards";
 @import "../../../app/home";
 @import "font";
-@import "common";

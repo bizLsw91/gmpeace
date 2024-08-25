@@ -7,7 +7,7 @@ export default function OpeningCeremony() {
                 <div className="opening__mainImage flex justify-center">
                     <Image
                         src={'/images/개막식.jpg'}
-                        alt={'로고'}
+                        alt={'개막식'}
                         width={800}
                         height={600}
                     />
@@ -144,8 +144,9 @@ export default function OpeningCeremony() {
                         <Image
                             src={'/images/오케스트라.png'}
                             alt={'오케스트라'}
-                            width={800}
-                            height={400}
+                            width={500}
+                            height={200}
+                            className={'w-full'}
                         />
                     </div>
                     <div className="info">
@@ -154,9 +155,10 @@ export default function OpeningCeremony() {
                         <div className="info__subtitle">탄소중립과 정원이 있는 평화 도시 광명</div>
                         <Image
                             src={'/images/드로잉.png'}
-                            alt={'오케스트라'}
-                            width={800}
-                            height={400}
+                            alt={'드로잉'}
+                            width={500}
+                            height={200}
+                            className={'w-full'}
                         />
                     </div>
                     <div className="info flex space-x-10">
