@@ -48,7 +48,10 @@ export const metadata: Metadata = {
         ],
     },
     verification:{
-        google:'63-BNIv1LJVLXAMoHeVTH6SiCEvrDXbC8ja9DUk_F_Q'
+        google:'63-BNIv1LJVLXAMoHeVTH6SiCEvrDXbC8ja9DUk_F_Q',
+        other: {
+            'naver-site-verification': 'b562f84c15a888e803f7b716054edde35ecc2412',
+        },
     }
 };
 
