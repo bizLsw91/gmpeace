@@ -54,6 +54,15 @@
             font-size: 36px;
         }
     }
+    &__subtitle{
+        font-size: 16px;
+        @media #{$xs} {
+            font-size: 20px;
+        }
+        @media #{$md} {
+            font-size: 25px;
+        }
+    }
     &__data{
         padding-bottom: 20px;
         display: flex;
@@ -105,6 +114,64 @@
         margin-left: 15px;
     }
 }
+.grid {
+    display: grid;
+    border: 0.4px solid #000;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 50px;
+}
+.grid-header {
+    background-color: rgba(72, 129, 194, 0.72);
+    color: #fff;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 12px;
+
+    @media #{$xs} {
+        font-size: 15px;
+    }
+
+    @media #{$md} {
+        font-size: 20px;
+    }
+}
+.grid-cell {
+    border: 1px solid rgba(189, 186, 186, 0.54);
+    padding: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$xs} {
+        font-size: 15px;
+        padding: 6px;
+    }
+
+    @media #{$md} {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+}
+.profile{
+    img{
+        border: 1px solid #727171;
+    }
+    &__info{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 15px;
+        font-family: "Gmarket Sans Medium", sans-serif;
+        .name{
+            font-weight: bold;
+        }
+    }
+}
+
 
 .theme-color-1{
     color: $theme-color-1;
@@ -117,6 +184,15 @@
 }
 .theme-color-4{
     color: $theme-color-4;
+}
+.theme-color-t{
+    color: $theme-color-t;
+}
+.theme-color-session1{
+    color: $theme-color-session1;
+}
+.theme-color-session2{
+    color: $theme-color-session2;;
 }
 
 .theme-bg-color-1{
@@ -133,4 +209,10 @@
 }
 .theme-bg-color-5{
     background-color: $theme-color-5;
+}
+.theme-bg-color-session1{
+    background-color: $theme-color-session1;
+}
+.theme-bg-color-session2{
+    background-color: $theme-color-session2;;
 }

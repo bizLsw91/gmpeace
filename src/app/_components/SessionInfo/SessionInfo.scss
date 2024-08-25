@@ -1,0 +1,105 @@
+
+// 템플릿 함수 생성
+.session-container {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    .session-wrapper{
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .session-title {
+        font-size: 24px;
+        color: var(--theme-color);
+        margin-bottom: 10px;
+    }
+
+    .session-subtitle {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .session-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .session-position{
+        margin-left: 5px;
+        color: #727171;
+        font-weight: bold;
+    }
+
+    .speaker-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        max-width: 200px;
+
+        .speaker-photo {
+            border-radius: 8px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .speaker-name {
+            font-size: 18px;
+            color: var(--theme-color);
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .speaker-role {
+            font-size: 14px;
+            color: #666;
+        }
+    }
+
+    .session-role {
+        background-color: var(--theme-color);
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .session-person {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        &-name{
+            font-size: 18px;
+            color: var(--theme-color);
+            font-weight: bold;
+        }
+        &-role{
+            align-self: center;
+            margin-left: 5px;
+            font-size: 14px;
+            color: #666;
+            font-weight: normal;
+        }
+    }
+
+    .session-divider {
+        height: 1px;
+        background-color: #ccc;
+        margin: 20px 0;
+    }
+}

@@ -22,41 +22,41 @@ export default function OverviewSchedule() {
                         <div className="colorexplnt ml-2">전시회 및 연계행사</div>
                     </div>
                 </div>
-                <div className="schedule-grid">
-                    <div className="header">구분</div>
-                    <div className="header">1일차 - 9.20 (금)</div>
-                    <div className="header">2일차 - 9.21 (토)</div>
-                    <div className="header">3일차 - 9.22 (일)</div>
+                <div className="grid schedule-grid">
+                    <div className="grid-header">구분</div>
+                    <div className="grid-header">1일차 - 9.20 (금)</div>
+                    <div className="grid-header">2일차 - 9.21 (토)</div>
+                    <div className="grid-header">3일차 - 9.22 (일)</div>
 
-                    <div className="cell time">13:00-14:00</div>
-                    <div className="cell"></div>
-                    <div className="cell green cell1">평화정원 피크닉</div>
-                    <div className="cell green cell2">평화정원 피크닉</div>
+                    <div className="grid-cell time">13:00-14:00</div>
+                    <div className="grid-cell"></div>
+                    <div className="grid-cell green cell1">평화정원 피크닉</div>
+                    <div className="grid-cell green cell2">평화정원 피크닉</div>
 
-                    <div className="cell time">14:00-15:00</div>
-                    <div className="cell yellow">개막식</div>
-                    <div className="cell time">15:00-16:00</div>
-                    <div className="cell time">16:00-17:00</div>
-                    <div className="cell blue cell3">평화도시 광명포럼</div>
+                    <div className="grid-cell time">14:00-15:00</div>
+                    <div className="grid-cell yellow">개막식</div>
+                    <div className="grid-cell time">15:00-16:00</div>
+                    <div className="grid-cell time">16:00-17:00</div>
+                    <div className="grid-cell blue cell3">평화도시 광명포럼</div>
 
-                    <div className="cell yellow">시상식</div>
-                    <div className="cell time">17:00-18:00</div>
+                    <div className="grid-cell yellow">시상식</div>
+                    <div className="grid-cell time">17:00-18:00</div>
 
-                    <div className="cell"></div>
-                    <div className="cell green">한솥밥 비비기</div>
-                    <div className="cell green">평화정원 피크닉</div>
+                    <div className="grid-cell"></div>
+                    <div className="grid-cell green">한솥밥 비비기</div>
+                    <div className="grid-cell green">평화정원 피크닉</div>
 
-                    <div className="cell time cell4">18:00-19:00</div>
-                    <div className="cell cell8">&nbsp;</div>
-                    <div className="cell"> </div>
-                    <div className="cell cell7"></div>
-                    <div className="cell time">19:00-20:00</div>
-                    <div className="cell green cell5">평화주간 심야영화제</div>
-                    <div className="cell green cell6">평화주간 심야영화제</div>
+                    <div className="grid-cell time cell4">18:00-19:00</div>
+                    <div className="grid-cell cell8">&nbsp;</div>
+                    <div className="grid-cell"> </div>
+                    <div className="grid-cell cell7"></div>
+                    <div className="grid-cell time">19:00-20:00</div>
+                    <div className="grid-cell green cell5">평화주간 심야영화제</div>
+                    <div className="grid-cell green cell6">평화주간 심야영화제</div>
 
-                    <div className="cell"></div>
-                    <div className="cell time">20:00-21:00</div>
-                    <div className="cell"></div>
+                    <div className="grid-cell"></div>
+                    <div className="grid-cell time">20:00-21:00</div>
+                    <div className="grid-cell"></div>
 
                     <div className="schedule-grid__footer">
                         <p>

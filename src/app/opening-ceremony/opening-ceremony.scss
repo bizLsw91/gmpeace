@@ -1,0 +1,35 @@
+.opening{
+    padding-bottom: 50px;
+    &__mainImage{
+        margin-bottom: 50px;
+        img{
+            border-radius: 20px;
+            @media #{$xs} {
+                border-radius: 25px;
+            }
+
+            @media #{$md} {
+                border-radius: 30px;
+            }
+        }
+    }
+
+    &__program{
+        font-size: 15px;
+        font-family: NotoSansKR, sans-serif;
+        @media #{$xs} {
+            font-size: 19px;
+        }
+
+        @media #{$md} {
+            font-size: 25px;
+        }
+        .time{
+            @media #{$max-xs} {
+                word-break: break-all; /* 줄바꿈을 강제로 적용 */
+                white-space: normal; /* 줄바꿈을 허용 */
+                width: 74px;
+            }
+        }
+    }
+}
