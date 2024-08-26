@@ -10,10 +10,6 @@ export default function OverviewSchedule() {
                         <div className="colorexplnt ml-2">공식행사</div>
                     </div>
                     <div className="flex">
-                        <div className="colorbox theme-bg-color-2"></div>
-                        <div className="colorexplnt ml-2">광명포럼</div>
-                    </div>
-                    <div className="flex">
                         <div className="colorbox theme-bg-color-3"></div>
                         <div className="colorexplnt ml-2">시민 참여행사</div>
                     </div>
@@ -58,7 +54,7 @@ export default function OverviewSchedule() {
                     </tr>
                     <tr>
                         <td className={'time'}>15:00-16:00</td>
-                        <td className={'blue'}>평화도시 광명포럼</td>
+                        <td className={'yellow'}>평화도시 광명포럼</td>
                     </tr>
                     <tr>
                         <td className={'time'}>16:00-17:00</td>
@@ -122,88 +118,97 @@ export default function OverviewSchedule() {
                 <div className="infos flex flex-col space-y-7">
                     <div className="info">
                         <div className="info__big-title">1일차</div>
-                        <div className="info__title theme-color-1">제4회 광명시 평화주간 개막식</div>
+                        <div className="info__title theme-color-1">제4회 광명시 평화주간 개막식 및 평화도시 포럼
+                        </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-1">일 시</div>
-                            <div className="info__data-content">2024년 9월 20일(금) 14:00~15:00</div>
+                            <div className="info__data-content">2024년 9월 20일(금) 14:00~16:00</div>
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-1">장 소</div>
                             <div className="info__data-content">광명극장 2층</div>
                         </div>
-                    </div>
-                    <div className="info">
-                        <div className="info__big-title">1일차</div>
-                        <div className="info__title theme-color-2">평화도시 광명포럼</div>
                         <div className="info__data">
-                            <div className="info__data-title theme-bg-color-2">일 시</div>
-                            <div className="info__data-content">2024년 9월 20일(금) 15:00~17:00</div>
+                            <div className="info__data-title theme-bg-color-1">내 용</div>
+                            <div className="info__data-content-col theme-color-1">
+                                <div>식전공연</div>
+                                <div>개막퍼포먼스</div>
+                                <div>공식행사</div>
+                                <div>평화도시 포럼</div>
+                                <div>축하공연</div>
+                            </div>
                         </div>
-                        <div className="info__data">
-                            <div className="info__data-title theme-bg-color-2">장 소</div>
-                            <div className="info__data-content">광명극장 2층</div>
-                        </div>
-                    </div>
-                    <div className="info">
-                        <div className="info__big-title">1~2일차</div>
+                        <Divider/>
                         <div className="info__title theme-color-3">평화주간 심야영화제</div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">일 시</div>
-                            <div className="info__data-content-col">
-                                <div className="flex flex-col">
-                                    <div className=""><p>2024년 9월 20일(금) 18:30~21:00<br/><span
-                                        className={'theme-color-3'}>상영영화1</span></p></div>
-                                    <div className=""><p>2024년 9월 21일(토) 18:30~21:00<br/><span
-                                        className={'theme-color-3'}>상영영화2</span></p></div>
-                                </div>
+                            <div className="info__data-content">
+                                2024년 9월 20일(금) 18:30~20:30
                             </div>
                         </div>
                         <div className="info__data">
-                            <div className="info__data-title theme-bg-color-3">장 소</div>
-                            <div className="info__data-content">안양천</div>
+                            <div className="info__data-title theme-bg-color-3">내 용</div>
+                            <div className="info__data-content">상영영화 1</div>
                         </div>
                     </div>
+
                     <div className="info">
-                        <div className="info__big-title">2~3일차</div>
+                        <div className="info__big-title">2일차</div>
                         <div className="info__title theme-color-3">평화정원 피크닉</div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">일 시</div>
-                            <div className="info__data-content-col">
-                                <div className="flex flex-col">
-                                    <div className=""><p>2024년 9월 21일(토) 13:00~18:00</p></div>
-                                    <div className=""><p>2024년 9월 22일(일) 13:00~18:00</p></div>
-                                </div>
+                            <div className="info__data-content">
+                                2024년 9월 21일(토) 12:00~18:00
                             </div>
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">장 소</div>
-                            <div className="info__data-content">안양천</div>
+                            <div className="info__data-content">안양천 햇무리광장 아래 (광성초 맞은편 안양천둔치)</div>
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">내 용</div>
                             <div className="info__data-content-col theme-color-3">
-                                <div>레크리에이션</div>
-                                <div>라이브 페인팅</div>
-                                <div>청소년버스킹</div>
-                                <div>특별평화공연-평화춤배틀</div>
-                                <div>특별평화공연-평화세계음악회</div>
-                                <div>자전거 발전기 팝콘 게임</div>
-                                <div>재활용 소품 만들기</div>
-                                <div>친환경 소품 만들기</div>
+                                <div>비빔밥 퍼포먼스</div>
+                                <div>평화음악회</div>
+                                <div>버스킹 공연</div>
+                                <div>체험프로그램</div>
                                 <div>푸드트럭</div>
                             </div>
                         </div>
-                    </div>
-                    <div className="info">
-                        <div className="info__big-title">3일차</div>
-                        <div className="info__title theme-color-3">평화주간 학생 미술대회 시상식</div>
+                        <Divider/>
+                        <div className="info__title theme-color-3">평화주간 심야영화제</div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">일 시</div>
-                            <div className="info__data-content">2024년 9월 22일(일) 16:00~17:00</div>
+                            <div className="info__data-content">
+                                2024년 9월 21일(토) 18:30~20:30
+                            </div>
+                        </div>
+                        <div className="info__data">
+                            <div className="info__data-title theme-bg-color-3">내 용</div>
+                            <div className="info__data-content">상영영화 2</div>
+                        </div>
+                    </div>
+
+                    <div className="info">
+                        <div className="info__big-title">3일차</div>
+                        <div className="info__title theme-color-3">평화정원 피크닉</div>
+                        <div className="info__data">
+                            <div className="info__data-title theme-bg-color-3">일 시</div>
+                            <div className="info__data-content">2024년 9월 22일(일) 13:00~18:00</div>
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">장 소</div>
-                            <div className="info__data-content">안양천 햇무리광장</div>
+                            <div className="info__data-content">안양천 햇무리광장 아래 (광성초 맞은편 안양천둔치)</div>
+                        </div>
+                        <div className="info__data">
+                            <div className="info__data-title theme-bg-color-3">내 용</div>
+                            <div className="info__data-content-col theme-color-3">
+                                <div>남북한춤</div>
+                                <div>버스킹 공연</div>
+                                <div>학생미술대회 시상식</div>
+                                <div>체험프로그램</div>
+                                <div>푸드트럭</div>
+                            </div>
                         </div>
                     </div>
                     <div className="info">
@@ -232,7 +237,7 @@ export default function OverviewSchedule() {
                         {/*<Divider style={{borderColor: '#9d9d9d'}}></Divider>*/}
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-5">특별전시</div>
-                            <div className="info__data-content"><p>2024년 9월 21일(토)~22일(일)<br/>평화정원 피크닉 전시부스</p></div>
+                            <div className="info__data-content"><p>2024년 9월 21일(토)~22일(일)<br/>평화정원 전시부스</p></div>
                         </div>
                     </div>
                 </div>
