@@ -172,16 +172,16 @@ export default function OverviewSchedule() {
                     </div>
                     <div className="info">
                         <div className="info__big-title">전시행사</div>
-                        <div className="info__title theme-color-4">평화주간 학생 미술대회 수상작 전시</div>
-                        <div className="info__data">
-                            <div className="info__data-title theme-bg-color-4">일 시</div>
-                            <div className="info__data-content">2024년 9월 9일(토)~미정</div>
-                        </div>
-                        <div className="info__data">
-                            <div className="info__data-title theme-bg-color-4">장 소</div>
-                            <div className="info__data-content">평생학습원 1층 전시실</div>
-                        </div>
-                        <Divider style={{borderColor: '#9d9d9d'}}></Divider>
+                        {/*<div className="info__title theme-color-4">평화주간 학생 미술대회 수상작 전시</div>*/}
+                        {/*<div className="info__data">*/}
+                        {/*    <div className="info__data-title theme-bg-color-4">일 시</div>*/}
+                        {/*    <div className="info__data-content">2024년 9월 9일(토)~미정</div>*/}
+                        {/*</div>*/}
+                        {/*<div className="info__data">*/}
+                        {/*    <div className="info__data-title theme-bg-color-4">장 소</div>*/}
+                        {/*    <div className="info__data-content">평생학습원 1층 전시실</div>*/}
+                        {/*</div>*/}
+                        {/*<Divider style={{borderColor: '#9d9d9d'}}></Divider>*/}
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-5">특별전시</div>
                             <div className="info__data-content"><p>2024년 9월 21일(토)~22일(일)<br/>평화정원 피크닉 전시부스</p></div>
