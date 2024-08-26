@@ -150,7 +150,7 @@ export default function Ceremony() {
                             alt={'그림자'}
                             width={753}
                             height={421}
-                            className={'max-w-[750px]'}
+                            className={'w-full max-w-[750px]'}
                         />
                     </div>
                     <div className="info flex space-x-10">
@@ -158,7 +158,7 @@ export default function Ceremony() {
                             <div className="info__big-title">개회사</div>
                             <Image
                                 src={'/images/박승원.png'}
-                                alt={'오케스트라'}
+                                alt={'박승원'}
                                 width={400}
                                 height={400}
                             />
