@@ -42,8 +42,11 @@
     }
     .footer-title{
         min-width: 70px;
-    }
-    .footer-content{
-        text-align: start;
+        @media #{$xs} {
+            min-width: 90px;
+        }
+        @media #{$md} {
+            min-width: 120px;
+        }
     }
 }

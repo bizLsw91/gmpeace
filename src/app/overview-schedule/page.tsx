@@ -91,22 +91,27 @@ export default function OverviewSchedule() {
 
                     <tr className="schedule-grid__footer">
                         <td colSpan={4}>
-                            <div className={'flex'}>
-                                <div className={'footer-title'}>사전 행사:</div>
-                                <div>
-                                    <span className={'footer-content theme-bg-color-3'}>평화주간 학생미술대회 [2024.9.7. / 안양천]</span>
+                            <div className={'flex flex-col text-left'}>
+                                <div className={'flex justify-start'}>
+                                    <div className={'footer-title'}>사전 행사:</div>
+                                    <div>
+                                        <p className={'footer-content theme-bg-color-3'}>평화주간 학생미술대회 [2024.9.7. /
+                                            안양천]</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={'flex'}>
-                                <div className={'footer-title'}>전시 행사:</div>
-                                <div className={'footer-content theme-bg-color-4'}>북한미술 전시관, 학생미술대회 수상작 전시관, 독립운동 전시회 [2024.9.21~9.22 /
-                                    안양천]
+                                <div className={'flex justify-start'}>
+                                    <div className={'footer-title'}>전시 행사:</div>
+                                    <div className={'footer-content theme-bg-color-4'}><p>북한미술 전시관, 학생미술대회 수상작 전시관,
+                                        독립운동 전시회 [2024.9.21~9.22 /
+                                        안양천]
+                                    </p></div>
                                 </div>
-                            </div>
-                            <div className={'flex'}>
-                                <div className={'footer-title'}>연계 행사:</div>
-                                <div className={'footer-content theme-bg-color-6'}>(문화재단) 김대중 탄생 100주년 기념 콘서트, (디딤 청소년활동센터) 2024년 보훈
-                                    테마활동 청소년독립역사 계승연속 독립역사 ‘잇다’ 프로젝트
+                                <div className={'flex justify-start'}>
+                                    <div className={'footer-title'}>연계 행사:</div>
+                                    <div className={'footer-content theme-bg-color-6'}>(문화재단) 김대중 탄생 100주년 기념 콘서트, (디딤
+                                        청소년활동센터) 2024년 보훈
+                                        테마활동 청소년독립역사 계승연속 독립역사 ‘잇다’ 프로젝트
+                                    </div>
                                 </div>
                             </div>
                         </td>
