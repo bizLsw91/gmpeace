@@ -33,9 +33,12 @@ export default function Home() {
                             <div>평화, 광명이 잇다!</div>
                         </div>
                     </div>
-                    <div className="home__preRegiBtnArea flex justify-center">
+                    <div className="home__preRegiBtnArea flex justify-center gap-5">
                         <Link href={'https://forms.gle/Aomv415weGSwVAW96'}>
                             <Button type={'primary'} shape={'round'}><p>개막식 & 광명포럼<br/>사전신청</p></Button>
+                        </Link>
+                        <Link href={'https://forms.gle/b749FxFkqQw4hCZ9A'}>
+                            <Button type={'primary'} shape={'round'}><p>평화주간 학생미술대회<br/>사전신청</p></Button>
                         </Link>
 
                     </div>
