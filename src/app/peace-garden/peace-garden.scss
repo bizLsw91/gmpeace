@@ -85,20 +85,21 @@
     }
 
     .wrap{
-        //@media #{$max-xs} {
-            display: flex;
-            //flex-direction: column;
+        display: flex;
         flex-wrap: wrap;
-            gap:40px;
-        //}
-        //display: grid;
-        //gap: 30px;
-        //grid-template-columns: 1fr 1fr;
-
+        gap:40px;
+        >div{
+            flex:1;
+        }
+    }
+    .permtEvent{
+        min-width: 200px;
+    }
+    .special-event{
+        min-width: 300px;
     }
 
     .movie-profile{
-        flex:1;
         display: flex;
         flex-direction: column;
         align-items: center;

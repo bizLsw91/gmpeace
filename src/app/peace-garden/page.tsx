@@ -116,7 +116,7 @@ export default function PeaceGarden() {
                     <div className="wrap">
                         {
                             events.map((item, idx) => (
-                                <div className="info__data-col" key={idx}>
+                                <div className="info__data-col permtEvent" key={idx}>
                                     <div className="info__title theme-color-3">{item.title}</div>
                                     <div className="info__subtitle">
                                         <ul>
