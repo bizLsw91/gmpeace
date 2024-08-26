@@ -227,6 +227,23 @@
         background-color: #ffffff;
         vertical-align: middle;
     }
+    th:nth-child(1){
+        width:55px;
+
+        @media #{$md} {
+            width:170px;
+        }
+    }
+    .mergedTrH{
+        height: 28px;
+        @media #{$xs} {
+            height: 39px;
+        }
+
+        @media #{$md} {
+            height: 33px;
+        }
+    }
 }
 
 .ul-circle{
@@ -274,6 +291,9 @@
 }
 .theme-bg-color-5{
     background-color: $theme-color-5;
+}
+.theme-bg-color-6{
+    background-color: $theme-color-6;
 }
 .theme-bg-color-session1{
     background-color: $theme-color-session1;

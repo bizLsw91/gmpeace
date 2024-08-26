@@ -19,57 +19,100 @@ export default function OverviewSchedule() {
                     </div>
                     <div className="flex">
                         <div className="colorbox theme-bg-color-4"></div>
-                        <div className="colorexplnt ml-2">전시회 및 연계행사</div>
+                        <div className="colorexplnt ml-2">전시회</div>
+                    </div>
+                    <div className="flex">
+                        <div className="colorbox theme-bg-color-6"></div>
+                        <div className="colorexplnt ml-2">연계행사</div>
                     </div>
                 </div>
-                <div className="grid schedule-grid">
-                    <div className="grid-header">구분</div>
-                    <div className="grid-header">1일차 - 9.20 (금)</div>
-                    <div className="grid-header">2일차 - 9.21 (토)</div>
-                    <div className="grid-header">3일차 - 9.22 (일)</div>
+                <table className="overview-schedule__program mb-14">
+                    <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>1일차 - 9.20. (금)</th>
+                        <th>2일차 - 9.21. (토)</th>
+                        <th>3일차 - 9.22. (일)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>12:00-13:00</td>
+                        <td></td>
+                        <td className={'green'}>한솔밥 비비기</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13:00-14:00</td>
+                        <td></td>
+                        <td rowSpan={2} className={'green'}>평화음악회</td>
+                        <td rowSpan={2} className={'green'}>평화정원 피크닉</td>
+                    </tr>
+                    <tr className={'mergedTrH'}>
+                        <td rowSpan={2} className={'time'}>14:00-15:00</td>
+                        <td rowSpan={2} className={'yellow'}>개막식</td>
+                    </tr>
+                    <tr>
+                        <td rowSpan={4} className={'green'}>평화정원 피크닉</td>
+                        <td rowSpan={2} className={'green'}>남북한춤 공연</td>
+                    </tr>
+                    <tr>
+                        <td className={'time'}>15:00-16:00</td>
+                        <td className={'blue'}>평화도시 광명포럼</td>
+                    </tr>
+                    <tr>
+                        <td className={'time'}>16:00-17:00</td>
+                        <td></td>
+                        <td className={'yellow'}>시상식</td>
+                    </tr>
+                    <tr>
+                        <td className={'time'}>17:00-18:00</td>
+                        <td></td>
+                        <td className={'green'}>평화정원 피크닉</td>
+                    </tr>
+                    <tr className={'mergedTrH'}>
+                        <td rowSpan={2} className={'time'}>18:00-19:00</td>
+                        <td></td>
+                        <td></td>
+                        <td rowSpan={2}></td>
+                    </tr>
+                    <tr className={'mergedTrH'}>
+                        <td rowSpan={3} className={'green'}>평화주간 심야영화제</td>
+                        <td rowSpan={3} className={'green'}>평화주간 심야영화제</td>
+                    </tr>
+                    <tr>
+                        <td className={'time'}>19:00-20:00</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td className={'time'}>20:00-21:00</td>
+                        <td></td>
+                    </tr>
 
-                    <div className="grid-cell time">13:00-14:00</div>
-                    <div className="grid-cell"></div>
-                    <div className="grid-cell green cell1">평화정원 피크닉</div>
-                    <div className="grid-cell green cell2">평화정원 피크닉</div>
-
-                    <div className="grid-cell time">14:00-15:00</div>
-                    <div className="grid-cell yellow">개막식</div>
-                    <div className="grid-cell time">15:00-16:00</div>
-                    <div className="grid-cell time">16:00-17:00</div>
-                    <div className="grid-cell blue cell3">평화도시 광명포럼</div>
-
-                    <div className="grid-cell yellow">시상식</div>
-                    <div className="grid-cell time">17:00-18:00</div>
-
-                    <div className="grid-cell"></div>
-                    <div className="grid-cell green">한솥밥 비비기</div>
-                    <div className="grid-cell green">평화정원 피크닉</div>
-
-                    <div className="grid-cell time cell4">18:00-19:00</div>
-                    <div className="grid-cell cell8">&nbsp;</div>
-                    <div className="grid-cell"> </div>
-                    <div className="grid-cell cell7"></div>
-                    <div className="grid-cell time">19:00-20:00</div>
-                    <div className="grid-cell green cell5">평화주간 심야영화제</div>
-                    <div className="grid-cell green cell6">평화주간 심야영화제</div>
-
-                    <div className="grid-cell"></div>
-                    <div className="grid-cell time">20:00-21:00</div>
-                    <div className="grid-cell"></div>
-
-                    <div className="schedule-grid__footer">
-                        <p>
-                            사전 행사: <span className={'theme-bg-color-3'}>평화주간 학생미술대회 [2024.9.7. / 안양천]</span>
-                            <br/>
-                            전시 행사: <span className={'theme-bg-color-4'}>북한미술 전시관, 학생미술대회 수상작 전시관, 독립운동 전시회 [2024.9.21~9.22 / 안양천]</span>
-                            <br/>
-                            연계 행사: <span className={'theme-bg-color-4'}>(문화재단) 김대중 탄생 100주년 기념 콘서트</span>
-                            <br/>
-                            <span className={'theme-bg-color-4'}>(디딤 청소년활동센터) 2024년 보훈 테마활동 청소년독립역사 계승연속 독립역사 ‘잇다’ 프로젝트</span>
-                        </p>
-                    </div>
-                </div>
+                    <tr className="schedule-grid__footer">
+                        <td colSpan={4}>
+                            <div className={'flex'}>
+                                <div className={'footer-title'}>사전 행사:</div>
+                                <div>
+                                    <span className={'footer-content theme-bg-color-3'}>평화주간 학생미술대회 [2024.9.7. / 안양천]</span>
+                                </div>
+                            </div>
+                            <div className={'flex'}>
+                                <div className={'footer-title'}>전시 행사:</div>
+                                <div className={'footer-content theme-bg-color-4'}>북한미술 전시관, 학생미술대회 수상작 전시관, 독립운동 전시회 [2024.9.21~9.22 /
+                                    안양천]
+                                </div>
+                            </div>
+                            <div className={'flex'}>
+                                <div className={'footer-title'}>연계 행사:</div>
+                                <div className={'footer-content theme-bg-color-6'}>(문화재단) 김대중 탄생 100주년 기념 콘서트, (디딤 청소년활동센터) 2024년 보훈
+                                    테마활동 청소년독립역사 계승연속 독립역사 ‘잇다’ 프로젝트
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
 
                 <div className="infos flex flex-col space-y-7">
                     <div className="info">
