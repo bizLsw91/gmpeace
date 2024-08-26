@@ -23,7 +23,13 @@ export default function ArtContest() {
                             </div>
                             <div className="info__data">
                                 <div className="info__data-title theme-bg-color-3">시상식</div>
-                                <div className="info__data-content">9월 22일(토) 16:00 예정</div>
+                                <div className="info__data-content">
+                                    <ul className={'awards__ul space-y-3'}>
+                                        <li>9월 22일(토) 16:00 예정 ※ 변경시 별도 유선 안내 예정</li>
+                                        <li>대상 4명, 최우수상 8명, 우수상 12명 등
+                                            (특선 등은 참가자 규모에 따른 변경 운영)</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div className="info__data">
                                 <div className="info__data-title theme-bg-color-3">주최주관</div>
