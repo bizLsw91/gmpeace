@@ -207,6 +207,15 @@
         border: 1px solid #ddd;
         padding: 5px;
         text-align: center;
+        @media #{$xs} {
+            font-size: 19px;
+            padding: 10px;
+        }
+
+        @media #{$md} {
+            font-size: 25px;
+            padding: 14px;
+        }
     }
 
     th {
@@ -218,14 +227,16 @@
         background-color: #ffffff;
         vertical-align: middle;
     }
-    @media #{$xs} {
-        font-size: 19px;
-    }
+}
 
-    @media #{$md} {
-        font-size: 25px;
+.ul-circle{
+    list-style: circle;
+    margin-left: 30px;
+    li{
+        text-align: start;
     }
 }
+
 
 .theme-color-1{
     color: $theme-color-1;

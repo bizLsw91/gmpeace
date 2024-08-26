@@ -9,10 +9,9 @@ export const menuItems = [
     },
     {
         label: '기념행사',
-        to: '/opening-ceremony?context=2',
+        to: '/ceremony?context=2',
         children: [
-            { label: '개막식', to: '/opening-ceremony?context=2' },
-            { label: '평화도시 광명포럼', to: '/forum?context=2'},
+            { label: '개막식 및 평화도시 광명포럼', to: '/ceremony?context=2' },
             { label: '시상식', to: '/awards?context=2'},
         ]
     },

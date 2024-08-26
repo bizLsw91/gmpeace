@@ -1,4 +1,4 @@
-.opening{
+.ceremony{
     padding-bottom: 50px;
     &__mainImage{
         width: 100%;
@@ -18,10 +18,17 @@
     &__program{
         @include program-table;
         .time{
+            text-align: start;
             @media #{$max-xs} {
                 word-break: break-all; /* 줄바꿈을 강제로 적용 */
                 white-space: normal; /* 줄바꿈을 허용 */
-                width: 74px;
+                width: 58px;
+            }
+            @media #{$xs} {
+                width: 120px;
+            }
+            @media #{$md} {
+                width: 230px;
             }
         }
     }

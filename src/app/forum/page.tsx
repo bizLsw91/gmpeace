@@ -21,26 +21,6 @@ const sessionData = {
     ],
     themeColor: '#008bd0',  // session1 컬러
 };
-const sessionData2 = {
-    sessionTitle: '독립 운동',
-    sessionSubtitle: '이슈 한국사',
-    sessionDescription: '이슈 한국사(독립 운동)',
-    speaker: {
-        name: '오도영',
-        position:'교수',
-        role: '서울대학교 환경대학원',
-        photo: '/images/오도영.png',  // 실제 사진 경로로 변경
-    },
-    chair: {
-        name:'박승원',
-        role:'광명시장'
-    },
-    panelists: [
-        { name: '박태균', position:'교수', role: '서울대학교 국제대학원 교수' },
-        { name: '심용환', position:'소장', role: '역사N교육연구소 소장' },
-    ],
-    themeColor: '#598c30',  // session1 컬러
-};
 
 export default function Forum() {
     return (
@@ -128,18 +108,6 @@ export default function Forum() {
                         </table>
                         <div className={'flex justify-end mt-2'}>
                             * 포럼 일정은 현장상황에 따라 변경될 수 있습니다.
-                        </div>
-                    </div>
-                    <div className="info">
-                        <div className="info__big-title theme-color-session1">세션 1</div>
-                        <div className="info__session">
-                            <SessionInfo {...sessionData} />
-                        </div>
-                    </div>
-                    <div className="info">
-                        <div className="info__big-title theme-color-session2">세션 2</div>
-                        <div className="info__session">
-                            <SessionInfo {...sessionData2} />
                         </div>
                     </div>
                     <div className="info">

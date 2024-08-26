@@ -5,29 +5,16 @@ import Image from 'next/image';
 // 타입 정의
 interface Speaker {
     name: string;
-    role: string;
+    roles: string[];
     position: string;
     photo: string;
-}
-
-interface Chair {
-    name: string;
-    role: string;
-}
-
-interface Panelist {
-    name: string;
-    position: string;
-    role: string;
 }
 
 interface SessionComponentProps {
     sessionTitle: string;
     sessionSubtitle: string;
     sessionDescription: string;
-    speaker: Speaker;
-    chair: Chair;
-    panelists: Panelist[];
+    speakers: Speaker[];
     themeColor: string;
 }
 
@@ -35,9 +22,7 @@ export default function SessionInfo({
                                         sessionTitle,
                                         sessionSubtitle,
                                         sessionDescription,
-                                        speaker,
-                                        chair,
-                                        panelists,
+                                        speakers,
                                         themeColor,
                                     }: SessionComponentProps) {
     return (
@@ -47,34 +32,28 @@ export default function SessionInfo({
                 <div className="session-subtitle">{sessionSubtitle}</div>
                 <div className="session-description">{sessionDescription}</div>
 
-                <div className="flex justify-center">
-                    <div className="speaker-container">
-                        <div className="speaker-photo">
-                            <Image src={speaker.photo}
-                                   alt={speaker.name}
-                                   width={300}
-                                   height={400}
-                            />
+                <div className="flex justify-center flex-wrap gap-5">
+                    {speakers.map((speaker, idx) => (
+                        <div className="speaker-container" key={idx}>
+                            <div className="speaker-photo">
+                                <Image src={speaker.photo}
+                                       alt={speaker.name}
+                                       width={300}
+                                       height={400}
+                                />
+                            </div>
+                            <div className="speaker-name">{speaker.name}<span
+                                className={'session-position'}>{speaker.position}</span></div>
+                            <div className="speaker-role">
+                                <ul className={'ul-circle'}>
+                                    {speaker.roles.map((role, idx2) => (
+                                        <li key={idx2}>{role}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className="speaker-name">{speaker.name}<span className={'session-position'}>{speaker.position}</span></div>
-                        <div className="speaker-role">{speaker.role}</div>
-                    </div>
+                    ))}
                 </div>
-
-                <div className="session-role">좌장</div>
-                <div className="session-person-name">{chair.name}<span
-                    className="session-person-role">{chair.role}</span></div>
-
-
-                <div className="session-divider"></div>
-
-                <div className="session-role">패널</div>
-                {panelists.map((panelist, index) => (
-                    <div key={index} className="session-person">
-                        <span className={'session-person-name'}>{panelist.name}</span><span className={'session-position'}>{panelist.position}</span>
-                        <span className={'session-person-role'}>{panelist.role}</span>
-                    </div>
-                ))}
             </div>
         </div>
     );
