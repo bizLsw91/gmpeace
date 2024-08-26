@@ -33,7 +33,7 @@ export default function Home() {
                             <div>평화, 광명이 잇다!</div>
                         </div>
                     </div>
-                    <div className="home__preRegiBtnArea flex justify-center gap-5">
+                    <div className="home__preRegiBtnArea flex flex-wrap justify-center gap-5">
                         <Link href={'https://forms.gle/Aomv415weGSwVAW96'}>
                             <Button type={'primary'} shape={'round'}><p>개막식 & 광명포럼<br/>사전신청</p></Button>
                         </Link>
@@ -42,8 +42,8 @@ export default function Home() {
                         </Link>
 
                     </div>
-                    <div className="home__youtube flex justify-center mt-[20px] xs:mt-[40px] pt-4">
-                        <div className="video-container">
+                    <div className="home__youtube flex justify-center mt-[20px] xs:mt-[30px]">
+                        <div className="video-container flex justify-center">
                             <iframe width="560" height="315"
                                     src="https://www.youtube.com/embed/kR3wDMXTTw4?si=cXJl-r-l2WJCgB85"
                                     title="YouTube video player" frameBorder="0"

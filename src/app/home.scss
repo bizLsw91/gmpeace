@@ -8,6 +8,7 @@
     background: url(../../public/images/background1-1.jpg);
     background-size: cover; /* 이미지가 배너 크기에 맞게 조정되도록 함 */
     background-position: center; /* 중앙에 이미지를 위치시킴 */
+    padding-bottom: 70px;
 
     &__logo {
         img {
@@ -68,6 +69,15 @@
         }
         .ant-btn-primary{
             background: #1788e1;
+        }
+    }
+    .video-container{
+        width: 100%;
+        iframe{
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 560/315;
         }
     }
 }
