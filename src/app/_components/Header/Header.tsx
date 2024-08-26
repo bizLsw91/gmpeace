@@ -27,10 +27,10 @@ export default function Header() {
                     <div className={'header-logo w-[230px] xs:w-[300px]'}>
                         <Link href={'/'}>
                             <Image
-                                src={'/images/text-logo.png'}
-                                alt={'로고'}
-                                width={300}
-                                height={60}
+                                src={'/images/slogun.png'}
+                                alt={'슬로건'}
+                                width={100}
+                                height={20}
                             />
                         </Link>
                     </div>
