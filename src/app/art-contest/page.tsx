@@ -1,4 +1,6 @@
+import {Button} from "antd";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ArtContest() {
     return (
@@ -7,7 +9,12 @@ export default function ArtContest() {
                 <div className="art-contest-guide">
                     <div>
                         <div className="info">
-                            <div className="info__big-title theme-color-3">평화주간 학생 미술대회</div>
+                            <div className="info__big-title theme-color-3 flex flex-wrap-reverse justify-between">
+                                <div className={'flex items-end'}>평화주간 학생 미술대회</div>
+                                <Link href={'https://forms.gle/b749FxFkqQw4hCZ9A'} className={'pb-5'}>
+                                    <Button type={'primary'} shape={'round'}>사전신청</Button>
+                                </Link>
+                            </div>
                             <div className="info__subtitle mb-5"><p>어린이들이 생각하는 일상의 평화,<br/>탄소중립을 그림으로 만나 봄</p></div>
                             <div className="info__data">
                                 <div className="info__data-title theme-bg-color-3">일 시</div>
@@ -27,7 +34,7 @@ export default function ArtContest() {
                                     <ul className={'awards__ul space-y-3'}>
                                         <li>9월 22일(토) 16:00 예정 ※ 변경시 별도 유선 안내 예정</li>
                                         <li>대상 4명, 최우수상 8명, 우수상 12명 등
-                                            (특선 등은 참가자 규모에 따른 변경 운영)</li>
+                                            <br/>(특선 등은 참가자 규모에 따른 변경 운영)</li>
                                     </ul>
                                 </div>
                             </div>

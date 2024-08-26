@@ -1,4 +1,4 @@
-import SessionInfo from "@/app/_components/SessionInfo/SessionInfo";
+import ComingSoon from "@/app/peace-garden/ComingSoon";
 import {Divider} from "antd";
 import Image from "next/image";
 
@@ -16,9 +16,9 @@ const events = [
         ]
     },
     {
-        title: '남북평화/독립운동 전시부스',
+        title: '평화 전시부스',
         contents: [
-            '평화를 향한 선조들의 발자취'
+            '평화를 향한 발자취'
         ]
     },
     {
@@ -35,8 +35,9 @@ const spEvents = [
     {
         title: '특별 평화 공연',
         color: 'theme-color-3',
-        content: '비빔퍼포먼스 전 남북한 전통춤 배틀한판',
-        time: '9월 21일(토) 오후 4시 ~ 5시',
+        content: '',
+        time: '9월 21일(토) 13:00 평화음악회',
+        time2: '9월 22일(일) 14:30 남북한춤 공연',
         imgUrl: '/images/남북한전통춤.png',
         alt: '남북한전통춤'
     },
@@ -44,30 +45,18 @@ const spEvents = [
         title: '한솥밥 비빔 체험',
         color: 'theme-color-3',
         content: '쌀(禾)을 고루 나누어(平) 먹는(口) 平和 비빔밥 만들기',
-        time: '9월 21일(토) 오후 5시 ~ 5시 반',
+        time: '9월 21일(토) 12:00',
         imgUrl: '/images/비빔밥.png',
         alt: '비빔밥'
     },
     {
-        title: '평화 특별 전시',
+        title: '평화 전시',
         color: 'theme-color-4',
-        content: ' "경계 없음 / 무한"을 의미를 내포하는 탈북작가 선무,\n' +
-            ' 한반도에 대한 통일의 염원을 담은 특별전시\n' +
-            ' 광명 평화 미술대회 작품전시와 연계',
+        content: '과거부터 현재의 평화의 발자취',
         time: '9월 21일(토) ~ 22일(일), 13:00 ~ 19:00',
-        imgUrl: '/images/spGallery.png',
-        alt: '특별 전시'
+        imgUrl: '',
+        alt: '평화 전시'
     },
-    {
-        title: '영화 토크쇼',
-        color: 'theme-color-3',
-        content: '구성: 영화평론가 최광희, 영화유튜버 거의없다\n / ' +
-            '내용 : 평화와 독립 관련 영화 상영 전 해당 영화에 대한 설명 및 관련 토크쇼',
-        time: '9월 21일(토) 18:30 ~ 20:30',
-        imgUrl: '/images/영화토크쇼.png',
-        alt: '영화토크쇼'
-    },
-
 ]
 
 export default function PeaceGarden() {
@@ -75,13 +64,14 @@ export default function PeaceGarden() {
         <div className={'peace-garden'}>
             <div className="wrapper">
                 <div className="peace-garden__mainImage mb-12">
-                    <Image
-                        className={'w-full'}
-                        src={'/images/garden-map.png'}
-                        alt={'garden-map'}
-                        width={600}
-                        height={250}
-                    />
+                    {/*<Image*/}
+                    {/*    className={'w-full'}*/}
+                    {/*    src={'/images/garden-map.png'}*/}
+                    {/*    alt={'garden-map'}*/}
+                    {/*    width={600}*/}
+                    {/*    height={250}*/}
+                    {/*/>*/}
+                    <ComingSoon title={'평화정원 지도'}/>
                 </div>
                 <div className="picnic-zone-guide">
                     <div>
@@ -146,24 +136,26 @@ export default function PeaceGarden() {
                     <div className="info__subtitle">자연에서 누리는 휴식과 힐링과 함께 하는 영화제</div>
                     <div className="wrap mt-[30px]">
                         <div className="movie-profile">
-                            <Image
-                                src={'/images/탈주.png'}
-                                alt={'탈주'}
-                                width={300}
-                                height={670}
-                            />
-                            <div className={'movie-profile__info'}>9월 20일(금) 오후7시 : 탈주</div>
-                            <div className={'movie-profile__age'}>15세 관람가, 라이센스 제공: 쇼박스</div>
+                            {/*<Image*/}
+                            {/*    src={'/images/탈주.png'}*/}
+                            {/*    alt={'탈주'}*/}
+                            {/*    width={300}*/}
+                            {/*    height={670}*/}
+                            {/*/>*/}
+                            <ComingSoon width={300} height={420} minWidth={300} title={'상영영화 1'}/>
+                            <div className={'movie-profile__info'}>9월 20일(금) 오후 6시 반: 상영영화 1</div>
+                            {/*<div className={'movie-profile__age'}>15세 관람가, 라이센스 제공: 쇼박스</div>*/}
                         </div>
                         <div className="movie-profile">
-                            <Image
-                                src={'/images/모가디슈.png'}
-                                alt={'모가디슈'}
-                                width={300}
-                                height={670}
-                            />
-                            <div className={'movie-profile__info'}>9월 21일(토) 오후7시 : 모가디슈</div>
-                            <div className={'movie-profile__age'}>전체관람가, 라이센스 제공: 펍시네마</div>
+                            {/*<Image*/}
+                            {/*    src={'/images/모가디슈.png'}*/}
+                            {/*    alt={'모가디슈'}*/}
+                            {/*    width={300}*/}
+                            {/*    height={670}*/}
+                            {/*/>*/}
+                            <ComingSoon width={300} height={420} minWidth={300} title={'상영영화 2'}/>
+                            <div className={'movie-profile__info'}>9월 21일(토) 오후 6시 반 : 상영영화 2</div>
+                            {/*<div className={'movie-profile__age'}>전체관람가, 라이센스 제공: 펍시네마</div>*/}
                         </div>
 
                     </div>
@@ -172,16 +164,22 @@ export default function PeaceGarden() {
                         {
                             spEvents.map((event, idx3) => (
                                 <div className="special-event" key={idx3}>
-                                    <div className={"info__title "+event.color}>{event.title}</div>
+                                    <div className={"info__title " + event.color}>{event.title}</div>
                                     <div className="info__subtitle">{event.content}</div>
                                     <div className="info__subtitle-bold">{event.time}</div>
-                                    <Image
-                                        className={'mt-4'}
-                                        src={event.imgUrl}
-                                        alt={event.alt}
-                                        width={500}
-                                        height={300}
-                                    />
+                                    {event.time2 && <div className="info__subtitle-bold">{event.time2}</div>}
+                                    {event.imgUrl ?
+                                        <Image
+                                            className={'mt-4'}
+                                            src={event.imgUrl}
+                                            alt={event.alt}
+                                            width={500}
+                                            height={300}
+                                        /> 
+                                        :
+                                        <ComingSoon width={500} height={300} title={'평화 전시 이미지'}/>
+                                    }
+                                    
                                 </div>
                             ))
                         }

@@ -70,7 +70,7 @@ export default function TabArea() {
     return (
         <div className={'tabArea'}>
             <div className="wrapper">
-                <div className={'pt-3 pb-8 md:pt-7 md:pb-16'}>
+                <div className={'pt-3 pb-12 md:pt-6 md:pb-28'}>
                     <ConfigProvider
                         theme={{
                             components: {

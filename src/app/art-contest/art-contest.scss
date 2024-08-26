@@ -9,4 +9,13 @@
         list-style: circle;
         margin-left: 30px;
     }
+    .ant-btn.ant-btn-round{
+        border-radius: 18px;
+        font-size: 30px;
+        font-weight: bold;
+        height: 70px;
+    }
+    .ant-btn-primary{
+        background: #1788e1;
+    }
 }
