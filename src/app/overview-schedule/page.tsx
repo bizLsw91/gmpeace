@@ -59,13 +59,13 @@ export default function OverviewSchedule() {
                     </thead>
                     <tbody>
                     <tr>
-                        <td>12:00-13:00</td>
+                        <td className={'time'}>12:00-13:00</td>
                         <td></td>
                         <td className={'green'}>한솔밥 비비기</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>13:00-14:00</td>
+                        <td className={'time'}>13:00-14:00</td>
                         <td></td>
                         <td rowSpan={2} className={'green'}>평화음악회</td>
                         <td rowSpan={2} className={'green'}>평화정원 피크닉</td>
@@ -156,7 +156,7 @@ export default function OverviewSchedule() {
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-1">내 용</div>
-                            <div className="info__data-content-col theme-color-1">
+                            <div className="info__data-content-col">
                                 <div>식전공연</div>
                                 <div>개막퍼포먼스</div>
                                 <div>공식행사</div>
@@ -193,7 +193,7 @@ export default function OverviewSchedule() {
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">내 용</div>
-                            <div className="info__data-content-col theme-color-3">
+                            <div className="info__data-content-col">
                                 <div>비빔밥 퍼포먼스</div>
                                 <div>평화음악회</div>
                                 <div>버스킹 공연</div>
@@ -228,7 +228,7 @@ export default function OverviewSchedule() {
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">내 용</div>
-                            <div className="info__data-content-col theme-color-3">
+                            <div className="info__data-content-col">
                                 <div>남북한춤</div>
                                 <div>버스킹 공연</div>
                                 <div>학생미술대회 시상식</div>

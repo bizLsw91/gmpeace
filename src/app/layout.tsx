@@ -60,7 +60,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="kor">
-        <body className={inter.className}>
+        {/*<body className={inter.className}>*/}
+        <body>
         <Header/>
         <Suspense fallback={<div>Loading...</div>}>
             <Banner/>

@@ -15,7 +15,7 @@ export default function ComingSoon({width, height, title, minWidth}: {
     return (
         <div
             className={cn(
-                "tempNotice w-full flex justify-center items-center bg-emerald-500 text-white text-3xl rounded-[20px] gap-4",
+                "tempNotice w-full flex justify-center items-center bg-emerald-500 text-white text-2xl rounded-[20px] gap-4",
                 !height && 'h-[250px]'
             )}
             style={inlineStyles}

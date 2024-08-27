@@ -40,12 +40,12 @@
         }
     }
     &__context{
-        font-size: 28px;
+        font-size: 33px;
         @media #{$xs} {
-            font-size: 35px;
+            font-size: 37px;
         }
         @media #{$sm} {
-            font-size: 50px;
+            font-size: 44px;
         }
         color: #005faa;
         font-family: 'Nanum Gothic ExtraBold', sans-serif;

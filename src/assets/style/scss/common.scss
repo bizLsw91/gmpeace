@@ -1,3 +1,10 @@
+body{
+    /* 기본 글꼴 */
+    font-family: 'Nanum Gothic',sans-serif;
+    word-break: keep-all; /* 단어가 깨지지 않도록 설정 */
+    overflow-wrap: break-word; /* 너무 긴 단어는 줄바꿈을 허용 */
+}
+
 .page-pb {
     padding-bottom: 50px;
     @media #{$md} {
@@ -23,15 +30,15 @@
     &__big-title {
         position: relative;
         color: #206edc;
-        font-family: 'Jua Regular', sans-serif;
-        font-size: 40px;
+        font-family: 'Nanum Gothic ExtraBold', sans-serif;
+        font-size: 24px;
         margin-bottom: 20px;
         @media #{$xs} {
-            font-size: 45px;
+            font-size: 29px;
             margin-bottom: 25px;
         }
         @media #{$md} {
-            font-size: 50px;
+            font-size: 33px;
             margin-bottom: 30px;
         }
 
@@ -46,13 +53,14 @@
         }
     }
     &__title{
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bold;
+        margin-bottom: 10px;
         @media #{$xs} {
-            font-size: 28px;
+            font-size: 25px;
         }
         @media #{$md} {
-            font-size: 36px;
+            font-size: 30px;
         }
     }
     &__subtitle{
@@ -81,15 +89,15 @@
         padding-bottom: 20px;
         display: flex;
         flex-direction: column;
-        font-size: 20px;
+        font-size: 17px;
         @media #{$xs} {
-            font-size: 25px;
+            font-size: 20px;
         }
         @media #{$sm} {
             flex-direction: row;
         }
         @media #{$md} {
-            font-size: 30px;
+            font-size: 23px;
         }
     }
     &__data-col{
@@ -105,38 +113,38 @@
         }
     }
     &__data-title {
-        width: 105px;
-        padding: 5px 14px;
+        width: 87px;
+        padding: 5px 11px;
         border-radius: 10px;
         background-color: #0052cc;
         color: white;
-        font-family: "Nanum Gothic", sans-serif;
+        font-family: "Godo M", sans-serif;
         text-align: center;
         display: inline-block; /* 버튼을 인라인 블록으로 표시 */
         border: none; /* 기본 테두리 제거 */
         flex-shrink: 0;
         align-self: flex-start;
         @media #{$xs} {
-            width: 130px;
-            padding: 10px 16px;
+            width: 110px;
+            padding: 7px 13px;
             border-radius: 12px;
         }
         @media #{$md} {
-            width: 175px;
-            padding: 13px 18px;
-            border-radius: 15px;
+            width: 130px;
+            padding: 8px 13px;
+            border-radius: 13px;
         }
     }
     &__data-content {
         display: flex;
         align-items: center;
-        font-family: "Gmarket Sans Medium", sans-serif;
+        font-family: "Godo M", sans-serif;
         margin-left: 15px;
     }
     &__data-content-col {
         display: flex;
         flex-direction: column;
-        font-family: "Gmarket Sans Medium", sans-serif;
+        font-family: "Godo M", sans-serif;
         margin-left: 15px;
     }
 }
@@ -201,37 +209,53 @@
 @mixin program-table{
     width: 100%;
     border-collapse: collapse;
-    font-size: 15px;
-    font-family: NotoSansKR, sans-serif;
+    font-size: 14px;
+    font-family: 'Godo M', sans-serif;
     th, td {
         border: 1px solid #ddd;
         padding: 5px;
         text-align: center;
         @media #{$xs} {
-            font-size: 19px;
+            font-size: 17px;
             padding: 10px;
         }
 
         @media #{$md} {
-            font-size: 25px;
-            padding: 14px;
+            font-size: 20px;
+            padding: 12px;
         }
     }
 
     th {
         background-color: #003366;
         color: white;
+        font-size: 16px;
+
+        @media #{$xs} {
+            font-size: 19px;
+            width: 130px;
+        }
+
+        @media #{$md} {
+            font-size: 24px;
+        }
     }
 
     td {
         background-color: #ffffff;
         vertical-align: middle;
     }
-    th:nth-child(1){
+    td.time,th:first-child{
         width:55px;
 
         @media #{$md} {
             width:170px;
+        }
+    }
+    tr:not(:last-child) td:not(.time), th:not(:first-child){
+        width:calc((100% - 55px) / 3);
+        @media #{$md} {
+            width: calc((100% - 170px) / 3);
         }
     }
     .mergedTrH{
@@ -252,6 +276,10 @@
     li{
         text-align: start;
     }
+}
+
+.ant-btn{
+    font-family: "Nanum Gothic", sans-serif;
 }
 
 
