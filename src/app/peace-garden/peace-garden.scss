@@ -93,10 +93,13 @@
         }
     }
     .permtEvent{
-        min-width: 200px;
+        min-width: 250px;
     }
     .special-event{
         min-width: 300px;
+        @media #{$xs} {
+            min-width: 380px;
+        }
     }
 
     .movie-profile{

@@ -66,10 +66,10 @@ body{
     &__subtitle{
         font-size: 16px;
         @media #{$xs} {
-            font-size: 20px;
+            font-size: 19px;
         }
         @media #{$md} {
-            font-size: 25px;
+            font-size: 23px;
         }
         ul{
             margin-left: 30px;
@@ -78,10 +78,10 @@ body{
         &-bold{
             font-weight: bold;
             @media #{$xs} {
-                font-size: 20px;
+                font-size: 19px;
             }
             @media #{$md} {
-                font-size: 25px;
+                font-size: 23px;
             }
         }
     }

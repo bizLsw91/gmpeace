@@ -130,7 +130,7 @@ export default function OverviewSchedule() {
                                 </div>
                                 <div className={'flex justify-start'}>
                                     <div className={'footer-title'}>연계 행사:</div>
-                                    <div className={'footer-content theme-bg-color-6'}>(문화재단) 김대중 탄생 100주년 기념 콘서트, (디딤
+                                    <div className={'footer-content theme-bg-color-6'}>(문화재단) 김대중 탄생 100주년 기념 콘서트<br/>(디딤
                                         청소년활동센터) 2024년 보훈
                                         테마활동 청소년독립역사 계승연속 독립역사 ‘잇다’ 프로젝트
                                     </div>
@@ -229,7 +229,7 @@ export default function OverviewSchedule() {
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">내 용</div>
                             <div className="info__data-content-col">
-                                <div>남북한춤</div>
+                                <div>남북한춤 공연</div>
                                 <div>버스킹 공연</div>
                                 <div>학생미술대회 시상식</div>
                                 <div>체험프로그램</div>

@@ -24,6 +24,6 @@ export const menuItems = [
     },
     {
         label: '만족도조사',
-        to: '/',
+        to: '/survey',
     },
 ]
