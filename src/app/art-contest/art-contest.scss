@@ -1,4 +1,5 @@
 .art-contest{
+    padding-bottom: 50px;
     &-guide{
         display: flex;
         flex-wrap: wrap;
@@ -9,13 +10,13 @@
         list-style: circle;
         margin-left: 30px;
     }
-    .ant-btn.ant-btn-round{
-        border-radius: 18px;
-        font-size: 30px;
-        font-weight: bold;
-        height: 70px;
-    }
     .ant-btn-primary{
         background: #1788e1;
+    }
+    .ant-btn{
+        height: 50px;
+    }
+    .ant-btn.ant-btn-round{
+        border-radius: 16px;
     }
 }

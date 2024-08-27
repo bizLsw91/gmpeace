@@ -45,6 +45,12 @@ export default function Home() {
                                 <div>평화주간 학생미술대회<br/>사전신청</div>
                             </Button>
                         </Link>
+                        <Link href={'files/2024년 평화주간 미술대회_단체신청서.hwp'}>
+                            <Button type={'primary'} shape={'round'}>
+                                <div>2024년 평화주간
+                                    <br/>미술대회_단체신청서</div>
+                            </Button>
+                        </Link>
 
                     </div>
                     <div className="home__youtube flex justify-center mt-[20px] xs:mt-[30px]">
