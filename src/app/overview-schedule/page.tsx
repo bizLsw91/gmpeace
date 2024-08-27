@@ -61,7 +61,7 @@ export default function OverviewSchedule() {
                     <tr>
                         <td className={'time'}>12:00-13:00</td>
                         <td></td>
-                        <td className={'green'}>한솔밥 비비기</td>
+                        <td className={'green'}>한솥밥 비비기</td>
                         <td></td>
                     </tr>
                     <tr>
