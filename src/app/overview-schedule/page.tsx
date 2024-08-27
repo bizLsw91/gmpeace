@@ -4,6 +4,31 @@ export default function OverviewSchedule() {
     return (
         <div className="overview-schedule">
             <div className="wrapper">
+                <div className="overview mb-14">
+                    <h1 className="info__big-title">행사개요</h1>
+                    <div className="info__data">
+                        <div className="info__data-title">행 사 명</div>
+                        <div className="info__data-content">제4회 광명시 평화주간</div>
+                    </div>
+                    <div className="info__data">
+                        <div className="info__data-title">행사기간</div>
+                        <div className="info__data-content">2024년 9월 20일(금)~9월 22일(일) / 3일간</div>
+                    </div>
+                    <div className="info__data">
+                        <div className="info__data-title">행사장소</div>
+                        <div className="info__data-content">① 광명극장(경기 광명시 철망산로 2), ② 안양천 햇무리광장</div>
+                    </div>
+                    <div className="info__data">
+                        <div className="info__data-title">행사내용</div>
+                        <div className="info__data-content-col">
+                            <div className=""><span className={'theme-color-1'}>[공식행사]</span> 개막식, 시상식</div>
+                            <div className=""><span className={'theme-color-2'}>[포럼]</span> 평화도시 광명포럼</div>
+                            <div className=""><span className={'theme-color-3'}>[참여행사]</span> 평화주간 심야영화제, 평화정원 피크닉</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 className="info__big-title">행사일정</h1>
                 <div className="colorInfo flex max-md:flex-col mb-3 md:gap-5">
                     <div className="flex">
                         <div className="colorbox theme-bg-color-1"></div>
