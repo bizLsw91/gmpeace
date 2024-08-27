@@ -38,8 +38,8 @@ export default function SessionInfo({
                             <div className="speaker-photo">
                                 <Image src={speaker.photo}
                                        alt={speaker.name}
-                                       width={300}
-                                       height={400}
+                                       width={255}
+                                       height={333}
                                 />
                             </div>
                             <div className="speaker-name">{speaker.name}<span

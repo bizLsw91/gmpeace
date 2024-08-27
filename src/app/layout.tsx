@@ -4,7 +4,6 @@ import Footer from "@/app/_components/Footer/Footer";
 import Header from "@/app/_components/Header/Header";
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
-import "./globals.css";
 import "../assets/style/tailwind/index.css"
 import "../assets/style/scss/index.scss"
 import {Suspense} from "react";
