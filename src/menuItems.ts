@@ -3,7 +3,7 @@ export const menuItems = [
         label: '행사개요',
         to: '/overview-schedule?context=1',
         children: [
-            { label: '행사일정', to: '/overview-schedule?context=1'},
+            { label: '행사개요', to: '/overview-schedule?context=1'},
         ]
     },
     {

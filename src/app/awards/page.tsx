@@ -2,10 +2,11 @@ import Image from "next/image";
 export default function Awards() {
     return (
         <div className="awards">
+            <h1 className="hidden">시상식</h1>
             <div className="wrapper">
                 <div className="infos flex flex-col space-y-7">
                     <div className="info">
-                        <h1 className="info__big-title">평화주간 학생 미술대회 시상식</h1>
+                        <div className="info__big-title">평화주간 학생 미술대회 시상식</div>
                         <div className="awards__mainImage flex justify-center">
                             <Image
                                 src={'/images/시상식.png'}
@@ -16,7 +17,7 @@ export default function Awards() {
                         </div>
                     </div>
                     <div className="info">
-                        <h1 className="info__big-title">행사개요</h1>
+                        <div className="info__big-title">행사개요</div>
                         <div className="info__data">
                             <div className="info__data-title">일 시</div>
                             <div className="info__data-content">2024년 9월 22일(일) 16:00</div>
@@ -35,7 +36,7 @@ export default function Awards() {
                         </div>
                     </div>
                     <div className="info">
-                        <h1 className="info__big-title">식전 공연</h1>
+                        <div className="info__big-title">식전 공연</div>
                         <div className="info__title theme-color-t">남북한춤 공연</div>
                         <div className="info__subtitle">남한춤과 북한춤의 전통춤 배틀한판</div>
                         <div className="awards__performanceImage">
@@ -48,7 +49,7 @@ export default function Awards() {
                         </div>
                     </div>
                     <div className="info">
-                        <h1 className="info__big-title">오프닝 공연</h1>
+                        <div className="info__big-title">오프닝 공연</div>
                         <div className="info__title theme-color-t">광명시민합창단</div>
                         <div className="awards__performanceImage">
                             {/*<Image*/}

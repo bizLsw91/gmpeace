@@ -62,6 +62,7 @@ const spEvents = [
 export default function PeaceGarden() {
     return (
         <div className={'peace-garden'}>
+            <h1 className="hidden">평화정원 피크닉</h1>
             <div className="wrapper">
                 <div className="peace-garden__mainImage mb-12">
                     {/*<Image*/}
@@ -112,7 +113,7 @@ export default function PeaceGarden() {
                     </div>
                 </div>
                 <div className="info">
-                    <h1 className="info__big-title theme-color-3">평화정원 상설행사</h1>
+                    <div className="info__big-title theme-color-3">평화정원 상설행사</div>
                     <div className="wrap">
                         {
                             events.map((item, idx) => (
@@ -131,7 +132,7 @@ export default function PeaceGarden() {
                     </div>
                 </div>
                 <div className="info">
-                    <h1 className="info__big-title theme-color-3">평화정원 특별행사</h1>
+                    <div className="info__big-title theme-color-3">평화정원 특별행사</div>
                     <div className="info__title theme-color-3">평화주간 심야영화제</div>
                     <div className="info__subtitle">자연에서 누리는 휴식과 힐링과 함께 하는 영화제</div>
                     <div className="wrap mt-[30px]">
@@ -175,11 +176,11 @@ export default function PeaceGarden() {
                                             alt={event.alt}
                                             width={500}
                                             height={300}
-                                        /> 
+                                        />
                                         :
                                         <ComingSoon width={500} height={300} title={'평화 전시 이미지'}/>
                                     }
-                                    
+
                                 </div>
                             ))
                         }

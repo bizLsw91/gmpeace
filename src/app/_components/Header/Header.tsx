@@ -43,7 +43,7 @@ export default function Header() {
                                         <ul className={'sub-menu absolute bg-white shadow-md rounded-md p-2 mt-2'}>
                                             {item.children.map((subItem, subIdx) => (
                                                 <li key={subIdx}>
-                                                    <Link href={subItem.to}><h1>{subItem.label}</h1></Link>
+                                                    <Link href={subItem.to}>{subItem.label}</Link>
                                                 </li>
                                             ))}
                                         </ul>
