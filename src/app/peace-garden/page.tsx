@@ -112,7 +112,7 @@ export default function PeaceGarden() {
                     </div>
                 </div>
                 <div className="info">
-                    <div className="info__big-title theme-color-3">평화정원 상설행사</div>
+                    <h1 className="info__big-title theme-color-3">평화정원 상설행사</h1>
                     <div className="wrap">
                         {
                             events.map((item, idx) => (
@@ -131,7 +131,7 @@ export default function PeaceGarden() {
                     </div>
                 </div>
                 <div className="info">
-                    <div className="info__big-title theme-color-3">평화정원 특별행사</div>
+                    <h1 className="info__big-title theme-color-3">평화정원 특별행사</h1>
                     <div className="info__title theme-color-3">평화주간 심야영화제</div>
                     <div className="info__subtitle">자연에서 누리는 휴식과 힐링과 함께 하는 영화제</div>
                     <div className="wrap mt-[30px]">

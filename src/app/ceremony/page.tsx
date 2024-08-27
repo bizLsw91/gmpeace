@@ -37,7 +37,7 @@ export default function Ceremony() {
 
                 <div className="infos flex flex-col space-y-7">
                     <div className="info">
-                        <div className="info__big-title">행사개요</div>
+                        <h1 className="info__big-title">행사개요</h1>
                         <div className="info__data">
                             <div className="info__data-title">일 시</div>
                             <div className="info__data-content">2024년 9월 20일(금) 14:00~16:00</div>
@@ -48,7 +48,7 @@ export default function Ceremony() {
                         </div>
                     </div>
                     <div className="info">
-                        <div className="info__big-title">개막식 및 포럼 프로그램</div>
+                        <h1 className="info__big-title">개막식 및 포럼 프로그램</h1>
                         <table className="ceremony__program">
                             <thead>
                             <tr>
@@ -130,7 +130,7 @@ export default function Ceremony() {
                         </table>
                     </div>
                     <div className="info">
-                        <div className="info__big-title">식전공연</div>
+                        <h1 className="info__big-title">식전공연</h1>
                         <div className="info__title theme-color-t">광명시민 오케스트라</div>
                         <div className="info__subtitle">평화의 하모니로 평화주간을 열다</div>
                         <Image
@@ -142,7 +142,7 @@ export default function Ceremony() {
                         />
                     </div>
                     <div className="info">
-                        <div className="info__big-title">오프닝 공연</div>
+                        <h1 className="info__big-title">오프닝 공연</h1>
                         <div className="info__title theme-color-t">쉐도우 아트 퍼포먼스</div>
                         <div className="info__subtitle">일상의 평화가 있는 평화도시 광명</div>
                         <Image
@@ -155,7 +155,7 @@ export default function Ceremony() {
                     </div>
                     <div className="info flex space-x-10">
                         <div className="profile">
-                            <div className="info__big-title">개회사</div>
+                            <h1 className="info__big-title">개회사</h1>
                             <Image
                                 src={'/images/박승원.png'}
                                 alt={'박승원'}
@@ -169,13 +169,13 @@ export default function Ceremony() {
                         </div>
                     </div>
                     <div className="info">
-                        <div className="info__big-title theme-color-session1">세션</div>
+                        <h1 className="info__big-title theme-color-session1">세션</h1>
                         <div className="info__session">
                             <SessionInfo {...sessionData} />
                         </div>
                     </div>
                     <div className="info">
-                        <div className="info__big-title">축하공연</div>
+                        <h1 className="info__big-title">축하공연</h1>
                         <div className="info__title theme-color-t">통일부-불후의명곡</div>
                         {/*<div className="info__subtitle">통일부-불후의명곡‘ 평화가온다’ 편우승</div>*/}
                         {/*<Image*/}

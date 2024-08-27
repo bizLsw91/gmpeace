@@ -9,12 +9,12 @@ export default function ArtContest() {
                 <div className="art-contest-guide">
                     <div>
                         <div className="info">
-                            <div className="info__big-title theme-color-3 flex flex-wrap-reverse justify-between">
+                            <h1 className="info__big-title theme-color-3 flex flex-wrap-reverse justify-between">
                                 <div className={'flex items-end'}>평화주간 학생 미술대회</div>
                                 <Link href={'https://forms.gle/b749FxFkqQw4hCZ9A'} className={'pb-5'}>
                                     <Button type={'primary'} shape={'round'}>사전신청</Button>
                                 </Link>
-                            </div>
+                            </h1>
                             <div className="info__subtitle mb-5"><p>어린이들이 생각하는 일상의 평화,<br/>탄소중립을 그림으로 만나 봄</p></div>
                             <div className="info__data">
                                 <div className="info__data-title theme-bg-color-3">일 시</div>

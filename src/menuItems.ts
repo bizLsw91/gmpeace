@@ -1,9 +1,8 @@
 export const menuItems = [
     {
         label: '행사개요',
-        to: '/greeting?context=1',
+        to: '/overview-schedule?context=1',
         children: [
-            { label: '인사말', to: '/greeting?context=1' },
             { label: '행사일정', to: '/overview-schedule?context=1'},
         ]
     },

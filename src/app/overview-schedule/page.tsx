@@ -117,7 +117,7 @@ export default function OverviewSchedule() {
 
                 <div className="infos flex flex-col space-y-7">
                     <div className="info">
-                        <div className="info__big-title">1일차</div>
+                        <h1 className="info__big-title">1일차</h1>
                         <div className="info__title theme-color-1">제4회 광명시 평화주간 개막식 및 평화도시 포럼
                         </div>
                         <div className="info__data">
@@ -153,7 +153,7 @@ export default function OverviewSchedule() {
                     </div>
 
                     <div className="info">
-                        <div className="info__big-title">2일차</div>
+                        <h1 className="info__big-title">2일차</h1>
                         <div className="info__title theme-color-3">평화정원 피크닉</div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">일 시</div>
@@ -190,7 +190,7 @@ export default function OverviewSchedule() {
                     </div>
 
                     <div className="info">
-                        <div className="info__big-title">3일차</div>
+                        <h1 className="info__big-title">3일차</h1>
                         <div className="info__title theme-color-3">평화정원 피크닉</div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">일 시</div>
@@ -212,7 +212,7 @@ export default function OverviewSchedule() {
                         </div>
                     </div>
                     <div className="info">
-                        <div className="info__big-title">사전행사</div>
+                        <h1 className="info__big-title">사전행사</h1>
                         <div className="info__title theme-color-4">평화주간 학생 미술대회</div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-4">일 시</div>
@@ -224,7 +224,7 @@ export default function OverviewSchedule() {
                         </div>
                     </div>
                     <div className="info">
-                        <div className="info__big-title">전시행사</div>
+                        <h1 className="info__big-title">전시행사</h1>
                         {/*<div className="info__title theme-color-4">평화주간 학생 미술대회 수상작 전시</div>*/}
                         {/*<div className="info__data">*/}
                         {/*    <div className="info__data-title theme-bg-color-4">일 시</div>*/}

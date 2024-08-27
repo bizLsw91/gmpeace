@@ -37,7 +37,7 @@ export default function Forum() {
 
                 <div className="infos flex flex-col space-y-7">
                     <div className="info">
-                        <div className="info__big-title">행사개요</div>
+                        <h1 className="info__big-title">행사개요</h1>
                         <div className="info__data">
                             <div className="info__data-title">일 시</div>
                             <div className="info__data-content">2024년 9월 20일(금) 15:00~17:00</div>
@@ -52,7 +52,7 @@ export default function Forum() {
                         </div>
                     </div>
                     <div className="info">
-                        <div className="info__big-title">포럼 프로그램</div>
+                        <h1 className="info__big-title">포럼 프로그램</h1>
                         <table className="forum__program">
                             <thead>
                             <tr>
@@ -111,7 +111,7 @@ export default function Forum() {
                         </div>
                     </div>
                     <div className="info">
-                        <div className="info__big-title">축하공연 (약 3~5곡)</div>
+                        <h1 className="info__big-title">축하공연 (약 3~5곡)</h1>
                         <div className="info__title theme-color-t">크로스오버그룹‘포레스텔라’</div>
                         <div className="info__subtitle">통일부-불후의명곡‘ 평화가온다’ 편우승</div>
                         <Image
