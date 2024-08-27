@@ -29,16 +29,16 @@ export default function Home() {
                     </div>
                     <div className="home__slogunText w-full ">
                         <div className="flex flex-wrap justify-center sm:space-x-5">
-                            <div>평화로운 광명생활!</div>
-                            <div>평화, 광명이 잇다!</div>
+                            <h1>평화로운 광명생활!</h1>
+                            <h1>평화, 광명이 잇다!</h1>
                         </div>
                     </div>
                     <div className="home__preRegiBtnArea flex flex-wrap justify-center gap-5">
                         <Link href={'https://forms.gle/Aomv415weGSwVAW96'}>
-                            <Button type={'primary'} shape={'round'}><p>개막식 & 광명포럼<br/>사전신청</p></Button>
+                            <Button type={'primary'} shape={'round'}><h1>개막식 & 광명포럼<br/>사전신청</h1></Button>
                         </Link>
                         <Link href={'https://forms.gle/b749FxFkqQw4hCZ9A'}>
-                            <Button type={'primary'} shape={'round'}><p>평화주간 학생미술대회<br/>사전신청</p></Button>
+                            <Button type={'primary'} shape={'round'}><h1>평화주간 학생미술대회<br/>사전신청</h1></Button>
                         </Link>
 
                     </div>
