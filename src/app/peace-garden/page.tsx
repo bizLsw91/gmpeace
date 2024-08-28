@@ -96,7 +96,7 @@ export default function PeaceGarden() {
                                     height={100}
                                 />
                                 <div className="eco-banner__text">
-                                    <p>안양천 피크닉장에는 별도의 주차공간이 없습니다. 도보나 대중교통 이용으로 &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <p>안양천 피크닉장에는 별도의 주차공간이 없습니다.<br/>도보나 대중교통 이용으로 &nbsp;&nbsp;&nbsp;&nbsp;
                                         <span>탄소발자국</span>을 줄여주세요.</p>
                                 </div>
                             </div>
