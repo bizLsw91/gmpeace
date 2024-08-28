@@ -20,8 +20,8 @@
     }
     .eco-banner{
         display: flex;
+        flex-direction: column;
         max-width: 650px;
-        align-items: center;
         padding: 15px;
         margin-bottom: 15px;
         font-family: 'GodoMaum', sans-serif;
@@ -33,25 +33,25 @@
             padding-right: 10px;
         }
         .noParking{
-            width: 100px;
+            width: 70px;
             @media #{$xs} {
-                width: 120px;
+                width: 90px;
             }
 
             @media #{$md} {
-                width: 136px;
+                width: 110px;
             }
         }
 
         &__text {
             line-height: 2em;
-            font-size: 14px;
+            font-size: 13px;
             @media #{$xs} {
-                font-size: 20px;
+                font-size: 17px;
             }
 
             @media #{$md} {
-                font-size: 25px;
+                font-size: 21px;
             }
             span {
                 position: relative;
