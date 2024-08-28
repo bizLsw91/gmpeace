@@ -1,5 +1,10 @@
 import {Divider} from "antd";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: '행사개요 | 광명시평화주간',
+    description: '광명시 평화주간의 전반적인 행사 내용 요약. 행사개요, 행사일정 등을 보실 수 있습니다.',
+};
 export default function OverviewSchedule() {
     return (
         <div className="overview-schedule">

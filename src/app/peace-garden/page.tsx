@@ -1,6 +1,12 @@
 import ComingSoon from "@/app/peace-garden/ComingSoon";
 import {Divider} from "antd";
+import {Metadata} from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+    title: '평화정원 피크닉 | 광명시평화주간',
+    description: '평화정원 피크닉은 광명시 평화주간 행사 중 시민들이 참여할 수 있는 행사입니다. 평화정원 피크닉에 대한 상세 정보 페이지입니다.',
+};
 
 const events = [
     {
