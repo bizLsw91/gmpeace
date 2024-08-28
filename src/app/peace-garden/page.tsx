@@ -63,6 +63,7 @@ export default function PeaceGarden() {
     return (
         <div className={'peace-garden'}>
             <h1 className="hidden">평화정원 피크닉</h1>
+            <h2 className="hidden">평화주간 평화정원 피크닉</h2>
             <div className="wrapper">
                 <div className="peace-garden__mainImage mb-12">
                     {/*<Image*/}

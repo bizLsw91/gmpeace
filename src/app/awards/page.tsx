@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function Awards() {
     return (
         <div className="awards">
-            <h1 className="hidden">시상식</h1>
+            <h1 className="hidden">평화주간 시상식</h1>
             <div className="wrapper">
                 <div className="infos flex flex-col space-y-7">
                     <div className="info">

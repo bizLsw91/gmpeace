@@ -8,7 +8,8 @@ export default function Home() {
 
     return (
         <main className="home">
-            <h1 className="hidden">Home</h1>
+            <h1 className="hidden">평화주간</h1>
+            <h2 className="hidden">광명시 평화주간</h2>
             {!open && <ServerBuildingPage/>}
             {open &&
                 <div className="wrapper">

@@ -4,6 +4,8 @@ export default function OverviewSchedule() {
     return (
         <div className="overview-schedule">
             <h1 className="hidden">행사개요</h1>
+            <h2 className="hidden">평화주간 행사개요</h2>
+            <h3 className="hidden">광명시 평화주간 행사개요</h3>
             <div className="wrapper">
                 <div className="overview mb-14">
                     <h1 className="info__big-title">행사개요</h1>
