@@ -1,0 +1,22 @@
+.greeting{
+
+    &__content{
+        background-color: #f4f4f4;
+        border-radius: 20px;
+        padding: 40px 30px;
+        font-size: 16px;
+        @media #{$xs} {
+            font-size: 18px;
+            padding: 48px 35px;
+        }
+        @media #{$md} {
+            font-size: 20px;
+            padding: 58px 40px;
+        }
+        font-family: 'Dokrip', sans-serif;
+        color: #727171;
+        max-width: 800px;
+    }
+    .overview{
+    }
+}
