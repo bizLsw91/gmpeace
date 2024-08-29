@@ -50,10 +50,6 @@ export default function OverviewSchedule() {
                         <div className="colorbox theme-bg-color-4"></div>
                         <div className="colorexplnt ml-2">전시회</div>
                     </div>
-                    <div className="flex">
-                        <div className="colorbox theme-bg-color-6"></div>
-                        <div className="colorexplnt ml-2">연계행사</div>
-                    </div>
                 </div>
                 <table className="overview-schedule__program mb-14">
                     <thead>
@@ -134,13 +130,6 @@ export default function OverviewSchedule() {
                                         독립운동 전시회 [2024.9.21~9.22 /
                                         안양천]
                                     </p></div>
-                                </div>
-                                <div className={'flex justify-start'}>
-                                    <div className={'footer-title'}>연계 행사:</div>
-                                    <div className={'footer-content theme-bg-color-6'}>(문화재단) 김대중 탄생 100주년 기념 콘서트<br/>(디딤
-                                        청소년활동센터) 2024년 보훈
-                                        테마활동 청소년독립역사 계승연속 독립역사 ‘잇다’ 프로젝트
-                                    </div>
                                 </div>
                             </div>
                         </td>
