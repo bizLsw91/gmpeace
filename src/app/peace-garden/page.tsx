@@ -92,8 +92,6 @@ export default function PeaceGarden() {
                                 <div className="info__data-title theme-bg-color-3">장 소</div>
                                 <div className="info__data-content">안양천 햇무리광장 아래<br/>(광성초 맞은편 안양천둔치)</div>
                             </div>
-                        </div>
-                        <div className="info">
                             <div className="eco-banner">
                                 <Image
                                     className="eco-banner__icon noParking"
@@ -109,14 +107,16 @@ export default function PeaceGarden() {
                             </div>
                         </div>
                     </div>
-                    <div className="guide-map">
-                        <Image
-                            className="eco-banner__icon"
-                            src={'/images/guideMap.png'}
-                            alt={'guideMap'}
-                            width={400}
-                            height={600}
-                        />
+                    <div className="info">
+                        <div className="guide-map">
+                            <Image
+                                className="eco-banner__icon"
+                                src={'/images/guideMap.png'}
+                                alt={'guideMap'}
+                                width={400}
+                                height={600}
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className="info">

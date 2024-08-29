@@ -66,8 +66,6 @@ export default function TabArea() {
 
     if(pathname==='' || pathname==='/')
         return (<></>);
-    if(pathname==='/overview-schedule?context=1' || pathname==='/overview-schedule')
-        return (<></>);
 
     return (
         <div className={'tabArea'}>

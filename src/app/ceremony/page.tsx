@@ -169,7 +169,7 @@ export default function Ceremony() {
                                 width={400}
                                 height={400}
                             />
-                            <div className="profile__info">
+                            <div className="profile__info info__subtitle">
                                 <div className="name">박승원</div>
                                 <div className="position">광명시장</div>
                             </div>

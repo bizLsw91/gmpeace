@@ -16,7 +16,7 @@ body{
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
-    padding: 0 5px;
+    padding: 0 14px;
     @media #{$xs} {
         padding: 0 15px;
     }
@@ -199,7 +199,6 @@ body{
         justify-content: center;
         gap: 5px;
         margin-top: 15px;
-        font-family: "Gmarket Sans Medium", sans-serif;
         .name{
             font-weight: bold;
         }

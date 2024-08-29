@@ -46,11 +46,11 @@
         &__text {
             line-height: 2em;
             font-size: 13px;
-            @media #{$xs} {
+            @media only screen and (min-width: 370px) {
                 font-size: 17px;
             }
 
-            @media #{$md} {
+            @media only screen and (min-width: 480px) {
                 font-size: 21px;
             }
             span {
