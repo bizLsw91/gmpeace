@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         title: '광명시 평화주간 제4회 - 평화포럼,평화정원 행사',
         description: "평화주간 행사 안내, '평화로운 광명생활', '평화, 광명이 잇다'",
         type: 'website',
-        url: 'https://www.gmpeace.or.kr',
+        url: 'https://www.gmpeace.co.kr',
         siteName: '제4회 광명시 평화주간',
         locale: 'ko_KR',
         images: [
