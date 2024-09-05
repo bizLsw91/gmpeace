@@ -1,5 +1,6 @@
 import ServerBuildingPage from "@/app/_components/ServerBuildingPage";
 import {Button} from "antd";
+import {Video} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -54,9 +55,11 @@ export default function Home() {
                         </Link>
 
                     </div>
-                    <div className="home__youtube flex justify-center mt-[20px] xs:mt-[30px]">
+                    <div className="home__youtube flex flex-col justify-center mt-[20px] xs:mt-[30px]">
+                        <div className="video-title flex justify-center info__title text-center ">
+                            <Video className={'video-title-icon mr-2 self-center'}/> 3회 평화주간행사보기</div>
                         <div className="video-container flex justify-center">
-                            <video width={1920} height={1080} controls>
+                            <video width={1920} height={1080} autoPlay controls>
                                 <source src="/videos/광명평화주간3회.mp4" type="video/mp4"/>
                             </video>
                         </div>

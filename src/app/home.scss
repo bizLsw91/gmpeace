@@ -68,6 +68,29 @@
             border-radius: 16px;
         }
     }
+    .video-title{
+        font-family: "Nanum Gothic ExtraBold", sans-serif;
+        color: #566375;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        @media #{$xs} {
+            font-size: 20px;
+        }
+        @media #{$md} {
+            font-size: 26px;
+        }
+        &-icon{
+            width: 20px;
+            height: auto;
+            @media #{$xs} {
+                width: 24px;
+            }
+            @media #{$md} {
+                width: 28px;
+            }
+        }
+    }
     .video-container{
         width: 100%;
         iframe{
