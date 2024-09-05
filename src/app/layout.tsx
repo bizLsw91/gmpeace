@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         description: "평화주간 행사 안내, '평화로운 광명생활', '평화, 광명이 잇다'",
         type: 'website',
         url: 'https://www.gmpeace.or.kr',
-        siteName: '제4회 광명시평화주간',
+        siteName: '제4회 광명시 평화주간',
         locale: 'ko_KR',
         images: [
             {
@@ -46,9 +46,8 @@ export const metadata: Metadata = {
         ],
     },
     verification:{
-        google:'63-BNIv1LJVLXAMoHeVTH6SiCEvrDXbC8ja9DUk_F_Q',
         other: {
-            'naver-site-verification': 'b562f84c15a888e803f7b716054edde35ecc2412',
+            'naver-site-verification': 'db985657c41437fce9f70ab3fc7aa35afa629571',
         },
     }
 };
