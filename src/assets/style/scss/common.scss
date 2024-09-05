@@ -244,7 +244,7 @@ body{
         background-color: #ffffff;
         vertical-align: middle;
     }
-    td.time,th:first-child{
+    td.time{
         width:55px;
 
         @media #{$md} {

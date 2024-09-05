@@ -17,18 +17,18 @@
 
     &__program{
         @include program-table;
-        .time{
+        td.time{
             text-align: start;
             @media #{$max-xs} {
                 word-break: break-all; /* 줄바꿈을 강제로 적용 */
                 white-space: normal; /* 줄바꿈을 허용 */
-                width: 58px;
+                width: 54px;
             }
             @media #{$xs} {
                 width: 120px;
             }
             @media #{$md} {
-                width: 230px;
+                width: 190px;
             }
         }
     }
