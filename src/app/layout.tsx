@@ -11,7 +11,7 @@ import {Suspense} from "react";
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-    title: "제4회 광명시 평화주간 - 평화포럼,평화정원 행사",
+    title: "광명시 평화주간 제4회 - 평화포럼,평화정원 행사",
     description: "평화주간 행사 안내, '평화로운 광명생활', '평화, 광명이 잇다'",
     keywords: ['평화주간', '광명시 평화주간', '광명 평화주간', '광명시평화주간', 'gmpeace', '광명시평화포럼', '평화포럼', '광명포럼', '평화정원', '학생미술대회'],
     creator: 'dev Lee SeongWoong',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         }
     },
     openGraph: {
-        title: '제4회 광명시 평화주간 - 평화포럼,평화정원 행사',
+        title: '광명시 평화주간 제4회 - 평화포럼,평화정원 행사',
         description: "평화주간 행사 안내, '평화로운 광명생활', '평화, 광명이 잇다'",
         type: 'website',
         url: 'https://www.gmpeace.or.kr',
