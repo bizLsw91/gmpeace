@@ -56,11 +56,9 @@ export default function Home() {
                     </div>
                     <div className="home__youtube flex justify-center mt-[20px] xs:mt-[30px]">
                         <div className="video-container flex justify-center">
-                            <iframe width="560" height="315"
-                                    src="https://www.youtube.com/embed/kR3wDMXTTw4?si=cXJl-r-l2WJCgB85"
-                                    title="YouTube video player" frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            <video width={1920} height={1080} controls>
+                                <source src="/videos/광명평화주간3회.mp4" type="video/mp4"/>
+                            </video>
                         </div>
                     </div>
                 </div>
