@@ -51,7 +51,7 @@ const spEvents = [
         content: '',
         time: '9월 21일(토) 13:00 평화음악회',
         time2: '9월 22일(일) 14:30 남북한춤 공연',
-        imgUrl: '/images/남북한전통춤.png',
+        imgUrl: '/images/세계뮤지션과남북한춤.png',
         alt: '남북한전통춤'
     },
     {
@@ -79,16 +79,15 @@ export default function PeaceGarden() {
             <h2 className="hidden">평화주간 평화정원 피크닉</h2>
             <div className="wrapper">
                 <div className="peace-garden__mainImage mb-12">
-                    {/*<Image*/}
-                    {/*    className={'w-full'}*/}
-                    {/*    src={'/images/garden-map.png'}*/}
-                    {/*    alt={'garden-map'}*/}
-                    {/*    width={600}*/}
-                    {/*    height={250}*/}
-                    {/*/>*/}
-                    <ComingSoon title={'평화정원 지도'}/>
+                    <Image
+                        className={'w-full'}
+                        src={'/images/garden-map.png'}
+                        alt={'garden-map'}
+                        width={1000}
+                        height={460}
+                    />
                 </div>
-                <div className="picnic-zone-guide">
+                <div className="picnic-zone-guide gap-6">
                     <div>
                         <div className="info">
                             <div className="info__data">
@@ -118,10 +117,10 @@ export default function PeaceGarden() {
                         <div className="guide-map">
                             <Image
                                 className="eco-banner__icon"
-                                src={'/images/guideMap.png'}
-                                alt={'guideMap'}
-                                width={400}
-                                height={600}
+                                src={'/images/simple-map.png'}
+                                alt={'simple-map'}
+                                width={500}
+                                height={500}
                             />
                         </div>
                     </div>
@@ -151,24 +150,22 @@ export default function PeaceGarden() {
                     <div className="info__subtitle">자연에서 누리는 휴식과 힐링과 함께 하는 영화제</div>
                     <div className="wrap mt-[30px]">
                         <div className="movie-profile">
-                            {/*<Image*/}
-                            {/*    src={'/images/탈주.png'}*/}
-                            {/*    alt={'탈주'}*/}
-                            {/*    width={300}*/}
-                            {/*    height={670}*/}
-                            {/*/>*/}
-                            <ComingSoon width={300} height={420} minWidth={300} title={'상영영화 1'}/>
+                            <Image
+                                src={'/images/모가디슈.png'}
+                                alt={'모가디슈'}
+                                width={300}
+                                height={670}
+                            />
                             <div className={'movie-profile__info info__subtitle'}>9월 20일(금) 오후 6시 30분: 상영영화 1</div>
                             {/*<div className={'movie-profile__age'}>15세 관람가, 라이센스 제공: 쇼박스</div>*/}
                         </div>
                         <div className="movie-profile">
-                            {/*<Image*/}
-                            {/*    src={'/images/모가디슈.png'}*/}
-                            {/*    alt={'모가디슈'}*/}
-                            {/*    width={300}*/}
-                            {/*    height={670}*/}
-                            {/*/>*/}
-                            <ComingSoon width={300} height={420} minWidth={300} title={'상영영화 2'}/>
+                            <Image
+                                src={'/images/씽1.png'}
+                                alt={'씽1'}
+                                width={300}
+                                height={670}
+                            />
                             <div className={'movie-profile__info info__subtitle'}>9월 21일(토) 오후 6시 30 : 상영영화 2</div>
                             {/*<div className={'movie-profile__age'}>전체관람가, 라이센스 제공: 펍시네마</div>*/}
                         </div>
