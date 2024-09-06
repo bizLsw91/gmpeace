@@ -23,7 +23,7 @@ export default function Banner() {
                     <div className="banner__logo w-full flex max-xs:justify-center xs:justify-start">
                         <Image
                             src={'/images/emblem.png'}
-                            alt={'로고'}
+                            alt={'평화주간 로고'}
                             width={400}
                             height={200}
                         />
