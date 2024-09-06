@@ -17,9 +17,6 @@ body{
     width: 100%;
     max-width: 1200px;
     padding: 0 14px;
-    @media #{$xs} {
-        padding: 0 15px;
-    }
     @media #{$md} {
         padding: 0 20px;
     }
@@ -208,11 +205,11 @@ body{
 @mixin program-table{
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Godo M', sans-serif;
     th, td {
         border: 1px solid #ddd;
-        padding: 5px;
+        padding: 4px;
         text-align: center;
         @media #{$xs} {
             font-size: 17px;
@@ -239,24 +236,21 @@ body{
             font-size: 24px;
         }
     }
-
     td {
         background-color: #ffffff;
         vertical-align: middle;
-    }
-    td.time{
-        width:55px;
+        .td-sub-content{
+            font-size: 12px;
+            @media #{$xs} {
+                font-size: 13px;
+            }
 
-        @media #{$md} {
-            width:170px;
+            @media #{$md} {
+                font-size: 15px;
+            }
         }
     }
-    tr:not(:last-child) td:not(.time), th:not(:first-child){
-        width:calc((100% - 55px) / 3);
-        @media #{$md} {
-            width: calc((100% - 170px) / 3);
-        }
-    }
+
     .mergedTrH{
         height: 28px;
         @media #{$xs} {
@@ -296,6 +290,9 @@ body{
 .theme-color-4{
     color: $theme-color-4;
 }
+.theme-color-7{
+    color: $theme-color-7;
+}
 .theme-color-t{
     color: $theme-color-t;
 }
@@ -323,6 +320,9 @@ body{
 }
 .theme-bg-color-6{
     background-color: $theme-color-6;
+}
+.theme-bg-color-7{
+    background-color: $theme-color-7;
 }
 .theme-bg-color-session1{
     background-color: $theme-color-session1;

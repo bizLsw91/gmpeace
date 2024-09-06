@@ -1,15 +1,50 @@
-.overview-schedule{
+.overview-schedule {
     padding-bottom: 50px;
 
-    &__program{
+    &__program {
         @include program-table;
-        th{
+
+        th {
             background-color: rgba(72, 129, 194, 0.72);
             color: #fff;
             padding: 4px;
             font-weight: bold;
+
+            .th-title-custom1 {
+                font-size: 12px;
+                @media #{$xs} {
+                    font-size: 14px;
+                }
+                @media #{$md} {
+
+                }
+            }
         }
+
+        .bg-white {
+            background-color: white;
+        }
+
+        /* 1번째 열 고정 너비 */
+        th:nth-child(1), td:nth-child(1) {
+            width: 55px;
+
+            @media #{$md} {
+                width: 170px;
+            }
+        }
+
+        /* 2~4번째 열은 동일한 너비 */
+        //thead:nth-child(1){
+            th:not(:nth-child(1)), td:not(:nth-child(1)) {
+                width: calc((100vw - 55px - 28px) / 3);
+                @media #{$md} {
+                    width: calc((100vw - 170px - 40px) / 3);
+                }
+            }
+        //}
     }
+
     .yellow {
         background-color: $theme-color-1;
     }
@@ -26,12 +61,17 @@
         background-color: $theme-color-3;
     }
 
-    .colorbox{
+    .orange {
+        background-color: $theme-color-7;
+    }
+
+    .colorbox {
         width: 40px;
         height: 20px;
         border-radius: 5px;
     }
-    .footer-title{
+
+    .footer-title {
         min-width: 70px;
         @media #{$xs} {
             min-width: 90px;
