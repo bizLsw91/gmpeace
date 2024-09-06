@@ -1,5 +1,6 @@
 import {Divider} from "antd";
 import {Metadata} from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: '행사개요 | 광명시평화주간',
@@ -144,37 +145,62 @@ export default function OverviewSchedule() {
                 <div className="infos flex flex-col space-y-7">
                     <div className="info">
                         <div className="info__big-title">1일차</div>
-                        <div className="info__title theme-color-1">제4회 광명시 평화주간 개막식 및 평화도시 포럼
+                        <div className="info__title theme-color-1">개막식 및 평화주간 광명포럼
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-1">일 시</div>
-                            <div className="info__data-content">2024년 9월 20일(금) 14:00~16:00</div>
+                            <div className="info__data-content">9. 20. (금) 14:00~16:00</div>
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-1">장 소</div>
-                            <div className="info__data-content">광명극장 2층</div>
+                            <div className="info__data-content">광명극장 2층 (경기도 광명시 철망산로 2)</div>
                         </div>
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-1">내 용</div>
-                            <div className="info__data-content-col">
-                                <div>식전공연</div>
-                                <div>개막퍼포먼스</div>
-                                <div>공식행사</div>
-                                <div>평화도시 포럼</div>
-                                <div>축하공연</div>
+                            <div className="info__data-content">
+                                개막식, 그림자연극 퍼포먼스 공연, 포레스텔라 축하공연
+                            </div>
+                        </div>
+                        <div className="info__data">
+                            <div className="info__data-title theme-bg-color-1">세 션</div>
+                            <div className="info__data-content">
+                                국제정세와 독일 통일로 본 평화의 길
+                            </div>
+                        </div>
+                        <div className="info__data">
+                            <div className="info__data-title theme-bg-color-1">발제자</div>
+                            <div className="info__data-content">
+                                백준기 한신대 교수, 다니엘린데만 비정상회담 독일대표
                             </div>
                         </div>
                         <Divider/>
                         <div className="info__title theme-color-3">평화주간 심야영화제</div>
-                        <div className="info__data">
-                            <div className="info__data-title theme-bg-color-3">일 시</div>
-                            <div className="info__data-content">
-                                2024년 9월 20일(금) 18:30~20:30
+                        <div className={'info-and-image flex flex-wrap'}>
+                            <div className={'mr-10'}>
+                                <div className="info__data">
+                                    <div className="info__data-title theme-bg-color-3">일 시</div>
+                                    <div className="info__data-content">
+                                        2024년 9월 20일(금) 18:30~20:30
+                                    </div>
+                                </div>
+                                <div className="info__data">
+                                    <div className="info__data-title theme-bg-color-3">장 소</div>
+                                    <div className="info__data-content">안양천 평화정원 피크닉 특설무대</div>
+                                </div>
+                                <div className="info__data">
+                                    <div className="info__data-title theme-bg-color-3">상영작</div>
+                                    <div className="info__data-content">모가디슈</div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="info__data">
-                            <div className="info__data-title theme-bg-color-3">내 용</div>
-                            <div className="info__data-content">상영영화 1</div>
+                            <div className="info-image">
+                                <Image
+                                    className="movie-poster"
+                                    src={'/images/모가디슈.png'}
+                                    alt={'모가디슈'}
+                                    width={400}
+                                    height={600}
+                                />
+                            </div>
                         </div>
                     </div>
 
@@ -194,24 +220,43 @@ export default function OverviewSchedule() {
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">내 용</div>
                             <div className="info__data-content-col">
-                                <div>비빔밥 퍼포먼스</div>
-                                <div>평화음악회</div>
-                                <div>버스킹 공연</div>
-                                <div>체험프로그램</div>
-                                <div>푸드트럭</div>
+                                <div>- 평화비빔밥, 12:00</div>
+                                <div>- 세계 뮤지션이 함께하는 평화음악회, 13:00</div>
+                                <div>- 광복회장과 청소년이 함께하는 독립운동 이야기, 15:00</div>
+                                <div className={'mt-3'}>탄소중립 체험</div>
+                                <div>평화정책 Zone</div>
+                                <div>사회적기업</div>
+                                <div>워크온챌린지</div>
                             </div>
                         </div>
                         <Divider/>
                         <div className="info__title theme-color-3">평화주간 심야영화제</div>
-                        <div className="info__data">
-                            <div className="info__data-title theme-bg-color-3">일 시</div>
-                            <div className="info__data-content">
-                                2024년 9월 21일(토) 18:30~20:30
+                        <div className={'info-and-image flex flex-wrap'}>
+                            <div className={'mr-10'}>
+                                <div className="info__data">
+                                    <div className="info__data-title theme-bg-color-3">일 시</div>
+                                    <div className="info__data-content">
+                                        2024년 9월 21일(토) 18:30~20:30
+                                    </div>
+                                </div>
+                                <div className="info__data">
+                                    <div className="info__data-title theme-bg-color-3">장 소</div>
+                                    <div className="info__data-content">안양천 평화정원 피크닉 특설무대</div>
+                                </div>
+                                <div className="info__data">
+                                    <div className="info__data-title theme-bg-color-3">상영작</div>
+                                    <div className="info__data-content">씽1</div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="info__data">
-                            <div className="info__data-title theme-bg-color-3">내 용</div>
-                            <div className="info__data-content">상영영화 2</div>
+                            <div className="info-image">
+                                <Image
+                                    className="movie-poster"
+                                    src={'/images/씽1.png'}
+                                    alt={'씽1'}
+                                    width={400}
+                                    height={600}
+                                />
+                            </div>
                         </div>
                     </div>
 
@@ -229,11 +274,12 @@ export default function OverviewSchedule() {
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">내 용</div>
                             <div className="info__data-content-col">
-                                <div>남북한춤 공연</div>
-                                <div>버스킹 공연</div>
-                                <div>학생미술대회 시상식</div>
-                                <div>체험프로그램</div>
-                                <div>푸드트럭</div>
+                                <div>- 남한춤과 북한춤의 전통춤 배틀한판, 14:30</div>
+                                <div>- 학생미술대회 시상식, 16:00</div>
+                                <div className={'mt-3'}>탄소중립 체험</div>
+                                <div>평화정책 Zone</div>
+                                <div>사회적기업</div>
+                                <div>워크온챌린지</div>
                             </div>
                         </div>
                     </div>
@@ -241,7 +287,7 @@ export default function OverviewSchedule() {
                         <div className="info__big-title">사전행사</div>
                         <div className="info__title theme-color-4">평화주간 학생 미술대회</div>
                         <div className="info__data">
-                            <div className="info__data-title theme-bg-color-4">일 시</div>
+                        <div className="info__data-title theme-bg-color-4">일 시</div>
                             <div className="info__data-content">2024년 9월 7일(토) 10:00~16:00</div>
                         </div>
                         <div className="info__data">
@@ -251,19 +297,17 @@ export default function OverviewSchedule() {
                     </div>
                     <div className="info">
                         <div className="info__big-title">전시행사</div>
-                        {/*<div className="info__title theme-color-4">평화주간 학생 미술대회 수상작 전시</div>*/}
-                        {/*<div className="info__data">*/}
-                        {/*    <div className="info__data-title theme-bg-color-4">일 시</div>*/}
-                        {/*    <div className="info__data-content">2024년 9월 9일(토)~미정</div>*/}
-                        {/*</div>*/}
-                        {/*<div className="info__data">*/}
-                        {/*    <div className="info__data-title theme-bg-color-4">장 소</div>*/}
-                        {/*    <div className="info__data-content">평생학습원 1층 전시실</div>*/}
-                        {/*</div>*/}
-                        {/*<Divider style={{borderColor: '#9d9d9d'}}></Divider>*/}
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-5">특별전시</div>
-                            <div className="info__data-content"><p>2024년 9월 21일(토)~22일(일)<br/>평화정원 전시부스</p></div>
+                            <div className="info__data-content">
+                                2024년 9월 21일(토)~22일(일)
+                                <br/>
+                                평화정원 전시부스
+                                <br/>
+                                - 독립운동가 사진전
+                                <br/>
+                                - 평화주간 학생미술대회 수상작 전시
+                            </div>
                         </div>
                     </div>
                 </div>

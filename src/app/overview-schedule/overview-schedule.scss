@@ -49,4 +49,16 @@
             min-width: 120px;
         }
     }
+    .info-and-image{
+        gap: 10px;
+    }
+    .info-image{
+        width: 250px;
+        @media #{$xs} {
+            width: 270px;
+        }
+        @media #{$md} {
+            width: 320px;
+        }
+    }
 }
