@@ -64,13 +64,13 @@ export default function OverviewSchedule() {
                     <tr>
                         <td className={'time'}>12:00-13:00</td>
                         <td></td>
-                        <td className={'green'}>한솥밥 비비기</td>
+                        <td className={'green'}>평화비빔밥</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td className={'time'}>13:00-14:00</td>
                         <td></td>
-                        <td rowSpan={2} className={'green'}>평화음악회</td>
+                        <td rowSpan={2} className={'green'}>세계 평화음악회</td>
                         <td rowSpan={2} className={'green'}>평화정원 피크닉</td>
                     </tr>
                     <tr className={'mergedTrH'}>
@@ -88,12 +88,12 @@ export default function OverviewSchedule() {
                     <tr>
                         <td className={'time'}>16:00-17:00</td>
                         <td></td>
-                        <td className={'yellow'}>시상식</td>
+                        <td className={'yellow text-sm-responsive'}>학생미술대회 시상식</td>
                     </tr>
                     <tr>
                         <td className={'time'}>17:00-18:00</td>
                         <td></td>
-                        <td className={'green'}>평화정원 피크닉</td>
+                        <td></td>
                     </tr>
                     <tr className={'mergedTrH'}>
                         <td rowSpan={2} className={'time'}>18:00-19:00</td>
@@ -102,8 +102,8 @@ export default function OverviewSchedule() {
                         <td rowSpan={2}></td>
                     </tr>
                     <tr className={'mergedTrH'}>
-                        <td rowSpan={3} className={'green'}>평화주간 심야영화제</td>
-                        <td rowSpan={3} className={'green'}>평화주간 심야영화제</td>
+                        <td rowSpan={3} className={'green'}>평화주간 심야영화제<br/>(모가디슈)</td>
+                        <td rowSpan={3} className={'green'}>평화주간 심야영화제<br/>(씽1)</td>
                     </tr>
                     <tr>
                         <td className={'time'}>19:00-20:00</td>
@@ -126,9 +126,13 @@ export default function OverviewSchedule() {
                                 </div>
                                 <div className={'flex justify-start'}>
                                     <div className={'footer-title'}>전시 행사:</div>
-                                    <div className={'footer-content theme-bg-color-4'}><p>북한미술 전시관, 학생미술대회 수상작 전시관,
-                                        독립운동 전시회 [2024.9.21~9.22 /
-                                        안양천]
+                                    <div className={'footer-content theme-bg-color-4'}><p>독립운동가 사진전, 학생미술대회 수상작 전시
+                                        [2024. 9.21~9.22 / 안양천]
+                                    </p></div>
+                                </div>
+                                <div className={'flex justify-start'}>
+                                    <div className={'footer-title'}>특별 행사:</div>
+                                    <div className={'footer-content theme-bg-color-3'}><p>평화비빔밥(9.21.토 12:00~13:00)
                                     </p></div>
                                 </div>
                             </div>

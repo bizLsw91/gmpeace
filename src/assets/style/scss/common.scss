@@ -252,9 +252,9 @@ body{
         }
     }
     tr:not(:last-child) td:not(.time), th:not(:first-child){
-        width:calc((100% - 55px) / 3);
+        width:calc((100vw - 55px - 28px) / 3);
         @media #{$md} {
-            width: calc((100% - 170px) / 3);
+            width: calc((100vw - 170px - 40px) / 3);
         }
     }
     .mergedTrH{

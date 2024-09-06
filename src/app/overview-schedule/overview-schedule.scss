@@ -9,6 +9,15 @@
             padding: 4px;
             font-weight: bold;
         }
+        .text-sm-responsive{
+            font-size: 12px;
+            @media #{$xs} {
+                font-size: 14px;
+            }
+            @media #{$md} {
+                font-size: 17px;
+            }
+        }
     }
     .yellow {
         background-color: $theme-color-1;
