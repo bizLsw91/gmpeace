@@ -16,16 +16,6 @@ export default function ArtContest() {
                     <div className="info">
                         <div className="info__big-title theme-color-3 flex flex-wrap-reverse justify-between">
                             <div className={'flex items-end'}>평화주간 학생 미술대회</div>
-                            <div className="flex flex-wrap gap-3">
-                                <Link href={'https://forms.gle/b749FxFkqQw4hCZ9A'} className={'pb-5'}>
-                                    <Button type={'primary'} shape={'round'}>사전신청</Button>
-                                </Link>
-                                <Link href={'files/2024년 평화주간 미술대회_단체신청서.hwp'}>
-                                    <Button type={'primary'} shape={'round'}>
-                                        <div>단체신청서</div>
-                                    </Button>
-                                </Link>
-                            </div>
                         </div>
                         <div className="info__subtitle mb-5"><p>어린이들이 생각하는 일상의 평화,<br/>탄소중립을 그림으로 만나 봄</p></div>
                         <div className="info__data">

@@ -22,7 +22,7 @@ export default function Banner() {
                 <div className="banner__content flex max-xs:flex-col justify-between">
                     <div className="banner__logo w-full flex max-xs:justify-center xs:justify-start">
                         <Image
-                            src={'/images/slogun.png'}
+                            src={'/images/emblem.png'}
                             alt={'로고'}
                             width={400}
                             height={200}

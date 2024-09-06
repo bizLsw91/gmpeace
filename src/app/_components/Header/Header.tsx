@@ -27,7 +27,7 @@ export default function Header() {
                     <div className={'header-logo w-[230px] xs:w-[300px]'}>
                         <Link href={'/'}>
                             <Image
-                                src={'/images/slogun.png'}
+                                src={'/images/emblem.png'}
                                 alt={'슬로건'}
                                 width={100}
                                 height={20}

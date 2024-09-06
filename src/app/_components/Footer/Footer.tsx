@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="flex flex-wrap items-center">
                     <div className={'footer__logo'}>
                         <Image
-                            src={'/images/slogun.png'}
+                            src={'/images/emblem.png'}
                             alt={'로고'}
                             width={300}
                             height={200}

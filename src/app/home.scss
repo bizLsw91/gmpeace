@@ -46,13 +46,12 @@
         }
     }
 
-    &__slogunText {
+    &__sloganText {
         color: #2a6e9f;
-        font-size: 50px;
+        font-size: 48px;
         font-family: 'Nanum Pen Script', sans-serif;
         @media #{$sm} {
             font-size: 60px;
-
         }
         @media #{$md} {
             font-size: 70px;
