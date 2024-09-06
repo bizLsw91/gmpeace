@@ -59,7 +59,6 @@ export default function Ceremony() {
                         <table className="ceremony__program">
                             <thead>
                             <tr>
-                                <th>구분</th>
                                 <th>항목</th>
                                 <th>시간</th>
                                 <th>내용</th>
@@ -67,9 +66,8 @@ export default function Ceremony() {
                             </thead>
                             <tbody>
                             <tr>
-                                <td rowSpan={8}>개막식</td>
                                 <td>식전 공연</td>
-                                <td className={'time'}>13:50~14:05 (15’)</td>
+                                <td className={'time'}>13:55-14:05 (10’)</td>
                                 <td>광명시민오케스트라</td>
                             </tr>
                             <tr>
@@ -83,55 +81,39 @@ export default function Ceremony() {
                                 <td>그림자 연극 퍼포먼스 공연</td>
                             </tr>
                             <tr>
-                                <td rowSpan={3}>공식의례 및 내빈소개<br/>개회사, 축사</td>
-                                <td rowSpan={3} className={'time'}>14:15~14:30 (15’)</td>
-                                <td>공식의례 및 내빈소개</td>
+                                <td>공식의례</td>
+                                <td className={'time'}>14:15~14:30 (15’)</td>
+                                <td>공식의례 및 내빈소개, 개회사, 축사</td>
                             </tr>
                             <tr>
-                                <td>개회사</td>
-                            </tr>
-                            <tr>
-                                <td>축사</td>
-                            </tr>
-                            <tr>
-                                <td>개막 세레모니</td>
-                                <td className={'time'}>14:30~14:35 (5’)</td>
                                 <td>세레모니</td>
+                                <td className={'time'}>14:30~14:38 (8’)</td>
+                                <td>개막 세레모니 / 주제영상 상영</td>
                             </tr>
                             <tr>
-                                <td>주제영상 상영</td>
-                                <td className={'time'}>14:35~14:38 (3’)</td>
-                                <td>평화도시 광명 주제영상</td>
+                                <td colSpan={3}>브레이크타임 (시민 오케스트라 공연)</td>
                             </tr>
                             <tr>
-                                <td colSpan={2}>브레이크타임</td>
-                                <td className={'time'}>14:38~14:50 (12’)</td>
-                                <td>광명시민 오케스트라 공연</td>
-                            </tr>
-                            <tr>
-                                <td>개회</td>
-                                <td>포럼 행사 안내</td>
+                                <td>포럼안내</td>
                                 <td className={'time'}>14:50~14:55 (5’)</td>
                                 <td>포럼 소개 및 세션 참가자 소개</td>
                             </tr>
                             <tr>
-                                <td>발표 및 토론</td>
-                                <td>세션</td>
-                                <td className={'time'}>14:55~15:35 (40’)</td>
-                                <td>주제: 통일 한반도, 방향을 제시하다<br/>
-                                    발제1: 10분 / 발제2: 10분 / 패널토론 20분
+                                <td>포럼</td>
+                                <td className={'time'}>14:55~15:40 (45’)</td>
+                                <td>주제: 국제정세와 독일 통일로 본 평화의 길<br/>
+                                    발제: 백준기 교수(한신대학교), 다니엘 린데만(비정상회담)
                                 </td>
                             </tr>
                             <tr>
-                                <td rowSpan={2}>폐회</td>
                                 <td>축하공연</td>
-                                <td className={'time'}>15:35~15:55 (20’)</td>
-                                <td>메인 축하공연</td>
+                                <td className={'time'}>15:40~16:00 (20’)</td>
+                                <td>크로스오버그룹 ‘포레스텔라’</td>
                             </tr>
                             <tr>
-                                <td>마무리</td>
-                                <td className={'time'}>15:55~16:00 (5’)</td>
-                                <td>이후 평화주간 행사 안내 및 공식행사 마무리</td>
+                                <td>폐회</td>
+                                <td className={'time'}>16:00-</td>
+                                <td>이후 평화주간 행사 안내</td>
                             </tr>
                             </tbody>
                         </table>
