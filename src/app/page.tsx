@@ -49,10 +49,29 @@ export default function Home() {
                             <br/>
                             9월 12일 목요일
                         </div>
+                        <div>
+                            <Link href={'https://forms.gle/b749FxFkqQw4hCZ9A'}>
+                                <Button type={'primary'} shape={'round'} disabled>
+                                    <div>평화주간 학생미술대회<br/>사전신청</div>
+                                </Button>
+                            </Link>
+                        </div>
+                        <Link href={'files/2024년 평화주간 미술대회_단체신청서.hwp'}>
+                            <Button type={'primary'} shape={'round'} disabled>
+                                <div>2024년 평화주간
+                                    <br/>미술대회_단체신청서
+                                </div>
+                            </Button>
+                        </Link>
+                        <div className={'info__subtitle-bold text-center font-bold mb-5'}>
+                            ※ 평화주간 학생미술대회 사전신청 마감,
+                            <br/>
+                            현장에서 신청 가능합니다.
+                        </div>
                     </div>
                     <div className="home__youtube flex flex-col justify-center mt-[20px] xs:mt-[30px]">
                         <div className="video-title flex justify-center info__title text-center ">
-                            <Video className={'video-title-icon mr-2 self-center'}/> 3회 평화주간행사보기</div>
+                        <Video className={'video-title-icon mr-2 self-center'}/> 3회 평화주간행사보기</div>
                         <div className="video-container flex justify-center">
                             <video width={1920} height={1080} autoPlay controls>
                                 <source src="/videos/광명평화주간3회.mp4" type="video/mp4"/>
