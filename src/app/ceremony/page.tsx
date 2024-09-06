@@ -125,9 +125,9 @@ export default function Ceremony() {
                         <Image
                             src={'/images/오케스트라.png'}
                             alt={'오케스트라'}
-                            width={1000}
-                            height={520}
-                            className={'w-full'}
+                            width={1270}
+                            height={848}
+                            className={'info-image'}
                         />
                     </div>
                     <div className="info">
@@ -137,9 +137,9 @@ export default function Ceremony() {
                         <Image
                             src={'/images/그림자.png'}
                             alt={'그림자'}
-                            width={753}
-                            height={421}
-                            className={'w-full max-w-[750px]'}
+                            width={655}
+                            height={491}
+                            className={'info-image'}
                         />
                     </div>
                     <div className="info flex space-x-10">
@@ -150,6 +150,7 @@ export default function Ceremony() {
                                 alt={'박승원'}
                                 width={400}
                                 height={400}
+                                className={'info-image2'}
                             />
                             <div className="profile__info info__subtitle">
                                 <div className="name">박승원</div>
@@ -167,13 +168,13 @@ export default function Ceremony() {
                         <div className="info__big-title">축하공연</div>
                         <div className="info__title theme-color-t">크로스오버그룹 ‘포레스텔라’</div>
                         <div className="info__subtitle">통일부-불후의명곡</div>
-                        {/*<Image*/}
-                        {/*    className={'w-full'}*/}
-                        {/*    src={'/images/포레스텔라.png'}*/}
-                        {/*    alt={'포레스텔라'}*/}
-                        {/*    width={500}*/}
-                        {/*    height={250}*/}
-                        {/*/>*/}
+                        <Image
+                            className={'info-image'}
+                            src={'/images/포레스텔라.png'}
+                            alt={'포레스텔라'}
+                            width={800}
+                            height={680}
+                        />
                     </div>
                 </div>
             </div>

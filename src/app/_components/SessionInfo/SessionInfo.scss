@@ -48,8 +48,13 @@
             overflow: hidden;
 
             img {
-                width: 250px;
-                height: 330px;
+                width: 190px;
+                @media #{$xs} {
+                    width: 230px;
+                }
+                @media #{$md} {
+                    width: 280px;
+                }
             }
         }
 

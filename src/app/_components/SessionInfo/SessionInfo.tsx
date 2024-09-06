@@ -1,5 +1,4 @@
 import React from 'react';
-import './SessionInfo.scss';
 import Image from 'next/image';
 
 // 타입 정의

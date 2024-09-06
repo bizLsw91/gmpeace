@@ -32,4 +32,29 @@
             }
         }
     }
+
+    .info-image{
+        width: 450px;
+        margin-top: 10px;
+        @media #{$xs} {
+            width: 480px;
+            margin-top: 14px;
+        }
+        @media #{$md} {
+            width: 520px;
+            margin-top: 18px;
+        }
+    }
+    .info-image2{
+        width: 350px;
+        margin-top: 10px;
+        @media #{$xs} {
+            width: 380px;
+            margin-top: 14px;
+        }
+        @media #{$md} {
+            width: 420px;
+            margin-top: 18px;
+        }
+    }
 }
