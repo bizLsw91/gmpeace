@@ -1,5 +1,6 @@
 import ComingSoon from "@/app/peace-garden/ComingSoon";
 import {Divider} from "antd";
+import {Leaf, Sparkles} from "lucide-react";
 import {Metadata} from "next";
 import Image from "next/image";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 const events = [
     {
-        title: '신비한 탄소중립 실천 체험',
+        title: '신비한 탄소중립 실천체험',
         contents: [
             '내가 만든 에너지, 돌리자 발전자전거',
             '하늘에서 에너지가 쏟아지는 날',
@@ -46,11 +47,16 @@ const events = [
 
 const spEvents = [
     {
-        title: '특별 평화 공연',
-        color: 'theme-color-3',
-        content: '',
-        time: '9월 21일(토) 13:00 평화음악회',
-        time2: '9월 22일(일) 14:30 남북한춤 공연',
+        title: '특별 기획 공연 1',
+        subtitle: '<세계뮤지션이 함께하는 평화음악회>',
+        color: 'theme-color-7',
+        content: [
+            {
+                data_title: '일 시',
+            },
+
+        ],
+        time: '9월 21일(토) 13:00~14:15 평화음악회',
         imgUrl: '/images/세계뮤지션과남북한춤.png',
         alt: '남북한전통춤'
     },
@@ -125,13 +131,13 @@ export default function PeaceGarden() {
                         </div>
                     </div>
                 </div>
-                <div className="info">
-                    <div className="info__big-title theme-color-3">평화정원 상설행사</div>
-                    <div className="wrap">
+                <div className="info ">
+                    <div className="info__big-title theme-color-3 flex"><Leaf/>평화정원 피크닉 상설행사</div>
+                    <div className="wrap pl-6">
                         {
                             events.map((item, idx) => (
                                 <div className="info__data-col permtEvent" key={idx}>
-                                    <div className="info__title theme-color-3">{item.title}</div>
+                                    <div className="info__title theme-color-8">{item.title}</div>
                                     <div className="info__subtitle">
                                         <ul>
                                             {item.contents.map((subitem, idx2) => (
@@ -145,57 +151,133 @@ export default function PeaceGarden() {
                     </div>
                 </div>
                 <div className="info">
-                    <div className="info__big-title theme-color-3">평화정원 특별행사</div>
-                    <div className="info__title theme-color-3">평화주간 심야영화제</div>
-                    <div className="info__subtitle">자연에서 누리는 휴식과 힐링과 함께 하는 영화제</div>
-                    <div className="wrap mt-[30px]">
-                        <div className="movie-profile">
-                            <Image
-                                src={'/images/모가디슈.png'}
-                                alt={'모가디슈'}
-                                width={300}
-                                height={670}
-                            />
-                            <div className={'movie-profile__info info__subtitle'}>9월 20일(금) 오후 6시 30분: 상영영화 1</div>
-                            {/*<div className={'movie-profile__age'}>15세 관람가, 라이센스 제공: 쇼박스</div>*/}
-                        </div>
-                        <div className="movie-profile">
-                            <Image
-                                src={'/images/씽1.png'}
-                                alt={'씽1'}
-                                width={300}
-                                height={670}
-                            />
-                            <div className={'movie-profile__info info__subtitle'}>9월 21일(토) 오후 6시 30 : 상영영화 2</div>
-                            {/*<div className={'movie-profile__age'}>전체관람가, 라이센스 제공: 펍시네마</div>*/}
-                        </div>
+                    <div className="info__big-title theme-color-2-1 flex"><Sparkles/> 평화정원 특별행사</div>
+                    <div className="pl-6">
+                        <div className="info__title theme-color-t">평화주간 심야영화제</div>
+                        <div className="info__subtitle">자연에서 누리는 휴식과 힐링과 함께 하는 영화제</div>
+                        <div className="wrap mt-[30px]">
+                            <div className="movie-profile">
+                                <Image
+                                    src={'/images/모가디슈.png'}
+                                    alt={'모가디슈'}
+                                    width={300}
+                                    height={670}
+                                />
+                                <div className={'movie-profile__info info__subtitle'}>9월 20일(금) 오후 6시 30분: 상영영화 1</div>
+                                {/*<div className={'movie-profile__age'}>15세 관람가, 라이센스 제공: 쇼박스</div>*/}
+                            </div>
+                            <div className="movie-profile">
+                                <Image
+                                    src={'/images/씽1.png'}
+                                    alt={'씽1'}
+                                    width={300}
+                                    height={670}
+                                />
+                                <div className={'movie-profile__info info__subtitle'}>9월 21일(토) 오후 6시 30 : 상영영화 2</div>
+                                {/*<div className={'movie-profile__age'}>전체관람가, 라이센스 제공: 펍시네마</div>*/}
+                            </div>
 
-                    </div>
-                    <Divider style={{borderColor: '#9d9d9d'}}/>
-                    <div className="wrap">
-                        {
-                            spEvents.map((event, idx3) => (
-                                <div className="special-event" key={idx3}>
-                                    <div className={"info__title " + event.color}>{event.title}</div>
-                                    <div className="info__subtitle">{event.content}</div>
-                                    <div className="info__subtitle-bold">{event.time}</div>
-                                    {event.time2 && <div className="info__subtitle-bold">{event.time2}</div>}
-                                    {event.imgUrl ?
-                                        <Image
-                                            className={'mt-4'}
-                                            src={event.imgUrl}
-                                            alt={event.alt}
-                                            width={500}
-                                            height={300}
-                                        />
-                                        :
-                                        <ComingSoon width={500} height={300} title={'평화 전시 이미지'}/>
-                                    }
-
+                        </div>
+                        <Divider style={{borderColor: '#9d9d9d'}}/>
+                        <div className="wrap">
+                            <div className="special-event">
+                                <div className={"info__title theme-color-7"}>
+                                    특별 기획 공연 1
                                 </div>
-                            ))
-                        }
-
+                                <div className={'flex flex-wrap'}>
+                                    <div className={'event-info'}>
+                                        <div className="info__subtitle color-7-1 mb-3 godo">&lt;세계뮤지션이 함께하는
+                                            평화음악회&gt;</div>
+                                        <div className="info__data">
+                                            <div className="info__data-title-small badge-color-7-2">일 시</div>
+                                            <div className="info__data-content">9월 21일(토) 13:00~14:15</div>
+                                        </div>
+                                        <div className="info__data">
+                                            <div className="info__data-title-small badge-color-7-2">출연진</div>
+                                            <div className="info__data-content-col">
+                                                <ul className={'ul-circle'}>
+                                                    <li>서아프리카 공연단 Tiamonyon</li>
+                                                    <li>북에서 남으로 온 연주자 박성진</li>
+                                                    <li>국악실내악단 고호</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <Image
+                                        className={'img-1'}
+                                        src={'/images/세계뮤지션.png'}
+                                        alt={'세계뮤지션'}
+                                        width={300}
+                                        height={400}
+                                    />
+                                </div>
+                            </div>
+                            <div className="special-event">
+                                <div className={"info__title theme-color-7"}>
+                                    특별 기획 공연 2
+                                </div>
+                                <div className={'flex flex-wrap'}>
+                                    <div className={'event-info'}>
+                                        <div className="info__subtitle color-7-1 mb-3 godo">&lt;남한춤과 북한춤의 전통춤
+                                            배틀한판&gt;</div>
+                                        <div className="info__data">
+                                            <div className="info__data-title-small badge-color-7-2">일 시</div>
+                                            <div className="info__data-content">9월 22일(일) 14:30~15:30</div>
+                                        </div>
+                                        <div className="info__data">
+                                            <div className="info__data-title-small badge-color-7-2">출연진</div>
+                                            <div className="info__data-content-col">
+                                                <ul className={'ul-circle'}>
+                                                    <li>안은미 컴퍼니</li>
+                                                    <li>남사당놀이 명인 문진수</li>
+                                                    <li>축하공연: 광명시립농악단</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <Image
+                                        className={'img-1'}
+                                        src={'/images/남북한춤.png'}
+                                        alt={'남북한춤'}
+                                        width={300}
+                                        height={400}
+                                    />
+                                </div>
+                            </div>
+                            <div className="special-event">
+                                <div className={"info__title theme-color-3"}>
+                                    평화비빔밥
+                                </div>
+                                <div className={'flex flex-wrap'}>
+                                    <div className={'event-info'}>
+                                        <div className="info__subtitle mb-3 godo">쌀(禾)을 고루 나누어(平) 먹는(口) 平和 비빔밥
+                                            만들기
+                                        </div>
+                                        <div className="info__data">
+                                            <div className="info__data-title-small badge-color-3-1">일 시</div>
+                                            <div className="info__data-content">9월 21일(토) 12:00</div>
+                                        </div>
+                                    </div>
+                                    <Image
+                                        className={'img-1'}
+                                        src={'/images/비빔밥.png'}
+                                        alt={'비빔밥'}
+                                        width={300}
+                                        height={150}
+                                    />
+                                </div>
+                            </div>
+                            <div className="special-event">
+                                <div className={"info__title theme-color-4"}>
+                                    전시 프로그램
+                                </div>
+                                <div className={'flex flex-wrap'}>
+                                    <div className={'event-info'}>
+                                        <div className="info__subtitle mb-3 godo">독립운동가 사진전 및 평화주간 학생미술대회 수상작 전시</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

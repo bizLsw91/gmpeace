@@ -1,6 +1,6 @@
-body{
+body {
     /* 기본 글꼴 */
-    font-family: 'Nanum Gothic',sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     word-break: keep-all; /* 단어가 깨지지 않도록 설정 */
     overflow-wrap: break-word; /* 너무 긴 단어는 줄바꿈을 허용 */
 }
@@ -25,8 +25,33 @@ body{
     }
 }
 
+@mixin info__data-title {
+    width: 87px;
+    padding: 5px 11px;
+    border-radius: 10px;
+    background-color: #0052cc;
+    color: white;
+    font-family: "Godo M", sans-serif;
+    text-align: center;
+    display: inline-block; /* 버튼을 인라인 블록으로 표시 */
+    border: none; /* 기본 테두리 제거 */
+    flex-shrink: 0;
+    align-self: flex-start;
+    @media #{$xs} {
+        width: 110px;
+        padding: 7px 13px;
+        border-radius: 12px;
+    }
+    @media #{$md} {
+        width: 130px;
+        padding: 8px 13px;
+        border-radius: 13px;
+    }
+}
+
 .info {
     padding-bottom: 40px;
+
     &__big-title {
         position: relative;
         color: #206edc;
@@ -52,18 +77,20 @@ body{
             width: 100%;
         }
     }
-    &__title{
-        font-size: 20px;
+
+    &__title {
+        font-size: 18px;
         font-weight: bold;
         margin-bottom: 5px;
         @media #{$xs} {
-            font-size: 25px;
+            font-size: 22px;
         }
         @media #{$md} {
-            font-size: 30px;
+            font-size: 27px;
         }
     }
-    &__subtitle{
+
+    &__subtitle {
         font-size: 16px;
         @media #{$xs} {
             font-size: 19px;
@@ -71,11 +98,13 @@ body{
         @media #{$md} {
             font-size: 23px;
         }
-        ul{
+
+        ul {
             margin-left: 30px;
             list-style: circle;
         }
-        &-bold{
+
+        &-bold {
             font-weight: bold;
             @media #{$xs} {
                 font-size: 19px;
@@ -85,7 +114,8 @@ body{
             }
         }
     }
-    &__data{
+
+    &__data {
         padding-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -100,7 +130,8 @@ body{
             font-size: 23px;
         }
     }
-    &__data-col{
+
+    &__data-col {
         padding-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -112,35 +143,18 @@ body{
             font-size: 30px;
         }
     }
-    &__data-title {
-        width: 87px;
-        padding: 5px 11px;
-        border-radius: 10px;
-        background-color: #0052cc;
-        color: white;
-        font-family: "Godo M", sans-serif;
-        text-align: center;
-        display: inline-block; /* 버튼을 인라인 블록으로 표시 */
-        border: none; /* 기본 테두리 제거 */
-        flex-shrink: 0;
-        align-self: flex-start;
-        @media #{$xs} {
-            width: 110px;
-            padding: 7px 13px;
-            border-radius: 12px;
-        }
-        @media #{$md} {
-            width: 130px;
-            padding: 8px 13px;
-            border-radius: 13px;
-        }
+
+    &__data-title{
+        @include info__data-title;
     }
+
     &__data-content {
         display: flex;
         align-items: center;
         font-family: "Godo M", sans-serif;
         margin-left: 15px;
     }
+
     &__data-content-col {
         display: flex;
         flex-direction: column;
@@ -148,6 +162,34 @@ body{
         margin-left: 15px;
     }
 }
+.info__data-title-small{
+    @include info__data-title;
+    background-color: white;
+    font-size: 14px;
+    width: 60px;
+    padding: 3px 0px;
+    @media #{$xs} {
+        font-size: 17px;
+        width: 66px;
+        padding: 3px 0px;
+    }
+    @media #{$md} {
+        font-size: 20px;
+        width: 85px;
+        padding: 3px 0px;
+    }
+}
+.badge{
+    &-color-7-2{
+        color: $theme-color-7-2;
+        border: 2px $theme-color-7-2 solid;
+    }
+    &-color-3-1{
+        color: $theme-color-3-1;
+        border: 2px $theme-color-3-1 solid;
+    }
+}
+
 .grid {
     display: grid;
     border: 0.4px solid #000;
@@ -155,6 +197,7 @@ body{
     font-family: Arial, sans-serif;
     margin-bottom: 50px;
 }
+
 .grid-header {
     background-color: rgba(72, 129, 194, 0.72);
     color: #fff;
@@ -170,6 +213,7 @@ body{
         font-size: 20px;
     }
 }
+
 .grid-cell {
     border: 1px solid rgba(189, 186, 186, 0.54);
     padding: 4px;
@@ -190,22 +234,25 @@ body{
     }
 
 }
-.profile{
-    img{
+
+.profile {
+    img {
         border: 1px solid #727171;
     }
-    &__info{
+
+    &__info {
         display: flex;
         justify-content: center;
         gap: 5px;
         margin-top: 15px;
-        .name{
+
+        .name {
             font-weight: bold;
         }
     }
 }
 
-@mixin program-table{
+@mixin program-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
@@ -244,20 +291,20 @@ body{
         background-color: #ffffff;
         vertical-align: middle;
     }
-    td.time{
-        width:55px;
+    td.time {
+        width: 55px;
 
         @media #{$md} {
-            width:170px;
+            width: 170px;
         }
     }
-    tr:not(:last-child) td:not(.time), th:not(:first-child){
-        width:calc((100vw - 55px - 28px) / 3);
+    tr:not(:last-child) td:not(.time), th:not(:first-child) {
+        width: calc((100vw - 55px - 28px) / 3);
         @media #{$md} {
             width: calc((100vw - 170px - 40px) / 3);
         }
     }
-    .mergedTrH{
+    .mergedTrH {
         height: 28px;
         @media #{$xs} {
             height: 39px;
@@ -269,70 +316,102 @@ body{
     }
 }
 
-.ul-circle{
+.ul-circle {
     list-style: circle;
     margin-left: 30px;
-    li{
+
+    li {
         text-align: start;
     }
 }
 
-.ant-btn{
+.ant-btn {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 20px;
     font-weight: bold;
     height: 70px;
 }
 
-.theme-color-1{
+.theme-color-1 {
     color: $theme-color-1;
 }
-.theme-color-2{
+
+.theme-color-2 {
     color: $theme-color-2;
 }
-.theme-color-3{
+
+.theme-color-2-1 {
+    color: $theme-color-2-1;
+}
+
+.theme-color-3 {
     color: $theme-color-3;
 }
-.theme-color-4{
+
+.theme-color-4 {
     color: $theme-color-4;
 }
-.theme-color-7{
+
+.theme-color-7 {
     color: $theme-color-7;
 }
-.theme-color-t{
+
+.theme-color-7-1 {
+    color: $theme-color-7-1;
+}
+
+.theme-color-8 {
+    color: $theme-color-8;
+}
+
+.theme-color-t {
     color: $theme-color-t;
 }
-.theme-color-session1{
+
+.theme-color-session1 {
     color: $theme-color-session1;
 }
-.theme-color-session2{
+
+.theme-color-session2 {
     color: $theme-color-session2;;
 }
 
-.theme-bg-color-1{
+.theme-bg-color-1 {
     background-color: $theme-color-1;
 }
-.theme-bg-color-2{
+
+.theme-bg-color-2 {
     background-color: $theme-color-2;
 }
-.theme-bg-color-3{
+
+.theme-bg-color-3 {
     background-color: $theme-color-3;
 }
-.theme-bg-color-4{
+
+.theme-bg-color-4 {
     background-color: $theme-color-4;
 }
-.theme-bg-color-5{
+
+.theme-bg-color-5 {
     background-color: $theme-color-5;
 }
-.theme-bg-color-6{
+
+.theme-bg-color-6 {
     background-color: $theme-color-6;
 }
-.theme-bg-color-7{
+
+.theme-bg-color-7 {
     background-color: $theme-color-7;
 }
-.theme-bg-color-session1{
+
+.theme-bg-color-8 {
+    background-color: $theme-color-8;
+}
+
+.theme-bg-color-session1 {
     background-color: $theme-color-session1;
 }
-.theme-bg-color-session2{
+
+.theme-bg-color-session2 {
     background-color: $theme-color-session2;;
 }

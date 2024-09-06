@@ -95,10 +95,45 @@
     .permtEvent{
         min-width: 250px;
     }
+    .info__subtitle{
+        font-weight: bold;
+        color: #727171;
+    }
     .special-event{
         min-width: 300px;
         @media #{$xs} {
             min-width: 380px;
+        }
+        .event-info{
+            margin-bottom: 1rem;
+            @media #{$xs} {
+                margin-right: 1rem;
+            }
+            @media #{$md} {
+
+            }
+        }
+        .info__data{
+            flex-direction: row;
+        }
+        .info__data-content{
+            font-weight: bold;
+            color: #727171;
+            font-family: "Nanum Gothic", sans-serif;
+        }
+        .info__data-content-col{
+            font-weight: bold;
+            color: #727171;
+            font-family: "Nanum Gothic", sans-serif;
+        }
+        .img-1{
+            width: 200px;
+            @media #{$xs} {
+                width: 240px;
+            }
+            @media #{$md} {
+                width: 270px;
+            }
         }
     }
 
@@ -113,5 +148,9 @@
             color: #727171;
             font-weight: bold;
         }
+    }
+
+    .color-7-1{
+        color: $theme-color-7-1;
     }
 }
