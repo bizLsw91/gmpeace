@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.gmpeace.co.kr/</loc>
-        <lastmod>2024-08-25T03:50:28+00:00</lastmod>
+        <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://www.gmpeace.co.kr/greeting?context=1</loc>
-        <lastmod>2024-08-25T03:50:28+00:00</lastmod>
+        <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://www.gmpeace.co.kr/overview-schedule?context=1</loc>
-        <lastmod>2024-08-25T03:50:28+00:00</lastmod>
+        <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://www.gmpeace.co.kr/opening-ceremony?context=2</loc>
-        <lastmod>2024-08-25T03:50:28+00:00</lastmod>
+        <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://www.gmpeace.co.kr/awards?context=2</loc>
-        <lastmod>2024-08-25T03:50:28+00:00</lastmod>
+        <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://www.gmpeace.co.kr/peace-garden?context=3</loc>
-        <lastmod>2024-08-25T03:50:28+00:00</lastmod>
+        <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://www.gmpeace.co.kr/art-contest?context=3</loc>
-        <lastmod>2024-08-25T03:50:28+00:00</lastmod>
+        <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
 </urlset>
