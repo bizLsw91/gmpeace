@@ -5,7 +5,7 @@
     @media screen and (orientation: landscape) {
         min-height: 850px;
     }
-    background: url(../../public/images/background1-1.jpg);
+    background: url(../../public/images/background.jpg);
     background-size: cover; /* 이미지가 배너 크기에 맞게 조정되도록 함 */
     background-position: center; /* 중앙에 이미지를 위치시킴 */
     padding-bottom: 70px;
@@ -15,12 +15,12 @@
             width: 300px;
             height: 150px;
             @media #{$sm} {
-                width: 320px;
-                height: 160px;
+                width: 350px;
+                height: 170px;
             }
             @media #{$md} {
-                width: 360px;
-                height: 180px;
+                width: 400px;
+                height: 200px;
             }
         }
 
