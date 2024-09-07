@@ -146,7 +146,7 @@ export default function Ceremony() {
                         <div className="profile">
                             <div className="info__big-title">개회사</div>
                             <Image
-                                src={'/images/박승원.png'}
+                                src={'/images/시장님.webp'}
                                 alt={'박승원'}
                                 width={400}
                                 height={400}

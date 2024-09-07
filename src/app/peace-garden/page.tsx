@@ -1,4 +1,3 @@
-import ComingSoon from "@/app/peace-garden/ComingSoon";
 import {Divider} from "antd";
 import {Leaf, Sparkles} from "lucide-react";
 import {Metadata} from "next";
@@ -43,39 +42,6 @@ const events = [
             '친환경 소품 만들기'
         ]
     }
-]
-
-const spEvents = [
-    {
-        title: '특별 기획 공연 1',
-        subtitle: '<세계뮤지션이 함께하는 평화음악회>',
-        color: 'theme-color-7',
-        content: [
-            {
-                data_title: '일 시',
-            },
-
-        ],
-        time: '9월 21일(토) 13:00~14:15 평화음악회',
-        imgUrl: '/images/세계뮤지션과남북한춤.png',
-        alt: '남북한전통춤'
-    },
-    {
-        title: '한솥밥 비빔 체험',
-        color: 'theme-color-3',
-        content: '쌀(禾)을 고루 나누어(平) 먹는(口) 平和 비빔밥 만들기',
-        time: '9월 21일(토) 12:00',
-        imgUrl: '/images/비빔밥.png',
-        alt: '비빔밥'
-    },
-    {
-        title: '평화 전시',
-        color: 'theme-color-4',
-        content: '과거부터 현재의 평화의 발자취',
-        time: '9월 21일(토) ~ 22일(일) 13:00~19:00',
-        imgUrl: '',
-        alt: '평화 전시'
-    },
 ]
 
 export default function PeaceGarden() {
