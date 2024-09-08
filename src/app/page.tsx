@@ -49,23 +49,6 @@ export default function Home() {
                             <br/>
                             9월 12일 목요일
                         </div>
-                        {/*<Link href={'https://forms.gle/b749FxFkqQw4hCZ9A'}>
-                            <Button type={'primary'} shape={'round'} disabled>
-                                <div>평화주간 학생미술대회<br/>사전신청</div>
-                            </Button>
-                        </Link>
-                        <Link href={'files/2024년 평화주간 미술대회_단체신청서.hwp'}>
-                            <Button type={'primary'} shape={'round'} disabled>
-                                <div>2024년 평화주간
-                                    <br/>미술대회_단체신청서
-                                </div>
-                            </Button>
-                        </Link>*/}
-                        <div className={'info__subtitle-bold text-center font-bold mb-5'}>
-                            ※ 평화주간 학생미술대회 사전신청이 마감되었습니다.
-                            <br/>
-                            현장에서 신청 가능합니다.
-                        </div>
                     </div>
                     <div className="home__youtube flex flex-col justify-center mt-[20px] xs:mt-[30px]">
                         <div className="video-title flex justify-center info__title text-center ">
