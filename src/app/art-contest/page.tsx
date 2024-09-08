@@ -14,9 +14,6 @@ export default function ArtContest() {
             <h1 className="hidden">평화주간 학생 미술대회</h1>
             <div className="wrapper">
                 <div className="info">
-                    <div className="text-gray-800 text-2xl font-bold mb-4">
-                        ※ 사전신청은 마감되었습니다. 현장에서 접수 가능합니다.
-                    </div>
                     <div className="info__big-title theme-color-3 flex flex-wrap-reverse justify-between">
                         <div className={'flex items-end'}>평화주간 학생 미술대회</div>
                     </div>
