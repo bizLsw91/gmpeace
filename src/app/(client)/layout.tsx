@@ -1,6 +1,31 @@
+import Banner from "@/app/_components/Banner/Banner";
+import TabArea from "@/app/_components/TabArea/TabArea";
+import Footer from "@/app/_components/Footer/Footer";
+import Header from "@/app/_components/Header/Header";
 import type {Metadata} from "next";
-import "../assets/style/tailwind/index.css"
-import "../assets/style/scss/index.scss"
+import "../../assets/style/tailwind/index.css"
+import "../../assets/style/scss/index.scss"
+import {Suspense} from "react";
+
+export default function RootLayout({
+                                       children
+                                   }: Readonly<{
+    children: React.ReactNode;
+}>) {
+    return (
+        <>
+            <Header/>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Banner/>
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <TabArea/>
+            </Suspense>
+            {children}
+            <Footer/>
+        </>
+);
+}
 
 export const metadata: Metadata = {
     title: "광명시 평화주간 제4회 - 평화포럼,평화정원 행사",
@@ -43,17 +68,3 @@ export const metadata: Metadata = {
         },
     }
 };
-
-export default function RootLayout({
-                                       children
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
-    return (
-        <html lang="kor">
-        <body>
-        {children}
-        </body>
-        </html>
-    );
-}

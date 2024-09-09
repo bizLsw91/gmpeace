@@ -5,7 +5,7 @@ import {usePathname, useSearchParams} from "next/navigation";
 export default function Banner() {
     const pathname = usePathname()
     const searchParams = useSearchParams()
-    if(pathname==='' || pathname==='/')
+    if(pathname==='/main')
         return (<></>);
     const contextNum = searchParams.get('context')
     let context = ''

@@ -25,7 +25,7 @@ export default function Header() {
             <div className={'wrapper h-full'}>
                 <div className="header__area flex justify-between items-center h-full">
                     <div className={'header-logo w-[230px] xs:w-[300px]'}>
-                        <Link href={'/'}>
+                        <Link href={'/main'}>
                             <Image
                                 src={'/images/emblem.png'}
                                 alt={'슬로건'}

@@ -8,7 +8,7 @@ import Image from "next/image";
 import { Drawer, Menu as AntdMenu} from 'antd';
 import { useRouter } from 'next/navigation';
 
-export default function Header() {
+export default function AdminHeader() {
     const [open, setOpen] = useState(false);
     const router = useRouter();
 

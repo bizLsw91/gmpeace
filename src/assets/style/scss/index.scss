@@ -4,11 +4,11 @@
 @import "../../../app/_components/Footer/Footer.scss";
 @import "../../../app/_components/Banner/Banner.scss";
 @import "../../../app/_components/SessionInfo/SessionInfo";
-@import "../../../app/greeting/greeting";
-@import "../../../app/overview-schedule/overview-schedule";
-@import "../../../app/ceremony/ceremony";
-@import "../../../app/peace-garden/peace-garden";
-@import "../../../app/awards/awards";
-@import "../../../app/art-contest/art-contest";
+@import "../../../app/(client)/greeting/greeting";
+@import "../../../app/(client)/overview-schedule/overview-schedule";
+@import "../../../app/(client)/ceremony/ceremony";
+@import "../../../app/(client)/peace-garden/peace-garden";
+@import "../../../app/(client)/awards/awards";
+@import "../../../app/(client)/art-contest/art-contest";
 @import "../../../app/home";
 @import "font";
