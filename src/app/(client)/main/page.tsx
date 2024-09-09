@@ -12,7 +12,7 @@ export default function Home() {
                 <div className="home__logo w-full flex justify-center mt-[50px] xs:mt-[70px] pt-4">
                     <Image
                         src={'/images/emblem.png'}
-                        alt={'슬로건'}
+                        alt={'광명시 평화주간 emblem'}
                         width={400}
                         height={200}
                     />
@@ -20,7 +20,7 @@ export default function Home() {
                 <div className="home__signiture-logo w-full flex justify-center mt-[20px] xs:mt-[40px] pt-4">
                     <Image
                         src={'/images/signitureLogo.png'}
-                        alt={'상징로고'}
+                        alt={'광명시 평화주간 상징로고'}
                         width={600}
                         height={600}
                     />
@@ -28,7 +28,7 @@ export default function Home() {
                 <div className="home__sloganText w-full flex justify-center mb-14">
                     <Image
                         src={'/images/slogan.png'}
-                        alt={'slogan'}
+                        alt={'광명시 평화주간 slogan'}
                         width={600}
                         height={80}
                     />

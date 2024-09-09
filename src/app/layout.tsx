@@ -1,7 +1,6 @@
 import type {Metadata} from "next";
 import "../assets/style/tailwind/index.css"
 import "../assets/style/scss/index.scss"
-import {SessionProvider} from "next-auth/react";
 
 export const metadata: Metadata = {
     title: "광명시 평화주간 제4회 - 평화포럼,평화정원 행사",
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
             // ... {} 여러개 추가 가능
         ],
     },
-    verification:{
+    verification: {
         other: {
             'naver-site-verification': 'db985657c41437fce9f70ab3fc7aa35afa629571',
         },
@@ -53,9 +52,7 @@ export default function RootLayout({
     return (
         <html lang="kor">
         <body>
-        <SessionProvider>
-            {children}
-        </SessionProvider>
+        {children}
         </body>
         </html>
     );
