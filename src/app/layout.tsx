@@ -3,12 +3,9 @@ import TabArea from "@/app/_components/TabArea/TabArea";
 import Footer from "@/app/_components/Footer/Footer";
 import Header from "@/app/_components/Header/Header";
 import type {Metadata} from "next";
-import {Inter} from "next/font/google";
 import "../assets/style/tailwind/index.css"
 import "../assets/style/scss/index.scss"
 import {Suspense} from "react";
-
-const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
     title: "광명시 평화주간 제4회 - 평화포럼,평화정원 행사",
@@ -59,7 +56,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="kor">
-        {/*<body className={inter.className}>*/}
         <body>
         <Header/>
         <Suspense fallback={<div>Loading...</div>}>
