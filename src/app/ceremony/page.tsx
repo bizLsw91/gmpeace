@@ -167,7 +167,6 @@ export default function Ceremony() {
                     <div className="info">
                         <div className="info__big-title">축하공연</div>
                         <div className="info__title theme-color-t">크로스오버그룹 ‘포레스텔라’</div>
-                        <div className="info__subtitle">통일부-불후의명곡</div>
                         <Image
                             className={'info-image'}
                             src={'/images/포레스텔라.png'}
