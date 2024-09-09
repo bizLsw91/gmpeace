@@ -129,7 +129,7 @@ export default function PeaceGarden() {
                                     width={300}
                                     height={670}
                                 />
-                                <div className={'movie-profile__info info__subtitle'}>9월 20일(금) 오후 6시 30분: 상영영화 1</div>
+                                <div className={'movie-profile__info info__subtitle'}>9월 20일(금) 오후 7시: 상영영화 1</div>
                                 {/*<div className={'movie-profile__age'}>15세 관람가, 라이센스 제공: 쇼박스</div>*/}
                             </div>
                             <div className="movie-profile">
@@ -139,7 +139,7 @@ export default function PeaceGarden() {
                                     width={300}
                                     height={670}
                                 />
-                                <div className={'movie-profile__info info__subtitle'}>9월 21일(토) 오후 6시 30 : 상영영화 2</div>
+                                <div className={'movie-profile__info info__subtitle'}>9월 21일(토) 오후 6시 30분 : 상영영화 2</div>
                                 {/*<div className={'movie-profile__age'}>전체관람가, 라이센스 제공: 펍시네마</div>*/}
                             </div>
 

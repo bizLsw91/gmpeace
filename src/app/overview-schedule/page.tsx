@@ -98,16 +98,16 @@ export default function OverviewSchedule() {
                     </tr>
                     <tr className={'mergedTrH'}>
                         <td rowSpan={2} className={'time'}>18:00-19:00</td>
-                        <td></td>
+                        <td rowSpan={2}></td>
                         <td></td>
                         <td rowSpan={2}></td>
                     </tr>
                     <tr className={'mergedTrH'}>
-                        <td rowSpan={3} className={'green'}>평화주간 심야영화제<br/>(모가디슈)</td>
                         <td rowSpan={3} className={'green'}>평화주간 심야영화제<br/>(씽1)</td>
                     </tr>
                     <tr>
                         <td className={'time'}>19:00-20:00</td>
+                        <td rowSpan={2} className={'green'}>평화주간 심야영화제<br/>(모가디슈)</td>
                         <td></td>
                     </tr>
                     <tr>
@@ -180,7 +180,7 @@ export default function OverviewSchedule() {
                                 <div className="info__data">
                                     <div className="info__data-title theme-bg-color-3">일 시</div>
                                     <div className="info__data-content">
-                                        2024년 9월 20일(금) 18:30~20:30
+                                        2024년 9월 20일(금) 19:00~20:30
                                     </div>
                                 </div>
                                 <div className="info__data">
