@@ -1,63 +1,43 @@
 "use client"
 
-import Spinner from "@/components/shared/spinner";
-import { Session } from "next-auth";
+import {Session} from "next-auth";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import {usePathname, useRouter} from "next/navigation";
+import { createContext, useContext, useEffect } from "react";
+import Spinner from "@/components/shared/spinner";
 
-import React, {createContext, PropsWithChildren, useContext, useEffect} from "react";
-
-interface IAuthProviderProps {}
-
-interface IAuthContext {
-  initialized: boolean;
-  session: Session;
+interface AuthContextType {
+  session: Session | null;
 }
-export const AuthContext = createContext<IAuthContext | null>(null);
+const AuthContext = createContext<AuthContextType | null>(null);
+
 export const useAuth = () => {
-  const result = useContext(AuthContext);
-  if (!result?.initialized) {
-    throw new Error("Auth context must be used within a AuthProvider!");
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
   }
-  return result;
-}
+  return context;
+};
 
-const privatePage = ["/admin/history"];
-
-const AuthProvider = ({ children }: PropsWithChildren<IAuthProviderProps>) => {
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { data: session, status } = useSession();
   const router = useRouter();
+  const pathname = usePathname()
   const loading = status === "loading";
-  const isPublicPage = !privatePage.includes(router.pathname);
 
   useEffect(() => {
-    if (loading) {
-      return;
+    if (!loading && !session && pathname.startsWith("/admin")) {
+      router.push("/admin/login");
     }
-    if (session && isPublicPage) {
-      router.push("/");
-    } else if (!session && !isPublicPage) {
-      router.push("/login");
-    }
-  }, [loading, session, router]);
+  }, [loading, session, pathname, router]);
 
-  if (loading || (session && isPublicPage)) {
-    return <Spinner />;
-  }
-
-  if (isPublicPage) {
-    return <>{children}</>;
-  }
-
-  if (!session?.user) {
+  if (loading) {
     return <Spinner />;
   }
 
   return (
-      <AuthContext.Provider value={{ initialized: true, session }}>
+      <AuthContext.Provider value={{ session }}>
         {children}
       </AuthContext.Provider>
   );
 };
-
-export default React.memo(AuthProvider);
