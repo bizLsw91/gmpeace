@@ -1,7 +1,10 @@
+"use client"
+
 import Spinner from "@/components/shared/spinner";
 import { Session } from "next-auth";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
+
 import React, {createContext, PropsWithChildren, useContext, useEffect} from "react";
 
 interface IAuthProviderProps {}
