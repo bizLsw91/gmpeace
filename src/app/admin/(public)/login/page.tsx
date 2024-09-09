@@ -18,7 +18,7 @@ const LoginPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
     const params = useSearchParams();
-    console.log("params = ", params);
+    const query_error = params.get('error');
 
     const handleFinish = useCallback(async (value: ILoginFormValue) => {
         setIsLoading(true);
@@ -40,26 +40,26 @@ const LoginPage = () => {
                             <h2 className="mt-2 text-5xl font-bold leading-tight inter">Admin System</h2>
                         </div>
                         <div className="w-full px-2 mt-12 sm:px-6">
-                            {/*{params.entries() && router?.query.error !== "CredentialsSignin" ? (*/}
-                            {/*    <div className="mb-3">*/}
-                            {/*        <Alert message={`로그인 중 오류가 발생했습니다. ${router?.query.error}`} type="warning" />*/}
-                            {/*    </div>*/}
-                            {/*) : null}*/}
+                            {query_error && query_error !== "CredentialsSignin" ? (
+                                <div className="mb-3">
+                                    <Alert message={`로그인 중 오류가 발생했습니다. ${query_error}`} type="warning" />
+                                </div>
+                            ) : null}
                             <Form<ILoginFormValue>
                                 form={form}
                                 layout="vertical"
                                 initialValues={{username: "admin", password: "admin"}}
                                 onFinish={handleFinish}
                             >
-                                {/*<div className="mb-3">*/}
-                                {/*    {router?.query.error === "CredentialsSignin" ? (*/}
-                                {/*        <>*/}
-                                {/*            <Alert message="로그인을 실패했습니다. 아이디 또는 비밀번호를 다시 확인해주세요." type="error" />*/}
-                                {/*        </>*/}
-                                {/*    ) : (*/}
-                                {/*        <></>*/}
-                                {/*    )}*/}
-                                {/*</div>*/}
+                                <div className="mb-3">
+                                    {query_error === "CredentialsSignin" ? (
+                                        <>
+                                            <Alert message="로그인을 실패했습니다. 아이디 또는 비밀번호를 다시 확인해주세요." type="error" />
+                                        </>
+                                    ) : (
+                                        <></>
+                                    )}
+                                </div>
                                 <Form.Item name="username" rules={[{required: true, message: "아이디를 입력해주세요"}]}>
                                     <Input size="large" placeholder="아이디"/>
                                 </Form.Item>
