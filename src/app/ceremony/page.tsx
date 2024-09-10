@@ -16,13 +16,13 @@ const sessionData = {
             name: '백준기',
             position:'교수',
             roles: ['한신대학교 교수','전) 통일부 통일교육원 원장','모스크바대학교 정치학 박사'],
-            photo: '/images/백준기.png',  // 실제 사진 경로로 변경
+            photo: '/images/백준기.jpg',  // 실제 사진 경로로 변경
         },
         {
             name: '다니엘 린데만',
             position:'',
             roles: ['《비정상회담》독일대표','본 대학교 동아시아학과','연세대학원 국제관계학 석사','연세대학원 한국학 전공 석사'],
-            photo: '/images/다니엘.png',  // 실제 사진 경로로 변경
+            photo: '/images/다니엘.jpg',  // 실제 사진 경로로 변경
         },
     ],
     themeColor: '#008bd0',  // session1 컬러
@@ -146,7 +146,7 @@ export default function Ceremony() {
                         <div className="profile">
                             <div className="info__big-title">개회사</div>
                             <Image
-                                src={'/images/시장님.webp'}
+                                src={'/images/시장님900.jpg'}
                                 alt={'박승원'}
                                 width={400}
                                 height={400}
