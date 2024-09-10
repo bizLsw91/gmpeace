@@ -19,10 +19,6 @@ export const metadata: Metadata = {
         googleBot: {
             index: true,
             follow: true,
-            noimageindex: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
         }
     },
     openGraph: {
@@ -41,6 +37,12 @@ export const metadata: Metadata = {
             },
             // ... {} 여러개 추가 가능
         ],
+    },
+    twitter:{
+        card: 'summary_large_image',
+        title:'제4회 광명시 평화주간',
+        description: "평화주간 행사 안내, '평화로운 광명생활', '평화, 광명이 잇다'",
+        images: ['https://firebasestorage.googleapis.com/v0/b/gmpeace-76b43.appspot.com/o/images%2FopenGraphImg.png?alt=media&token=a7199ed5-5b81-4f8e-b31e-fff2f49e8249']
     },
     verification:{
         other: {
