@@ -15,8 +15,8 @@ export default function Greeting() {
                         <Image
                             src="/images/시장님-sm.jpg"
                             alt="시장님"
-                            width={110}
-                            height={140}
+                            width={240}
+                            height={260}
                             className={'greeting__img'}
                         />
                         존경하는 광명시민 여러분
