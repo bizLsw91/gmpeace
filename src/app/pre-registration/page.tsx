@@ -7,6 +7,23 @@ export const metadata: Metadata = {
     description: '광명시 평화주간의 사전신청 안내 및 접수를 할 수 있는 페이지입니다.',
 };
 export default function PreRegistration() {
+    // 현재 서버 시간을 가져옵니다.
+    const currentTime = new Date();
+
+    // 첫 번째 시간 범위: 9월 13일 9:00 ~ 14:00
+    const startTime1 = new Date('2024-09-13T09:00:00');
+    const endTime1 = new Date('2024-09-13T14:00:00');
+
+    // 두 번째 시간 범위: 9월 13일 14:00 ~ 16:00
+    const startTime2 = new Date('2024-09-13T14:00:00');
+    const endTime2 = new Date('2024-09-13T16:00:00');
+
+    // 첫 번째 버튼 활성화 여부
+    const isCitizenActive = currentTime >= startTime1 && currentTime < endTime1;
+
+    // 두 번째 버튼 활성화 여부
+    const isNonCitizenActive = currentTime >= startTime2 && currentTime < endTime2;
+
     return (
         <div className="pre-registration">
             <h1 className="hidden">개막식 & 평화도시 광명포럼 사전신청</h1>
@@ -49,14 +66,14 @@ export default function PreRegistration() {
                                 <td>사전신청</td>
                                 <td>
                                     <Link href={'https://forms.gle/X1sXcogoL7BZpoCZ7'}>
-                                        <Button type={'primary'} shape={'default'} disabled>
+                                        <Button type={'primary'} shape={'default'} disabled={!isCitizenActive}>
                                             <div>광명시민<br/>사전신청</div>
                                         </Button>
                                     </Link>
                                 </td>
                                 <td>
                                     <Link href={'https://forms.gle/ZZY7m35o9y28DwZ97'}>
-                                        <Button type={'primary'} shape={'default'} disabled>
+                                        <Button type={'primary'} shape={'default'} disabled={!isNonCitizenActive}>
                                             <div>광명시민 외<br/>사전신청</div>
                                         </Button>
                                     </Link>
