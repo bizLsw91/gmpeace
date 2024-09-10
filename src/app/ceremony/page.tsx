@@ -148,8 +148,8 @@ export default function Ceremony() {
                             <Image
                                 src={'/images/시장님900.jpg'}
                                 alt={'박승원'}
-                                width={400}
-                                height={400}
+                                width={500}
+                                height={600}
                                 className={'info-image2'}
                             />
                             <div className="profile__info info__subtitle">
