@@ -34,15 +34,13 @@ export default function Home() {
                     />
                 </div>
                 <div className="home__preRegiBtnArea flex flex-col items-center gap-5">
-                    <Link href={'https://forms.gle/Aomv415weGSwVAW96'}>
-                        <Button type={'primary'} shape={'round'} disabled>
-                            <div>개막식 & 광명포럼<br/>사전신청</div>
+                    <Link href={'/pre-registration'}>
+                        <Button type={'primary'} shape={'round'}>
+                            <div>개막식 & 광명포럼<br/>사전신청 안내 및 접수</div>
                         </Button>
                     </Link>
                     <div className={'info__subtitle-bold text-center font-bold mb-5'}>
-                        ※ 개막식 & 광명포럼 사전신청 오픈예정일:
-                        <br/>
-                        9월 12일 목요일
+                        ※ 일 시: 9월 13일 금요일 9:00 ~ 16:00
                     </div>
                 </div>
                 <div className="home__youtube flex flex-col justify-center mt-[20px] xs:mt-[30px]">

@@ -1,0 +1,13 @@
+.pre-registration{
+    &__table{
+        @include program-table;
+        th, td {
+            border: 0px solid #ddd;
+        }
+        td:nth-child(1) {
+            border-right: 1px solid #ddd;
+        }
+    }
+
+
+}

@@ -64,7 +64,7 @@ export default function TabArea() {
         setValue(path)
     }, [path]);
 
-    if(pathname==='' || pathname==='/')
+    if(pathname==='' || pathname==='/' || pathname==='/pre-registration')
         return (<></>);
 
     return (

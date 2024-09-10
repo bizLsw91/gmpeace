@@ -15,6 +15,8 @@ export default function Banner() {
         context = '공식행사&포럼'
     }else if(contextNum=='3'){
         context = '참여행사'
+    }else if(pathname==='/pre-registration'){
+        context = '개막식 & 평화도시 광명포럼 사전신청 안내 및 접수'
     }
     return (
         <div className={'banner mt-[50px] xs:mt-[70px]'}>

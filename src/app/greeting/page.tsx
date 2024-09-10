@@ -70,7 +70,7 @@ export default function Greeting() {
                             2024. 9.
                         </div>
                         <div className={'text-right'}>
-                            광명시장 박 승 원
+                            광명시장  박 승 원
                         </div>
                     </div>
                 </div>
