@@ -1,4 +1,4 @@
-import TabArea from "@/app/_components/TabArea/TabArea";
+import Image from "next/image";
 
 export default function Greeting() {
 
@@ -12,10 +12,17 @@ export default function Greeting() {
                 </div>
                 <div className="flex justify-center">
                     <div className={'greeting__content'}>
+                        <Image
+                            src="/images/시장님-sm.jpg"
+                            alt="시장님"
+                            width={110}
+                            height={140}
+                            className={'greeting__img'}
+                        />
                         존경하는 광명시민 여러분
-                        안녕하십니까? 광명시장 박승원입니다.
+                        안녕하십니까?<br/> 광명시장 박승원입니다.
                         <br/><br/>
-                        광명시 평화주간이 벌써 네 번째를 맞이하게 되었습니다.
+                        광명시 평화주간이 벌써 네 번째를 맞이하게 되었습니다.<br/>
                         네 돌을 맞은 광명시 평화주간에 광명시민 여러분을 초대합니다!
                         <br/><br/>
                         광명시는 2021년에 평화도시를 선포한 이후,
@@ -70,7 +77,7 @@ export default function Greeting() {
                             2024. 9.
                         </div>
                         <div className={'text-right'}>
-                            광명시장  박 승 원
+                            광명시장 박 승 원
                         </div>
                     </div>
                 </div>

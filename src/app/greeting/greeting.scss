@@ -17,6 +17,13 @@
         color: #727171;
         max-width: 800px;
     }
-    .overview{
+    &__img{
+        border-radius: 10px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        @media only screen and (min-width: 809px) {
+            float: left;
+            width: 140px;
+        }
     }
 }
