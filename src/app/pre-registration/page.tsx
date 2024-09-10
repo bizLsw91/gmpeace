@@ -79,12 +79,6 @@ export default function PreRegistration() {
                         </div>
                     </div>
                     <div className="info">
-                        <h1 className="info__big-title">당첨이 안되셨더라도</h1>
-                        <div className="info__title theme-color-t">
-                            ※ 13:40 까지 당첨자가 수령하지 아니한 표는 현장 참여자에게 배부됩니다. <br/>
-                        </div>
-                    </div>
-                    <div className="info">
                         <h1 className="info__big-title">모든 참여자분께</h1>
                         <div className="info__title theme-color-t">
                             ※ 개막식이 시작되는 14시까지 착석해 주셔야 하며, 중간 입장은 불가합니다.
