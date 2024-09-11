@@ -3,8 +3,8 @@ import CredentialsProvider, {CredentialsConfig} from "next-auth/providers/creden
 
 const credentialsProviderOption: CredentialsConfig<{}> = {
     type: "credentials",
-    id: "login-credentials",
-    name: "login-credentials",
+    id: "gmpeace-credentials",
+    name: "gmpeace-credentials",
     credentials: {
         username: { label: "Username", type: "text" },
         password: { label: "Password", type: "password" },

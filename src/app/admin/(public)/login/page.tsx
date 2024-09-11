@@ -22,7 +22,7 @@ const LoginPage = () => {
 
         try {
             console.log(value);
-            await signIn("login-credentials", { username: value.username, password: value.password });
+            await signIn("gmpeace-credentials", { username: value.username, password: value.password });
         } catch (error) {
             setIsLoading(false);
         }
