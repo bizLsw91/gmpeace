@@ -1,6 +1,6 @@
 export const metadata: Metadata = {
     title: "제4회 광명시 평화주간 2024",
-    description: "제4회 광명시 평화주간 2024",
+    description: "제4회 광명시 평화주간 2024 행사안내 및 사전신청 사이트",
     keywords: '제4회 광명시 평화주간',
     creator: 'dev Lee SeongWoong',
     icons: 'https://firebasestorage.googleapis.com/v0/b/gmpeace-76b43.appspot.com/o/images%2Ffavicon.png?alt=media&token=d167623e-bbbe-46e2-8a6a-0ac50631a6bf',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: '제4회 광명시 평화주간',
-        description: "제4회 광명시 평화주간",
+        description: "제4회 광명시 평화주간 2024 행사안내 및 사전신청 사이트",
         type: 'website',
         url: 'https://www.gmpeace.co.kr',
         siteName: '제4회 광명시 평화주간',
