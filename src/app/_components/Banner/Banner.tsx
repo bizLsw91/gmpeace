@@ -4,16 +4,14 @@ import {usePathname, useSearchParams} from "next/navigation";
 
 export default function Banner() {
     const pathname = usePathname()
-    const searchParams = useSearchParams()
+    let context = ''
     if(pathname==='' || pathname==='/')
         return (<></>);
-    const contextNum = searchParams.get('context')
-    let context = ''
-    if (contextNum=='1') {
-        context = '행사개요'
-    }else if(contextNum=='2'){
+    else if(pathname==='/greeting' || pathname==='/overview-schedule'){
+        context = '평화주간 행사개요'
+    }else if(pathname==='/ceremony' || pathname==='/awards'){
         context = '공식행사&포럼'
-    }else if(contextNum=='3'){
+    }else if(pathname==='/peace-garden' || pathname==='/art-contest'){
         context = '참여행사'
     }else if(pathname==='/pre-registration'){
         context = '개막식 & 평화도시 광명포럼 사전신청 안내 및 접수'

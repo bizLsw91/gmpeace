@@ -6,32 +6,32 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://www.gmpeace.co.kr/greeting?context=1</loc>
+        <loc>https://www.gmpeace.co.kr/greeting</loc>
         <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.gmpeace.co.kr/overview-schedule?context=1</loc>
+        <loc>https://www.gmpeace.co.kr/overview-schedule</loc>
         <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.gmpeace.co.kr/opening-ceremony?context=2</loc>
+        <loc>https://www.gmpeace.co.kr/opening-ceremony</loc>
         <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.gmpeace.co.kr/awards?context=2</loc>
+        <loc>https://www.gmpeace.co.kr/awards</loc>
         <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.gmpeace.co.kr/peace-garden?context=3</loc>
+        <loc>https://www.gmpeace.co.kr/peace-garden</loc>
         <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.gmpeace.co.kr/art-contest?context=3</loc>
+        <loc>https://www.gmpeace.co.kr/art-contest</loc>
         <lastmod>2024-09-05T03:50:28+00:00</lastmod>
         <priority>0.80</priority>
     </url>
