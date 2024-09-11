@@ -1,7 +1,5 @@
-import {Button} from "antd";
 import {Metadata} from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 export const metadata: Metadata = {
     title: '학생미술대회 | 광명시평화주간',
