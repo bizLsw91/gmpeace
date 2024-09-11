@@ -40,8 +40,15 @@ export default function Home() {
                         </Button>
                     </Link>
                     <div className={'info__subtitle-bold text-center font-bold mb-5'}>
-                        ※ 일 시: 9월 13일 금요일 9:00 ~ 16:00
+                        ※ 개막식 & 광명포럼 사전신청 일시: <br/>9월 13일 금요일 9:00 ~ 16:00
                     </div>
+                </div>
+                <div className="home__preRegiBtnArea flex flex-col items-center gap-5">
+                    <Link href={'/https://docs.google.com/forms/d/1q_k3q2SVnQzphBcG5vK57NkcsZvyYImRaTqk9OJaaME/viewform'}>
+                        <Button type={'primary'} shape={'round'}>
+                            <div>평화비빔밥 사전신청</div>
+                        </Button>
+                    </Link>
                 </div>
                 <div className="home__youtube flex flex-col justify-center mt-[20px] xs:mt-[30px]">
                     <div className="video-title flex justify-center info__title text-center ">
