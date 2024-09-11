@@ -5,6 +5,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: '사전신청 | 광명시평화주간',
     description: '광명시 평화주간의 사전신청 안내 및 접수를 할 수 있는 페이지입니다.',
+    alternates: {
+        canonical: 'https://www.gmpeace.co.kr/pre-registration',
+    }
 };
 export default function PreRegistration() {
     // 현재 서버 시간을 가져옵니다.

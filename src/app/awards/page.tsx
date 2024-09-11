@@ -4,6 +4,9 @@ import Image from "next/image";
 export const metadata: Metadata = {
     title: '시상식 | 광명시평화주간',
     description: '광명시 평화주간의 학생 미술대회 시상식에 대한 상세 정보 페이지입니다.',
+    alternates: {
+        canonical: 'https://www.gmpeace.co.kr/awards',
+    }
 };
 
 export default function Awards() {

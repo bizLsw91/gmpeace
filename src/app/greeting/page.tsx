@@ -1,5 +1,13 @@
+import {Metadata} from "next";
 import Image from "next/image";
 
+export const metadata: Metadata = {
+    title: '개회사 | 광명시평화주간',
+    description: '광명시 평화주간에 대해 광명시장님의 개회사를 담고 있는 페이지입니다.',
+    alternates: {
+        canonical: 'https://www.gmpeace.co.kr/ceremony',
+    }
+};
 export default function Greeting() {
 
     return (

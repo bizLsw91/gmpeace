@@ -30,8 +30,8 @@ export const menuItems = [
             { label: '사전신청 안내 및 신청', to: '/pre-registration' },
         ]
     },
-    {
-        label: '만족도조사',
-        to: '/survey',
-    },
+    // {
+    //     label: '만족도조사',
+    //     to: '/survey',
+    // },
 ]
