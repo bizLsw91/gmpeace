@@ -1,8 +1,8 @@
+import {serviceAccount} from "@/firebase/gmpeace-cloud-firebase-adminsdk-fmhzx-73c5bd68d0";
 import {getFirestore} from "firebase-admin/firestore";
 const { getStorage } = require('firebase-admin/storage');
 const {initializeApp, getApp, getApps, cert} = require('firebase-admin/app');
 
-import * as serviceAccount from './gmpeace-cloud-firebase-adminsdk-fmhzx-73c5bd68d0.json';
 let app;
 if (!getApps().length) {
     initializeApp({
