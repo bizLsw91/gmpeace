@@ -31,6 +31,10 @@ export const nextAuthOptions: NextAuthOptions = {
     // callbacks: { ... },
     session: {
         strategy: 'jwt', // 세션을 JWT로 관리
+        maxAge: 7 * 24 * 60 * 60,// 7일
+    },
+    jwt:{
+        maxAge: 7 * 24 * 60 * 60,// 7일
     },
     // events: { ... },
     pages: {

@@ -12,11 +12,8 @@ interface ILoginFormValue {
 }
 
 const LoginPage = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
     const [form] = useForm<ILoginFormValue>();
     const [isLoading, setIsLoading] = useState(false);
-    const router = useRouter();
     const params = useSearchParams();
     const query_error = params.get('error');
 
