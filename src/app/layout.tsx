@@ -63,7 +63,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="kor">
+        <html lang="ko">
         <body>
         <Header/>
         <Suspense fallback={<div>Loading...</div>}>
