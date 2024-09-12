@@ -39,9 +39,6 @@ export default function Home() {
                             <div>개막식 & 광명포럼<br/>사전신청 안내 및 접수</div>
                         </Button>
                     </Link>
-                    <div className={'info__subtitle-bold text-center font-bold mb-5'}>
-                        ※ 개막식 & 광명포럼 사전신청 일시: <br/>9월 13일 금요일 9:00 ~ 16:00
-                    </div>
                 </div>
                 <div className="home__preRegiBtnArea flex flex-col items-center gap-5">
                     <Link href={'https://docs.google.com/forms/d/1q_k3q2SVnQzphBcG5vK57NkcsZvyYImRaTqk9OJaaME/viewform'}>

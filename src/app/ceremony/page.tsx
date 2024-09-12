@@ -1,4 +1,6 @@
+import { BsExclamationLg } from "react-icons/bs";
 import SessionInfo from "@/app/_components/SessionInfo/SessionInfo";
+import { TbCashBanknoteOff } from "react-icons/tb";
 import {Metadata} from "next";
 import Image from "next/image";
 
@@ -56,11 +58,18 @@ export default function Ceremony() {
                             <div className="info__data-title">장 소</div>
                             <div className="info__data-content">광명극장 2층</div>
                         </div>
+                        <div className="info__data">
+                            <div className="info__data-content flex gap-2">
+                                <div className={'flex text-red-700 text-2xl md:text-3xl'}>
+                                    <BsExclamationLg />
+                                    <TbCashBanknoteOff />
+                                </div>풍선, 현수막, 카메라 휴대금지</div>
+                        </div>
                     </div>
                     <div className="info">
                         <div className="info__big-title">개막식 및 포럼 프로그램</div>
                         <table className="ceremony__program">
-                            <thead>
+                        <thead>
                             <tr>
                                 <th>항목</th>
                                 <th>시간</th>
