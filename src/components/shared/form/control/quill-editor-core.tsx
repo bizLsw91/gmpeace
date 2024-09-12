@@ -12,6 +12,13 @@ const modules = {
     container: [
       [{ header: [1, 2, 3, false] }],
       ["bold", "italic", "underline", "strike", "blockquote"],
+      [{ color: [] }, { background: [] }],
+      [
+        { align: "" },
+        { align: "center" },
+        { align: "right" },
+        { align: "justify" }
+      ],
       [{ list: "ordered" }, { list: "bullet" }, { indent: "-1" }, { indent: "+1" }],
       ["link", "image"],
     ],
@@ -25,6 +32,9 @@ const formats = [
   "underline",
   "strike",
   "blockquote",
+  "color",
+  "background",
+  "align",
   "list",
   "bullet",
   "indent",

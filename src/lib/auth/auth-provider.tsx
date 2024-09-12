@@ -42,7 +42,7 @@ const AuthProvider = ({ children }: PropsWithChildren<IAuthProviderProps>) => {
     }
 
     if (session && isPublicPage()) {
-      router.push("/admin/history");
+      router.push("/admin/notice");
     } else if (!session && !isPublicPage()) {
       router.push("/admin/login");
     }

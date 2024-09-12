@@ -4,17 +4,15 @@ Content-Type: application/json
 
 {
   "title": "notice post test",
-  "content": "notice post test content"
+  "content": "notice post test content",
+  "author": "관리자"
 }
 
-### 3. createUserTest
-POST {{domain}}/api/sign/createUser
-Content-Type: application/json
+### 2. notice list
+GET {{domain}}/api/notices
 
-{
-  "email": "hd98lsu@naver.com",
-  "password": "qwer1234@"
-}
+### 2.1 notice list
+GET {{domain}}/api/notices?page=1
 
 ### 3.1 signInUser Test
 POST {{domain}}/api/sign/signInUser

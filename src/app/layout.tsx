@@ -1,3 +1,4 @@
+import RQProviders from "@/app/_components/RQProvider";
 import type {Metadata} from "next";
 import "../assets/style/tailwind/index.css"
 import "../assets/style/scss/index.scss"
@@ -44,15 +45,18 @@ export const metadata: Metadata = {
     }
 };
 
+
 export default function RootLayout({
                                        children
                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="kor">
+        <html lang="ko">
         <body>
-        {children}
+        <RQProviders>
+            {children}
+        </RQProviders>
         </body>
         </html>
     );

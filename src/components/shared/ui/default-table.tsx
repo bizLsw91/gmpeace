@@ -18,7 +18,7 @@ const DefaultTable = <T extends object>({
       tableLayout="fixed"
       scroll={{ x: 800 }}
       bordered
-      {...(countLabel && { title: () => <p>{numeral(countLabel).format("0,0")}건</p> })}
+      {...(countLabel && { title: () => <p>총 {numeral(countLabel).format("0,0")} 개</p> })}
       {...tableProps}
     >
       {children}

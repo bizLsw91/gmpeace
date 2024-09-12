@@ -4,6 +4,9 @@ import AuthProvider from "@/lib/auth/auth-provider";
 import {ConfigProvider} from "antd";
 import {SessionProvider} from "next-auth/react";
 import koKR from "antd/locale/ko_KR";
+
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+
 export default function AdminLayout({
                                         children,
                                     }: {
@@ -21,14 +24,14 @@ export default function AdminLayout({
                 }}
                 locale={koKR}
             >
-            <SessionProvider>
-                <AuthProvider>
-                    <AdminHeader/>
-                    <div className="pt-[50px] xs:pt-[70px] box-border h-screen">
-                        {children}
-                    </div>
-                </AuthProvider>
-            </SessionProvider>
+                <SessionProvider>
+                    <AuthProvider>
+                        <AdminHeader/>
+                        <div className="pt-[50px] xs:pt-[70px] box-border h-screen">
+                            {children}
+                        </div>
+                    </AuthProvider>
+                </SessionProvider>
             </ConfigProvider>
         </>
     );
