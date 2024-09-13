@@ -12,10 +12,10 @@ import React from "react";
 
 const NoticesList = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    // const { data, isLoading, isError } = useNotices(currentPage);
-    const { data, isLoading, isError } = useQuery({
-        queryKey:['notices'],
-        queryFn: ()=>axios.get(`/api/notices?page=${currentPage||1}` )});;
+    const { data, isLoading, isError } = useNotices(currentPage);
+    // const { data, isLoading, isError } = useQuery({
+    //     queryKey:['notices'],
+    //     queryFn: ()=>axios.get(`/api/notices?page=${currentPage||1}` )});;
     // const router = useRouter();
     //
     // if (isLoading) {
