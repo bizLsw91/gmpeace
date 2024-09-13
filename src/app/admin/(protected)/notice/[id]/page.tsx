@@ -1,6 +1,6 @@
-export default function NoticeDetail() {
+export default function AdminNoticeDetail() {
     return (
-        <div className="notice-detail">
+        <div className="admin-notice-detail">
 
         </div>
     );

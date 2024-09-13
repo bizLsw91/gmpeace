@@ -13,7 +13,7 @@ import {useState} from "react";
 import Image from "next/image";
 import ReactQuill from "react-quill";
 
-const NoticeCreate: IDefaultLayoutPage = ()=> {
+const AdminNoticeCreate: IDefaultLayoutPage = ()=> {
     const [form] = useForm();
     const [formData, setFormData] = useState<INoticeFormValue>();
     const {mutate: createNotice} = useCreateNotices()
@@ -38,7 +38,7 @@ const NoticeCreate: IDefaultLayoutPage = ()=> {
 
 
     return (
-        <div className="notice-create pt-10 pb-20">
+        <div className="admin-notice-create pt-10 pb-20">
             <div className="wrapper">
                 <div className="flex justify-center font-bold text-2xl mb-14">공지사항 작성</div>
                 <DefaultForm<INoticeFormValue>
@@ -111,5 +111,5 @@ const NoticeCreate: IDefaultLayoutPage = ()=> {
     );
 }
 
-NoticeCreate.getLayout = getDefaultLayout;
-export default NoticeCreate;
+AdminNoticeCreate.getLayout = getDefaultLayout;
+export default AdminNoticeCreate;

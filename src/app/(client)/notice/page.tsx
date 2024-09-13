@@ -14,15 +14,12 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import {Button} from "@mui/material";
 
 export default function Notice() {
-    const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
     const router = useRouter();
     const searchParams = useSearchParams();
     const pathname = usePathname()
 
-
     const page = searchParams.get('page');
     const {data, error, isLoading} = useNotices({page: page ? Number(page) : 1});
-    const {mutate: deleteNotices, isPending: isDeleting} = useDeleteNotices()
 
     const handleChangePage = useCallback(
         (pageNumber: number) => {
@@ -32,52 +29,12 @@ export default function Notice() {
 
             // router.push를 사용해 변경된 URL로 이동
             router.push(`${pathname}?${params.toString()}`);
-            ;
         },
         [router]
     );
 
-    const onSelectChange = useCallback((newSelectedRowKeys: React.Key[]) => {
-        setSelectedRowKeys(newSelectedRowKeys);
-    }, []);
-
-    const modifyDropdownItems: MenuProps["items"] = useMemo(
-        () => [
-            {
-                key: "statusUpdate",
-                label: <a onClick={() => console.log(selectedRowKeys)}>상태수정</a>,
-            },
-        ],
-        [selectedRowKeys]
-    );
-
-    const rowSelection = {
-        selectedRowKeys,
-        onChange: onSelectChange,
-    };
-    const hasSelected = selectedRowKeys.length > 0;
-
-    const onNoticeDelete = useCallback(() => {
-        const stringKeys: number[] = selectedRowKeys.map(key => Number(key));
-        console.log("stringKeys = ", stringKeys);
-        deleteNotices(stringKeys)
-    }, [selectedRowKeys]);
 
     const columns: ColumnsType<INotice> = [
-        {
-            key: "action",
-            width: 80,
-            align: "center",
-            render: (_value: unknown, record: INotice) => {
-                return (
-                    <span className="flex justify-center gap-2">
-                    <Link href={`/admin/notice/edit/${record.id}`} className="px-2 py-1 text-sm btn">
-                      수정
-                    </Link>
-                    </span>
-                );
-            },
-        },
         {
             title: "번호",
             dataIndex: "id",
@@ -124,9 +81,8 @@ export default function Notice() {
     return (
         <div className="notice pt-10">
             <div className="wrapper">
-                <div className="flex justify-center font-bold text-2xl mb-14">공지사항</div>
+                <div className="flex justify-center font-bold text-2xl mb-14">알림</div>
                 <DefaultTable<INotice>
-                    rowSelection={rowSelection}
                     columns={columns}
                     dataSource={data?.data?.items || []}
                     loading={isLoading}

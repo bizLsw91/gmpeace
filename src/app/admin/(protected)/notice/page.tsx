@@ -13,7 +13,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import LoadingButton from '@mui/lab/LoadingButton';
 import {Button} from "@mui/material";
 
-export default function Notice() {
+export default function AdminNotice() {
     const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -124,7 +124,7 @@ export default function Notice() {
 
 
     return (
-        <div className="notice pt-10">
+        <div className="admin-notice pt-10">
             <div className="wrapper">
                 <div className="flex justify-center font-bold text-2xl mb-14">공지사항</div>
                 <div className="flex justify-between">
