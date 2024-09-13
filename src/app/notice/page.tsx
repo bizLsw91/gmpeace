@@ -1,6 +1,7 @@
 "use client";
 
-import {INotice, useNotices} from "@/app/api/queries/notice";
+import {useNotices} from "@/app/(client)/api/notice";
+import {INotice} from "@/app/api/queries/notice";
 import {useQuery} from "@tanstack/react-query";
 import {Table, Pagination, TableColumnsType } from 'antd';
 import axios from "axios";
