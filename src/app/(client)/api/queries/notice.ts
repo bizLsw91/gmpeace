@@ -6,21 +6,6 @@ import {INoticeFormValue} from "@/types/notice";
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import axios from "axios";
 
-export interface INotice {
-    id: number;
-    user_id: number;
-    view_count: number;
-    title: string;
-    content: string;
-    author: string;
-    attachments: { name:string,url:string }[]|null;
-    photos: string[]|null;
-    created_at: string;
-    updated_at: string;
-}
-
-// export interface INoticeFormValue extends Omit<INotice, "id" | "user_id" | "view_count" | "author" | "createdAt" | "updatedAt"> {}
-
 export const useNotices = (currPage:number) => {
     return useQuery({
         queryKey:['notices'],
