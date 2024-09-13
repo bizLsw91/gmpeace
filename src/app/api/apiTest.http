@@ -15,7 +15,7 @@ GET {{domain}}/api/notices
 GET {{domain}}/api/notices?page=1
 
 ### 3 notice detail
-GET {{domain}}/api/notices/40
+GET {{domain}}/api/notices/1
 
 
 ### 3.2 signOut Test

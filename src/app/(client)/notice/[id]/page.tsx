@@ -1,12 +1,14 @@
 "use client";
 
 import Spinner from "@/components/shared/spinner";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import moment from "moment";
+import { Upload, UploadFile } from "antd";
+import { RcFile } from "antd/es/upload";
+import { InboxOutlined } from "@ant-design/icons";
 
 // 공지사항 데이터 타입 정의
 interface INotice {
@@ -14,14 +16,10 @@ interface INotice {
     content: string;
     created_at: string;
     updated_at: string;
-    attachments?: { fileName: string; fileUrl: string }[]; // 첨부파일 배열
+    attachments?: { name: string; url: string }[]; // 첨부파일 배열
 }
 
-export default function NoticeDetail({params}: {
-    params: {
-        id: string
-    }
-}) {
+export default function NoticeDetail({ params }: { params: { id: string } }) {
     const [notice, setNotice] = useState<INotice | null>(null);
     const router = useRouter();
     const noticeId = params.id;
@@ -38,8 +36,18 @@ export default function NoticeDetail({params}: {
     }, [noticeId]);
 
     if (!notice) {
-        return <Spinner/>;
+        return <Spinner />;
     }
+
+    // 업로드 파일 리스트로 변환 (Ant Design Upload 컴포넌트가 사용)
+    const fileList: UploadFile[] = notice.attachments
+        ? notice.attachments.map((attachment, index) => ({
+            uid: String(index),
+            name: attachment.name,
+            url: attachment.url,
+            status: "done", // 업로드 완료 상태
+        }))
+        : [];
 
     return (
         <div className="max-w-3xl mx-auto p-5">
@@ -56,31 +64,21 @@ export default function NoticeDetail({params}: {
                     </p>
                 </div>
 
-                <hr className="my-4" />
+                <hr className="my-4"/>
+
+                {/* Ant Design Upload 컴포넌트를 이용한 첨부파일 섹션 */}
+                <div className="mb-4">
+                    <h2 className="text-lg font-semibold mb-2">첨부파일</h2>
+                    <Upload
+                        fileList={fileList} // 기존 첨부파일을 fileList로 표시
+                        // listType="picture" // 이미지와 파일을 섞어 표시
+                        showUploadList={{showRemoveIcon: false}} // 파일 제거 버튼 숨김
+                    />
+                </div>
+                <hr className="my-4"/>
 
                 {/* ReactQuill - 읽기 전용 */}
-                <ReactQuill value={notice.content} readOnly={true} theme="bubble" className="bg-gray-50" />
-
-                {/* 첨부파일 섹션 */}
-                {notice.attachments && notice.attachments.length > 0 && (
-                    <div className="mt-6">
-                        <h2 className="text-xl font-semibold mb-2">첨부파일</h2>
-                        <ul className="list-disc list-inside">
-                            {notice.attachments.map((attachment, index) => (
-                                <li key={index}>
-                                    <a
-                                        href={attachment.fileUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-500 hover:underline"
-                                    >
-                                        {attachment.fileName}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
+                <ReactQuill value={notice.content} readOnly={true} theme="bubble" className="bg-gray-50"/>
             </div>
         </div>
     );
