@@ -1,17 +1,11 @@
 "use client"
-import {INotice, useDeleteNotices, useNotices} from "@/app/_clientApi/notice";
+import {INotice, useNotices} from "@/app/_clientApi/notice";
 import DefaultTable from "@/components/shared/ui/default-table";
 import {ISO8601DateTime} from "@/types/common";
-import {useQueryClient} from "@tanstack/react-query";
-import {MenuProps, Popconfirm} from "antd";
 import {ColumnsType} from "antd/es/table";
 import moment from "moment";
-import Link from "next/link";
 import {usePathname, useRouter, useSearchParams} from "next/navigation";
-import {useCallback, useMemo, useState} from "react";
-import DeleteIcon from '@mui/icons-material/Delete';
-import LoadingButton from '@mui/lab/LoadingButton';
-import {Button} from "@mui/material";
+import {useCallback} from "react";
 
 export default function Notice() {
     const router = useRouter();
