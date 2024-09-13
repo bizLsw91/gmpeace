@@ -52,7 +52,7 @@ export default function PreRegistration() {
                             <tbody>
                             <tr>
                                 <td>일 시</td>
-                                <td>9. 13.(금) 9:00~14:00</td>
+                                <td>9. 13.(금) 9:00~16:00</td>
                                 <td>9. 13.(금) 14:00~16:00</td>
                             </tr>
                             <tr>
