@@ -1,10 +1,7 @@
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import {UploadFile} from "antd";
 import axios from "axios";
-import qs from "qs";
 import { fetchApi } from "./base";
-
-// const fetcher = (url:string) => fetch(url).then(res => res.json());
 
 export interface INotice {
     id: number;
@@ -33,10 +30,6 @@ export interface INoticeAntdFormValue {
     }|undefined;
 }
 
-interface INoticesParams {
-    page?: number;
-}
-
 export interface INoticesResponse {
     items: INotice[]|any[]|undefined;
     page: {
@@ -59,10 +52,10 @@ export const updateNotice = (id: string, value: INoticeFormValue) => {
     return fetchApi.put(`api/notices/${id}`, { body: JSON.stringify(value) });
 };
 
-export const useNotices = (params: INoticesParams) => {
+export const useNotices = (currPage:number) => {
     return useQuery({
         queryKey:['notices'],
-        queryFn: ()=>axios.get(`/api/notices?${qs.stringify(params)}` )});
+        queryFn: ()=>axios.get(`/api/notices?page=${currPage||1}` )});
 };
 export const useNotice = (param: number) => {
     return useQuery({
