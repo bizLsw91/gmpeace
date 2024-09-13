@@ -61,7 +61,7 @@ export const updateNotice = (id: string, value: INoticeFormValue) => {
 
 export const useNotices = (params: INoticesParams) => {
     return useQuery({
-        queryKey:['notices', params],
+        queryKey:['notices'],
         queryFn: ()=>axios.get(`/api/notices?${qs.stringify(params)}` )});
 };
 export const useNotice = (param: number) => {

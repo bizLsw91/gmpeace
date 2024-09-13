@@ -9,22 +9,18 @@ import {useCallback} from "react";
 export default function Notice() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const pathname = usePathname()
 
     const page = searchParams.get('page');
     const {data, error, isLoading} = useNotices({page: page ? Number(page) : 1});
 
-    const handleChangePage = useCallback(
-        (pageNumber: number) => {
-            // 기존 searchParams를 가져와서 새로운 pageNumber로 설정
-            // const params = new URLSearchParams(searchParams.toString());
-            // params.set('page', String(pageNumber)); // 새로운 페이지 번호 설정
+    const handleChangePage = (pageNumber: number) => {
+        // 기존 searchParams를 가져와서 새로운 pageNumber로 설정
+        // const params = new URLSearchParams(searchParams.toString());
+        // params.set('page', String(pageNumber)); // 새로운 페이지 번호 설정
 
-            // router.push를 사용해 변경된 URL로 이동
-            router.push(`/notice?page=${page}`);
-        },
-        [router]
-    );
+        // router.push를 사용해 변경된 URL로 이동
+        router.push(`/notice?page=${page}`);
+    }
 
 
     const columns: ColumnsType<INotice> = [
@@ -41,7 +37,7 @@ export default function Notice() {
             title: "작성자",
             width: 150,
             // dataIndex: "user_id",
-            render: (value: string)=>{
+            render: (value: string) => {
                 return (<span>운영사무국</span>)
             }
         },
@@ -73,6 +69,10 @@ export default function Notice() {
         },
     ];
 
+    const handleRowClick = (record: INotice) => {
+        router.push(`/notice/detail/${record.id}`);
+    };
+
     return (
         <div className="notice pt-10">
             <div className="wrapper">
@@ -89,11 +89,11 @@ export default function Notice() {
                     }}
                     className="mt-3"
                     countLabel={data?.data?.page?.totalCount}
-                    onRow={(record, index) => ({
-                        onClick: () => {
-                            router.push(`/notice/${record.id}`);
-                        },
-                    })}
+                    onRow={(record) => {
+                        return {
+                            onClick: () => handleRowClick(record),
+                        };
+                    }}
                 />
             </div>
         </div>);
