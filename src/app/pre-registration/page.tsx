@@ -68,18 +68,20 @@ export default function PreRegistration() {
                             <tr>
                                 <td>사전신청</td>
                                 <td>
-                                    <Link href={'https://forms.gle/X1sXcogoL7BZpoCZ7'}>
-                                        <Button type={'primary'} shape={'default'}>
-                                            <div>광명시민<br/>사전신청</div>
-                                        </Button>
-                                    </Link>
+                                    마감되었습니다.
+                                    {/*<Link href={'https://forms.gle/X1sXcogoL7BZpoCZ7'}>*/}
+                                    {/*    <Button type={'primary'} shape={'default'}>*/}
+                                    {/*        <div>광명시민<br/>사전신청</div>*/}
+                                    {/*    </Button>*/}
+                                    {/*</Link>*/}
                                 </td>
                                 <td>
-                                    <Link href={'https://forms.gle/ZZY7m35o9y28DwZ97'}>
-                                        <Button type={'primary'} shape={'default'} >
-                                            <div>광명시민 외<br/>사전신청</div>
-                                        </Button>
-                                    </Link>
+                                    마감되었습니다.
+                                    {/*<Link href={'https://forms.gle/ZZY7m35o9y28DwZ97'}>*/}
+                                    {/*    <Button type={'primary'} shape={'default'} >*/}
+                                    {/*        <div>광명시민 외<br/>사전신청</div>*/}
+                                    {/*    </Button>*/}
+                                    {/*</Link>*/}
                                 </td>
                             </tr>
                             </tbody>
