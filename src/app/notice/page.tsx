@@ -10,16 +10,16 @@ import React from "react";
 
 const NoticesList = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const { data, isLoading, isError } = useNotices(currentPage);
-    const router = useRouter();
-
-    if (isLoading) {
-        return <Spin tip="Loading..." className="flex justify-center items-center min-h-screen" />;
-    }
-
-    if (isError) {
-        return <div className="text-red-500">Error loading notices.</div>;
-    }
+    // const { data, isLoading, isError } = useNotices(currentPage);
+    // const router = useRouter();
+    //
+    // if (isLoading) {
+    //     return <Spin tip="Loading..." className="flex justify-center items-center min-h-screen" />;
+    // }
+    //
+    // if (isError) {
+    //     return <div className="text-red-500">Error loading notices.</div>;
+    // }
 
     const columns:TableColumnsType<INotice> = [
         {
@@ -67,9 +67,9 @@ const NoticesList = () => {
         },
     ];
 
-    const handleRowClick = (record:INotice) => {
-        router.push(`/notice-detail/${record.id}`);
-    };
+    // const handleRowClick = (record:INotice) => {
+    //     router.push(`/notice-detail/${record.id}`);
+    // };
     return (
         <div className="notice-list p-6 max-w-4xl mx-auto">
             {/*<Table*/}
