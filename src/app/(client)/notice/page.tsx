@@ -1,9 +1,14 @@
 "use client"
 import {INotice, useNotices} from "@/app/_clientApi/notice";
-import Table, {ColumnsType} from "antd/es/table";
+import {Table, TableProps} from "antd";
+// import {ColumnsType} from "antd/es/table";
 import moment from "moment";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { useRouter, useSearchParams} from "next/navigation";
+// const Table = dynamic(() => import('antd/es/table'), { ssr: false });
+
+type ColumnsType<T extends object = object> = TableProps<T>['columns'];
+
 export default function Notice() {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -22,7 +27,7 @@ export default function Notice() {
     }
 
 
-    const columns: ColumnsType<INotice> = [
+    const columns:ColumnsType<INotice> = [
         {
             title: "번호",
             dataIndex: "id",
