@@ -1,4 +1,5 @@
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
+import {UploadFile} from "antd";
 import axios from "axios";
 import qs from "qs";
 import { fetchApi } from "./base";
@@ -12,11 +13,25 @@ export interface INotice {
     title: string;
     content: string;
     author: string;
+    attachments: string[];
+    photos: string[];
     createdAt: string;
     updatedAt: string;
 }
 
-export interface INoticeFormValue extends Omit<INotice, "id" | "createdAt" | "updatedAt"> {}
+export interface INoticeFormValue extends Omit<INotice, "id" | "user_id" | "view_count" | "author" | "createdAt" | "updatedAt"> {}
+export interface INoticeAntdFormValue {
+    title: string;
+    content: string;
+    attachments: {
+        file: File;
+        fileList: UploadFile[];
+    }|undefined;
+    photos: {
+        file: File;
+        fileList: UploadFile[];
+    }|undefined;
+}
 
 interface INoticesParams {
     page?: number;
