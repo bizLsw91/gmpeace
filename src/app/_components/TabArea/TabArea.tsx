@@ -35,22 +35,20 @@ const StyledRadioGroup = styled(Radio.Group)`
 
 export default function TabArea() {
     const pathname = usePathname()
-    const searchParams = useSearchParams()
-    const context = searchParams.get('context')
-    let path = pathname+'?context='+context;
+    let path = pathname;
     const [value, setValue] = useState(path);
     const router = useRouter();
 
     let options:any[]|undefined = []
-    if(context=='1'){
+    if(pathname==='/greeting' || pathname==='/overview-schedule'){
         options = menuItems[0]?.children?.map((item:any) => (
             { label: item.label, value: item.to }
         ))
-    }else if(context=='2'){
+    }else if(pathname==='/ceremony' || pathname==='/awards'){
         options = menuItems[1]?.children?.map((item:any) => (
             { label: item.label, value: item.to }
         ))
-    }else if(context=='3'){
+    }else if(pathname==='/peace-garden' || pathname==='/art-contest'){
         options = menuItems[2]?.children?.map((item:any) => (
             { label: item.label, value: item.to }
         ))
@@ -64,7 +62,7 @@ export default function TabArea() {
         setValue(path)
     }, [path]);
 
-    if(pathname==='/main')
+    if(pathname==='' || pathname==='/' || pathname==='/pre-registration' || pathname==='/notice')
         return (<></>);
 
     return (
