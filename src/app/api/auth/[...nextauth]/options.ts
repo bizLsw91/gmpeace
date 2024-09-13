@@ -1,4 +1,4 @@
-import {NextAuthOptions, Session} from "next-auth";
+import {NextAuthOptions} from "next-auth";
 import CredentialsProvider, {CredentialsConfig} from "next-auth/providers/credentials";
 
 const credentialsProviderOption: CredentialsConfig<{}> = {
@@ -42,17 +42,17 @@ export const nextAuthOptions: NextAuthOptions = {
         verifyRequest: "/login?verify=1",
         error: "/admin/login",
     },
-    callbacks: {
-        jwt({ token, user }) {
-            if (user) {
-                token.id = (user as Session["user"]).id;
-                token.login = (user as Session["user"]).login;
-            }
-            return token;
-        },
-        session({ session, token }) {
-            session.user = { ...session.user, id: token.id as string, login: token.login as string };
-            return session;
-        },
-    }
+    // callbacks: {
+    //     jwt({ token, user }) {
+    //         if (user) {
+    //             token.id = (user as Session["user"]).id;
+    //             token.login = (user as Session["user"]).login;
+    //         }
+    //         return token;
+    //     },
+    //     session({ session, token }) {
+    //         session.user = { ...session.user, id: token.id as string, login: token.login as string };
+    //         return session;
+    //     },
+    // }
 };
