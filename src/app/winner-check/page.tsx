@@ -68,7 +68,7 @@ export default function WinnerCheck() {
                     <hr className="my-4"/>
 
                     {/* ReactQuill - 읽기 전용 */}
-                    <ReactQuill value={notice.content} readOnly={true} theme="bubble" className="bg-gray-50"/>
+                    <ReactQuill value={notice.content} readOnly={true} theme="bubble" className="bg-gray-50" style={{padding: '15px'}}/>
                 </div>
             </div>
         </div>
