@@ -13,7 +13,7 @@ import {RcFile, UploadChangeParam} from "antd/es/upload";
 import {storage} from "firebase-admin";
 import {useState} from "react";
 import Image from "next/image";
-import ReactQuill from "react-quill";
+import { ReactQuill } from "@/components/shared/form/control/ReactQuill";
 
 const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const [form] = useForm();
