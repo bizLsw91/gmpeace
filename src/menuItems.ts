@@ -21,6 +21,7 @@ export const menuItems = [
         children: [
             { label: '평화정원 피크닉', to: '/peace-garden' },
             { label: '평화주간 학생 미술대회', to: '/art-contest'},
+            { label: '미술대회 수상자 확인', to: '/winner-check'},
         ]
     },
     {

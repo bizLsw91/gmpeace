@@ -48,7 +48,7 @@ export default function TabArea() {
         options = menuItems[1]?.children?.map((item:any) => (
             { label: item.label, value: item.to }
         ))
-    }else if(pathname==='/peace-garden' || pathname==='/art-contest'){
+    }else if(pathname==='/peace-garden' || pathname==='/art-contest' || pathname==='/winner-check'){
         options = menuItems[2]?.children?.map((item:any) => (
             { label: item.label, value: item.to }
         ))

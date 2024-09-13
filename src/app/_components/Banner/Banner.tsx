@@ -11,7 +11,7 @@ export default function Banner() {
         context = '평화주간 행사개요'
     }else if(pathname==='/ceremony' || pathname==='/awards'){
         context = '공식행사&포럼'
-    }else if(pathname==='/peace-garden' || pathname==='/art-contest'){
+    }else if(pathname==='/peace-garden' || pathname==='/art-contest' || pathname==='/winner-check'){
         context = '참여행사'
     }else if(pathname==='/pre-registration'){
         context = '개막식 & 평화도시 광명포럼 사전신청 안내 및 접수'
