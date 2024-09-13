@@ -1,6 +1,6 @@
 "use client"
 import {INoticeAntdFormValue} from "@/types/notice";
-import {useCreateNotices} from "@/app/(client)/api/queries/notice"
+// import {useCreateNotices} from "@/app/(client)/api/queries/notice"
 import {getDefaultLayout, IDefaultLayoutPage} from "@/components/layout/default-layout";
 import QuillEditor from "@/components/shared/form/control/quill-editor";
 import DefaultForm from "@/components/shared/form/ui/default-form";
@@ -18,7 +18,7 @@ import ReactQuill from "react-quill";
 const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const [form] = useForm();
     const [formData, setFormData] = useState<INoticeAntdFormValue>();
-    const {mutate: createNotice} = useCreateNotices()
+    // const {mutate: createNotice} = useCreateNotices()
     const [fileList, setFileList] = useState<UploadFile[]>([]);
     const [attachmentList, setAttachmentList] = useState<UploadFile[]>([]); // 파일 리스트
 

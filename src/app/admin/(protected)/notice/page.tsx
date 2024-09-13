@@ -1,5 +1,5 @@
 "use client"
-import {useDeleteNotices, useNotices} from "@/app/(client)/api/queries/notice";
+import { useNotices} from "@/app/(client)/api/queries/notice";
 import DefaultTable from "@/components/shared/ui/default-table";
 import {ISO8601DateTime} from "@/types/common";
 import {INotice} from "@/types/notice";
@@ -22,7 +22,7 @@ export default function AdminNotice() {
 
     const page = searchParams.get('page');
     const {data, error, isLoading} = useNotices(page ? Number(page) : 1);
-    const {mutate: deleteNotices, isPending: isDeleting} = useDeleteNotices()
+    // const {mutate: deleteNotices, isPending: isDeleting} = useDeleteNotices()
 
     const handleChangePage = useCallback(
         (pageNumber: number) => {
@@ -60,7 +60,7 @@ export default function AdminNotice() {
     const onNoticeDelete = useCallback(() => {
         const stringKeys: number[] = selectedRowKeys.map(key => Number(key));
         console.log("stringKeys = ", stringKeys);
-        deleteNotices(stringKeys)
+        // deleteNotices(stringKeys)
     }, [selectedRowKeys]);
 
     const columns: ColumnsType<INotice> = [
@@ -134,7 +134,7 @@ export default function AdminNotice() {
                     <div>
                         {
                             hasSelected &&
-                            <LoadingButton variant="outlined" color={"warning"} loading={isDeleting}
+                            <LoadingButton variant="outlined" color={"warning"}
                                            startIcon={<DeleteIcon/>} onClick={onNoticeDelete}>
                                 Delete {hasSelected ? selectedRowKeys.length : null}
                             </LoadingButton>
