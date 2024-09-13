@@ -1,7 +1,7 @@
 "use client"
 import {menuItems} from "@/menuItems";
 import {Radio, RadioChangeEvent, ConfigProvider} from "antd";
-import {usePathname, useRouter, useSearchParams} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 import {useEffect, useState} from "react";
 import styled from "styled-components";
 
@@ -62,7 +62,7 @@ export default function TabArea() {
         setValue(path)
     }, [path]);
 
-    if(pathname==='' || pathname==='/' || pathname==='/pre-registration')
+    if(pathname==='' || pathname==='/' || pathname==='/pre-registration' || pathname==='/notice' || pathname.startsWith('/notice/'))
         return (<></>);
 
     return (

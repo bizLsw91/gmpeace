@@ -30,6 +30,13 @@ export const menuItems = [
             { label: '사전신청 안내 및 신청', to: '/pre-registration' },
         ]
     },
+    {
+        label: '알림',
+        to: '/notice',
+        children: [
+            { label: '알림', to: '/notice' },
+        ]
+    },
     // {
     //     label: '만족도조사',
     //     to: '/survey',

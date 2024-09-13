@@ -48,6 +48,7 @@ export const metadata: Metadata = {
 };
 
 import Banner from "@/app/_components/Banner/Banner";
+import RQProviders from "@/app/_components/RQProvider";
 import TabArea from "@/app/_components/TabArea/TabArea";
 import Footer from "@/app/_components/Footer/Footer";
 import Header from "@/app/_components/Header/Header";
@@ -65,6 +66,7 @@ export default function RootLayout({
     return (
         <html lang="ko">
         <body>
+        <RQProviders>
         <Header/>
         <Suspense fallback={<div>Loading...</div>}>
             <Banner/>
@@ -74,6 +76,7 @@ export default function RootLayout({
         </Suspense>
         {children}
         <Footer/>
+        </RQProviders>
         </body>
         </html>
     );
