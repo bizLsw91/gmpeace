@@ -1,10 +1,9 @@
 "use client"
 import {INotice, useNotices} from "@/app/_clientApi/notice";
-import DefaultTable from "@/components/shared/ui/default-table";
-import {ColumnsType} from "antd/es/table";
+import Table, {ColumnsType} from "antd/es/table";
 import moment from "moment";
+import dynamic from "next/dynamic";
 import { useRouter, useSearchParams} from "next/navigation";
-
 export default function Notice() {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -76,7 +75,7 @@ export default function Notice() {
     return (
         <div className="notice pt-14 pb-24 min-h-[500px]">
             <div className="wrapper">
-                <DefaultTable
+                <Table
                     columns={columns}
                     dataSource={data?.data?.items || []}
                     loading={isLoading}
@@ -88,7 +87,7 @@ export default function Notice() {
                         onChange: handleChangePage,
                     }}
                     className="mt-3"
-                    countLabel={data?.data?.page?.totalCount}
+                    // countLabel={data?.data?.page?.totalCount}
                     onRow={(record) => {
                         return {
                             onClick: () => handleRowClick(record),
