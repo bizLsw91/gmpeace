@@ -89,8 +89,11 @@ export default function AdminNotice() {
         },
         {
             title: "작성자",
-            dataIndex: "author",
             width: 150,
+            dataIndex: "user_id",
+            // render: (value: string)=>{
+            //     return (<span>운영사무국</span>)
+            // }
         },
         {
             title: "생성일시",

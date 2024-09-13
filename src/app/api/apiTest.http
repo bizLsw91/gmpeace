@@ -14,14 +14,9 @@ GET {{domain}}/api/notices
 ### 2.1 notice list
 GET {{domain}}/api/notices?page=1
 
-### 3.1 signInUser Test
-POST {{domain}}/api/sign/signInUser
-Content-Type: application/json
+### 3 notice detail
+GET {{domain}}/api/notices/40
 
-{
-  "email": "hd98lsu@naver.com",
-  "password": "gpftmxk123"
-}
 
 ### 3.2 signOut Test
 GET {{domain}}/api/sign/signOut

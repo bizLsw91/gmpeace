@@ -1,14 +1,14 @@
-import {QueryClient, useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
+import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import axios from "axios";
 import qs from "qs";
-import useSWR from "swr";
 import { fetchApi } from "./base";
 
-const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT
 const fetcher = (url:string) => fetch(url).then(res => res.json());
 
 export interface INotice {
     id: number;
+    user_id: number;
+    view_count: number;
     title: string;
     content: string;
     author: string;
@@ -23,7 +23,7 @@ interface INoticesParams {
 }
 
 export interface INoticesResponse {
-    items: INotice[];
+    items: INotice[]|any[]|undefined;
     page: {
         currentPage: number;
         pageSize: number;
@@ -36,10 +36,6 @@ export interface INoticeResponse {
     data: INotice;
 }
 
-export const useNotice = (id: string | number) => {
-    return useSWR<INoticeResponse>(`api/notices/${id}`);
-};
-
 export const createNotice = (value: INoticeFormValue) => {
     return fetchApi.post(`api/notices`, { body: JSON.stringify(value) });
 };
@@ -51,7 +47,12 @@ export const updateNotice = (id: string, value: INoticeFormValue) => {
 export const useNotices = (params: INoticesParams) => {
     return useQuery({
         queryKey:['notices', params],
-        queryFn: ()=>axios.get(endpoint + `/api/notices?${qs.stringify(params)}` )});
+        queryFn: ()=>axios.get(`/api/notices?${qs.stringify(params)}` )});
+};
+export const useNotice = (param: number) => {
+    return useQuery({
+        queryKey:['notices', param],
+        queryFn: ()=>axios.get( `/api/notices/${param}` )});
 };
 export const useCreateNotices = () => {
     const queryClient = useQueryClient();
