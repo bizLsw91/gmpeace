@@ -1,10 +1,8 @@
 "use client";
 
-import {useNotices} from "@/app/(client)/api/notice";
+import {useNotices} from "@/app/(client)/api/queries/notice";
 import {INotice} from "@/app/api/queries/notice";
-import {useQuery} from "@tanstack/react-query";
 import {Table, Pagination, TableColumnsType } from 'antd';
-import axios from "axios";
 import moment from "moment";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -14,18 +12,15 @@ import React from "react";
 const NoticesList = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const { data, isLoading, isError } = useNotices(currentPage);
-    // const { data, isLoading, isError } = useQuery({
-    //     queryKey:['notices'],
-    //     queryFn: ()=>axios.get(`/api/notices?page=${currentPage||1}` )});;
-    // const router = useRouter();
-    //
-    // if (isLoading) {
-    //     return <Spin tip="Loading..." className="flex justify-center items-center min-h-screen" />;
-    // }
-    //
-    // if (isError) {
-    //     return <div className="text-red-500">Error loading notices.</div>;
-    // }
+    const router = useRouter();
+
+    if (isLoading) {
+        return <Spin tip="Loading..." className="flex justify-center items-center min-h-screen" />;
+    }
+
+    if (isError) {
+        return <div className="text-red-500">Error loading notices.</div>;
+    }
 
     const columns:TableColumnsType<INotice> = [
         {
@@ -73,29 +68,29 @@ const NoticesList = () => {
         },
     ];
 
-    // const handleRowClick = (record:INotice) => {
-    //     router.push(`/notice-detail/${record.id}`);
-    // };
+    const handleRowClick = (record:INotice) => {
+        router.push(`/notice-detail/${record.id}`);
+    };
     return (
         <div className="notice-list p-6 max-w-4xl mx-auto">
-            {/*<Table*/}
-            {/*    columns={columns}*/}
-            {/*    dataSource={data?.data?.items || []}*/}
-            {/*    pagination={false}*/}
-            {/*    rowKey="id"*/}
-            {/*    onRow={(record) => ({*/}
-            {/*        onClick: () => handleRowClick(record),*/}
-            {/*    })}*/}
-            {/*    className="cursor-pointer transition-all hover:shadow-md hover:bg-gray-50"*/}
-            {/*/>*/}
-            {/*<div className="flex justify-end mt-4">*/}
-            {/*    <Pagination*/}
-            {/*        current={currentPage}*/}
-            {/*        total={data?.data?.page?.totalCount || 0}*/}
-            {/*        pageSize={5}*/}
-            {/*        onChange={(page) => setCurrentPage(page)}*/}
-            {/*    />*/}
-            {/*</div>*/}
+            <Table
+                columns={columns}
+                dataSource={data?.data?.items || []}
+                pagination={false}
+                rowKey="id"
+                onRow={(record) => ({
+                    onClick: () => handleRowClick(record),
+                })}
+                className="cursor-pointer transition-all hover:shadow-md hover:bg-gray-50"
+            />
+            <div className="flex justify-end mt-4">
+                <Pagination
+                    current={currentPage}
+                    total={data?.data?.page?.totalCount || 0}
+                    pageSize={5}
+                    onChange={(page) => setCurrentPage(page)}
+                />
+            </div>
         </div>
     );
 };
