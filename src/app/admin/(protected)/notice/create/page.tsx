@@ -1,6 +1,7 @@
 "use client"
+import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import {INoticeAntdFormValue} from "@/types/notice";
-// import {useCreateNotices} from "@/app/(client)/api/queries/notice"
+import {useCreateNotices} from "@/app/(client)/api/queries/notice"
 import {getDefaultLayout, IDefaultLayoutPage} from "@/components/layout/default-layout";
 import QuillEditor from "@/components/shared/form/control/quill-editor";
 import DefaultForm from "@/components/shared/form/ui/default-form";
@@ -13,12 +14,11 @@ import {RcFile, UploadChangeParam} from "antd/es/upload";
 import {storage} from "firebase-admin";
 import {useState} from "react";
 import Image from "next/image";
-import { ReactQuill } from "@/components/shared/form/control/ReactQuill";
 
 const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const [form] = useForm();
     const [formData, setFormData] = useState<INoticeAntdFormValue>();
-    // const {mutate: createNotice} = useCreateNotices()
+    const {mutate: createNotice} = useCreateNotices()
     const [fileList, setFileList] = useState<UploadFile[]>([]);
     const [attachmentList, setAttachmentList] = useState<UploadFile[]>([]); // 파일 리스트
 
@@ -38,8 +38,8 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
         //     })
         // );
 
-        // createNotice(formValue);
-        // form.resetFields();
+        // createNotice(formData);
+        form.resetFields();
     };
     const handleChange = (changedValues: any, allValues: any) => {
         setFormData(allValues)
