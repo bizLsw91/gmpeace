@@ -2,9 +2,7 @@
 
 import {useNotices} from "@/app/(client)/api/queries/notice";
 import {INotice} from "@/types/notice";
-import {useQuery} from "@tanstack/react-query";
 import {Table, Pagination, TableColumnsType } from 'antd';
-import axios from "axios";
 import moment from "moment";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -13,9 +11,7 @@ import React from "react";
 
 const NoticesList = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const { data, isLoading, isError } = useQuery({
-        queryKey:['notices'],
-        queryFn: ()=>axios.get(`/api/notices?page=${currentPage||1}` )});
+    const { data, isLoading, isError } = useNotices(currentPage);
     const router = useRouter();
 
     if (isLoading) {
