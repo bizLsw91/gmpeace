@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {INotice, useNotices} from "@/app/_clientApi/notice";
 import {useQuery} from "@tanstack/react-query";
