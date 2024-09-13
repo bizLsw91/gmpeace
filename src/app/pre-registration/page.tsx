@@ -102,6 +102,7 @@ export default function PreRegistration() {
                         <h1 className="info__big-title">모든 참여자분께</h1>
                         <div className="info__title theme-color-t">
                             ※ 개막식이 시작되는 14시까지 착석해 주셔야 하며, 중간 입장은 불가합니다.
+                            ※ 극장 내 풍선, 현수막, 카메라 휴대금지 입니다.
                         </div>
                     </div>
                 </div>
