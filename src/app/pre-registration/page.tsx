@@ -52,8 +52,8 @@ export default function PreRegistration() {
                             <tbody>
                             <tr>
                                 <td>일 시</td>
-                                <td>9. 13.(금) 9:00~16:00</td>
-                                <td>9. 13.(금) 14:00~24:00</td>
+                                <td>9. 13.(금) 9:00~24:00</td>
+                                <td>9. 13.(금) 14:00~16:00</td>
                             </tr>
                             <tr>
                                 <td>좌석배정률</td>
@@ -68,20 +68,20 @@ export default function PreRegistration() {
                             <tr>
                                 <td>사전신청</td>
                                 <td>
-                                    마감되었습니다.
-                                    {/*<Link href={'https://forms.gle/X1sXcogoL7BZpoCZ7'}>*/}
-                                    {/*    <Button type={'primary'} shape={'default'}>*/}
-                                    {/*        <div>광명시민<br/>사전신청</div>*/}
-                                    {/*    </Button>*/}
-                                    {/*</Link>*/}
-                                </td>
-                                <td>
                                     {/*마감되었습니다.*/}
-                                    <Link href={'https://forms.gle/ZZY7m35o9y28DwZ97'}>
-                                        <Button type={'primary'} shape={'default'} >
-                                            <div>광명시민 외<br/>사전신청</div>
+                                    <Link href={'https://forms.gle/X1sXcogoL7BZpoCZ7'}>
+                                        <Button type={'primary'} shape={'default'}>
+                                            <div>광명시민<br/>사전신청</div>
                                         </Button>
                                     </Link>
+                                </td>
+                                <td>
+                                    마감되었습니다.
+                                    {/*<Link href={'https://forms.gle/ZZY7m35o9y28DwZ97'}>*/}
+                                    {/*    <Button type={'primary'} shape={'default'} >*/}
+                                    {/*        <div>광명시민 외<br/>사전신청</div>*/}
+                                    {/*    </Button>*/}
+                                    {/*</Link>*/}
                                 </td>
                             </tr>
                             </tbody>
