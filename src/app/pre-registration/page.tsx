@@ -76,7 +76,7 @@ export default function PreRegistration() {
                                 </td>
                                 <td>
                                     <Link href={'https://forms.gle/ZZY7m35o9y28DwZ97'}>
-                                        <Button type={'primary'} shape={'default'} disabled={!isNonCitizenActive}>
+                                        <Button type={'primary'} shape={'default'} >
                                             <div>광명시민 외<br/>사전신청</div>
                                         </Button>
                                     </Link>
