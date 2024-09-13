@@ -16,12 +16,12 @@ const AuthContext = createContext<IAuthContext | null>(null);
 
 export function useAuth() {
   const context = useContext(AuthContext);
-  if (!context?.initialized) {
-    // throw new Error("Auth context must be used within a AuthProvider!");
-    return null; // AuthContext가 아직 초기화되지 않았을 때 null 반환
+  if (!context) {
+    return { initialized: false, session: null as unknown as Session };
   }
   return context;
-};
+}
+
 
 const publicPageList = ["/admin/login"];
 
