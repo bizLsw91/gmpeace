@@ -18,11 +18,11 @@ export default function Notice() {
     const handleChangePage = useCallback(
         (pageNumber: number) => {
             // 기존 searchParams를 가져와서 새로운 pageNumber로 설정
-            const params = new URLSearchParams(searchParams.toString());
-            params.set('page', String(pageNumber)); // 새로운 페이지 번호 설정
+            // const params = new URLSearchParams(searchParams.toString());
+            // params.set('page', String(pageNumber)); // 새로운 페이지 번호 설정
 
             // router.push를 사용해 변경된 URL로 이동
-            router.push(`${pathname}?${params.toString()}`);
+            router.push(`/notice?page=${page}`);
         },
         [router]
     );
@@ -61,7 +61,7 @@ export default function Notice() {
         },
         {
             title: "수정일",
-            dataIndex: "updatedAt",
+            dataIndex: "updated_at",
             align: "center",
             width: 100,
             render: (value: ISO8601DateTime) => {

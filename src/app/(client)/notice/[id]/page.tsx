@@ -7,8 +7,6 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import moment from "moment";
 import { Upload, UploadFile } from "antd";
-import { RcFile } from "antd/es/upload";
-import { InboxOutlined } from "@ant-design/icons";
 
 // 공지사항 데이터 타입 정의
 interface INotice {
@@ -21,7 +19,6 @@ interface INotice {
 
 export default function NoticeDetail({ params }: { params: { id: string } }) {
     const [notice, setNotice] = useState<INotice | null>(null);
-    const router = useRouter();
     const noticeId = params.id;
 
     useEffect(() => {
