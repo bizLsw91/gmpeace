@@ -2,7 +2,7 @@
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import {UploadFile} from "antd";
 import axios from "axios";
-import { fetchApi } from "./base";
+import { fetchApi } from "../../_clientApi/base";
 const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT
 export interface INotice {
     id: number;

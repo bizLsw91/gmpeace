@@ -1,6 +1,6 @@
 "use client";
 
-import {INotice} from "@/app/_clientApi/notice";
+import {INotice} from "@/app/api/queries/notice";
 import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import Spinner from "@/components/shared/spinner";
 import {useRouter} from "next/navigation";
