@@ -24,11 +24,11 @@ export const useNotices = (currPage:number) => {
         queryFn: ()=>axios.get(`/api/notices?page=${currPage||1}` )});
 };
 
-export const useNotice = (param: number) => {
-    return useQuery({
-        queryKey:['notices', param],
-        queryFn: ()=>axios.get( `/api/notices/${param}` )});
-};
+// export const useNotice = (param: number) => {
+//     return useQuery({
+//         queryKey:['notices', param],
+//         queryFn: ()=>axios.get( `/api/notices/${param}` )});
+// };
 // export const useCreateNotices = () => {
 //     const queryClient = useQueryClient();
 //     return useMutation( {
