@@ -76,7 +76,7 @@ export default function Notice() {
     return (
         <div className="notice pt-14 pb-24 min-h-[500px]">
             <div className="wrapper">
-                <DefaultTable<INotice>
+                <DefaultTable
                     columns={columns}
                     dataSource={data?.data?.items || []}
                     loading={isLoading}
