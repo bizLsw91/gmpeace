@@ -1,9 +1,9 @@
 "use client";
 
+import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import Spinner from "@/components/shared/spinner";
 import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import moment from "moment";
 import {Button, Upload, UploadFile} from "antd";
