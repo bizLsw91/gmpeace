@@ -1,11 +1,12 @@
 'use client';
 
 import {INotice, useNotices} from "@/app/_clientApi/notice";
-import { Table, Pagination, TableColumnsType } from 'antd';
+import {Table, Pagination, TableColumnsType } from 'antd';
 import moment from "moment";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Spin } from 'antd';
+import React from "react";
 
 const NoticesList = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -93,4 +94,4 @@ const NoticesList = () => {
     );
 };
 
-export default NoticesList;
+export default React.memo(NoticesList);
