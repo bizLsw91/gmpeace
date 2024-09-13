@@ -10,7 +10,8 @@ export default function Notice() {
     const searchParams = useSearchParams();
 
     const page = searchParams.get('page');
-    const {data, error, isLoading} = useNotices({page: page ? Number(page) : 1});
+    let page1 = page ? Number(page) : 1;
+    const {data, isLoading} = useNotices({page: page1});
 
     const handleChangePage = (pageNumber: number) => {
         // 기존 searchParams를 가져와서 새로운 pageNumber로 설정
@@ -18,7 +19,7 @@ export default function Notice() {
         // params.set('page', String(pageNumber)); // 새로운 페이지 번호 설정
 
         // router.push를 사용해 변경된 URL로 이동
-        router.push(`/notice?page=${page}`);
+        router.push(`/notice?page=${pageNumber||1}`);
     }
 
 
@@ -36,7 +37,7 @@ export default function Notice() {
             title: "작성자",
             width: 150,
             // dataIndex: "user_id",
-            render: (value: string) => {
+            render: () => {
                 return (<span>운영사무국</span>)
             }
         },
