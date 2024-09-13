@@ -41,9 +41,18 @@ export default function Home() {
                     </Link>
                 </div>
                 <div className="home__preRegiBtnArea flex flex-col items-center gap-5">
-                    <Link href={'https://docs.google.com/forms/d/1q_k3q2SVnQzphBcG5vK57NkcsZvyYImRaTqk9OJaaME/viewform'}>
+                    <Link
+                        href={'https://docs.google.com/forms/d/1q_k3q2SVnQzphBcG5vK57NkcsZvyYImRaTqk9OJaaME/viewform'}>
                         <Button type={'primary'} shape={'round'}>
                             <div>평화비빔밥 사전신청</div>
+                        </Button>
+                    </Link>
+                </div>
+                <div className="home__preRegiBtnArea flex flex-col items-center gap-5">
+                    <Link
+                        href={'/winner-check'}>
+                        <Button type={'primary'} shape={'round'}>
+                            <div>학생미술대회 수상자 확인</div>
                         </Button>
                     </Link>
                 </div>
