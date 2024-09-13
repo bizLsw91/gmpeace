@@ -3,8 +3,7 @@ import {INotice, useNotices} from "@/app/_clientApi/notice";
 import DefaultTable from "@/components/shared/ui/default-table";
 import {ColumnsType} from "antd/es/table";
 import moment from "moment";
-import {usePathname, useRouter, useSearchParams} from "next/navigation";
-import {useCallback} from "react";
+import { useRouter, useSearchParams} from "next/navigation";
 
 export default function Notice() {
     const router = useRouter();
@@ -70,11 +69,11 @@ export default function Notice() {
     ];
 
     const handleRowClick = (record: INotice) => {
-        router.push(`/notice/detail/${record.id}`);
+        router.push(`/notice/${record.id}`);
     };
 
     return (
-        <div className="notice pt-10">
+        <div className="notice pt-14 pb-24 min-h-[500px]">
             <div className="wrapper">
                 <DefaultTable<INotice>
                     columns={columns}
