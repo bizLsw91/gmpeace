@@ -72,24 +72,24 @@ const NoticesList = () => {
     };
     return (
         <div className="notice-list p-6 max-w-4xl mx-auto">
-            <Table
-                columns={columns}
-                dataSource={data?.data?.items || []}
-                pagination={false}
-                rowKey="id"
-                onRow={(record) => ({
-                    onClick: () => handleRowClick(record),
-                })}
-                className="cursor-pointer transition-all hover:shadow-md hover:bg-gray-50"
-            />
-            <div className="flex justify-end mt-4">
-                <Pagination
-                    current={currentPage}
-                    total={data?.data?.page?.totalCount || 0}
-                    pageSize={5}
-                    onChange={(page) => setCurrentPage(page)}
-                />
-            </div>
+            {/*<Table*/}
+            {/*    columns={columns}*/}
+            {/*    dataSource={data?.data?.items || []}*/}
+            {/*    pagination={false}*/}
+            {/*    rowKey="id"*/}
+            {/*    onRow={(record) => ({*/}
+            {/*        onClick: () => handleRowClick(record),*/}
+            {/*    })}*/}
+            {/*    className="cursor-pointer transition-all hover:shadow-md hover:bg-gray-50"*/}
+            {/*/>*/}
+            {/*<div className="flex justify-end mt-4">*/}
+            {/*    <Pagination*/}
+            {/*        current={currentPage}*/}
+            {/*        total={data?.data?.page?.totalCount || 0}*/}
+            {/*        pageSize={5}*/}
+            {/*        onChange={(page) => setCurrentPage(page)}*/}
+            {/*    />*/}
+            {/*</div>*/}
         </div>
     );
 };
