@@ -329,9 +329,28 @@ body {
 
 .ant-btn {
     font-family: "Nanum Gothic", sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
-    height: 70px;
+    height: auto;
+    padding: 5px 10px;
+    @media #{$xs} {
+        font-size: 17px;
+    }
+    @media #{$md} {
+        font-size: 20px;
+    }
+}
+.ant-popover-inner{
+    padding: 0 !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+.ant-popover-inner-content li{
+    font-family: 'Godo M', sans-serif;
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: medium;
+    color: #0d548c;
 }
 
 .enable-transition {

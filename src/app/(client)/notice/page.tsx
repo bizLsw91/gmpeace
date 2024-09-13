@@ -72,7 +72,7 @@ const NoticesList = () => {
         router.push(`/notice/${record.id}`);
     };
     return (
-        <div className="notice-list p-6 max-w-4xl mx-auto">
+        <div className="notice-list pt-10 pb-20 max-w-4xl mx-auto">
             <Table
                 columns={columns}
                 dataSource={data?.data?.items || []}

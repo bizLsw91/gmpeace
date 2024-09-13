@@ -1,11 +1,13 @@
 "use client";
 
+import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import Spinner from "@/components/shared/spinner";
+import AntdBtnCustom from "@/components/shared/ui/AntBtnCustom";
+import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import moment from "moment";
-import { Upload, UploadFile } from "antd";
+import {Upload, UploadFile, Button } from "antd";
 
 // 공지사항 데이터 타입 정의
 interface INotice {
@@ -19,6 +21,7 @@ interface INotice {
 export default function NoticeDetail({ params }: { params: { id: string } }) {
     const [notice, setNotice] = useState<INotice | null>(null);
     const noticeId = params.id;
+    const router = useRouter();
 
     useEffect(() => {
         // 공지사항 상세 정보 가져오기 (API 호출)
@@ -45,8 +48,12 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
         }))
         : [];
 
+    const handleGoToList = () => {
+        router.push('/notice')
+    }
+
     return (
-        <div className="max-w-3xl mx-auto p-5">
+        <div className="notice-detail max-w-3xl mx-auto p-5 pb-20">
             <div className="bg-white shadow-md rounded-lg p-6">
                 <h1 className="text-2xl font-bold mb-4">{notice.title}</h1>
                 <p className="text-gray-600">작성자: 운영사무국</p>
@@ -75,6 +82,9 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
 
                 {/* ReactQuill - 읽기 전용 */}
                 <ReactQuill value={notice.content} readOnly={true} theme="bubble" className="bg-gray-50"/>
+            </div>
+            <div className="flex justify-center mt-6">
+                <AntdBtnCustom onClick={handleGoToList} enableHover={false}>목록으로 가기</AntdBtnCustom>
             </div>
         </div>
     );

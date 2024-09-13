@@ -20,7 +20,9 @@ export default function ClientLayout({
             <Suspense fallback={<div>Loading...</div>}>
                 <TabArea/>
             </Suspense>
-            {children}
+            <div className="min-h-[600px]">
+                {children}
+            </div>
             <Footer/>
         </>
 );

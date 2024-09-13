@@ -5,8 +5,8 @@ import {Menu} from "lucide-react";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import Image from "next/image";
-import { Drawer, Menu as AntdMenu} from 'antd';
-import { useRouter } from 'next/navigation';
+import {Drawer, Menu as AntdMenu, Popover} from 'antd';
+import {useRouter} from 'next/navigation';
 
 export default function Header() {
     const [open, setOpen] = useState(false);
@@ -37,28 +37,32 @@ export default function Header() {
                     <div className={'hidden md:block md:ml-11 h-full'}>
                         <ul className={'flex gap-6 text-sm h-full'}>
                             {menuItems.map((item, idx) => (
-                                <li key={idx} className={'h-full flex items-center'}>
-                                    <Link href={item.to}>{item.label}</Link>
-                                    {item.children && (
-                                        <ul className={'sub-menu absolute bg-white shadow-md rounded-md p-2 mt-2'}>
-                                            {item.children.map((subItem, subIdx) => (
-                                                <li key={subIdx}>
-                                                    <Link href={subItem.to}>{subItem.label}</Link>
+                                <Popover key={idx} arrow={false}  content={(
+                                    <ul>
+                                        {item.children.map((subItem, subIdx) => (
+                                            <Link key={subIdx} href={subItem.to}>
+                                                <li>
+                                                    {subItem.label}
                                                 </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </li>
+                                            </Link>
+                                        ))}
+                                    </ul>
+                                )}>
+                                    <li key={idx} className={'h-full flex items-center'}>
+                                        <Link href={item.to}>{item.label}</Link>
+                                    </li>
+                                </Popover>
+
                             ))}
                         </ul>
                     </div>
                     <div className={'md:hidden pt-[3px] mr-2'}>
                         <button onClick={showDrawer}><Menu/></button>
                     </div>
-                    <Drawer onClose={onClose} open={open} >
+                    <Drawer onClose={onClose} open={open}>
                         <AntdMenu
                             mode={'inline'}
-                            items={menuItems.map((item,idx) => ({
+                            items={menuItems.map((item, idx) => ({
                                 key: idx,
                                 label: item.label,
                                 children: item.children?.map(subItem => ({
@@ -66,7 +70,7 @@ export default function Header() {
                                     label: subItem.label,
                                 }))
                             }))}
-                            onSelect={function ({key}){
+                            onSelect={function ({key}) {
                                 onClose()
                                 router.push(key)
                             }}
