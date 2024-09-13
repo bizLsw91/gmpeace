@@ -10,10 +10,8 @@ import FormSection from "@/components/shared/form/ui/form-section";
 import {PlusOutlined} from "@ant-design/icons";
 import {Button, Divider, Form, Input, Upload, UploadFile} from "antd";
 import {useForm} from "antd/es/form/Form";
-import {RcFile, UploadChangeParam} from "antd/es/upload";
-import {storage} from "firebase-admin";
+import { UploadChangeParam} from "antd/es/upload";
 import {useState} from "react";
-import Image from "next/image";
 
 const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const [form] = useForm();

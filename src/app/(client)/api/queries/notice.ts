@@ -1,7 +1,3 @@
-//클라이언트에서 사용하는 쿼리들만 모아놓기
-
-// ★★★★★★ 아래와 같이 서버컴포넌트에서도 쓰이는 객체를 가져와서 사용할 때 배포에러가 발생했었다.
-// 주석처리하고 자체적으로 만드니까 에러 발생안함!
 import {INoticeFormValue} from "@/types/notice";
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import axios from "axios";
