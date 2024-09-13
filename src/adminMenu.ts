@@ -1,8 +1,9 @@
 export const adminMenu = [
     {
         label: '게시판 관리',
-        to: '/admin/history',
+        to: '/admin/notice',
         children: [
+            { label: '공지사항', to: '/admin/notice' },
             { label: 'History', to: '/admin/history' },
         ]
     },

@@ -1,3 +1,8 @@
+import RQProviders from "@/app/_components/RQProvider";
+import type {Metadata} from "next";
+import "../assets/style/tailwind/index.css"
+import "../assets/style/scss/index.scss"
+
 export const metadata: Metadata = {
     title: "제4회 광명시 평화주간 2024",
     description: "제4회 광명시 평화주간 2024 행사안내 및 사전신청 사이트",
@@ -47,16 +52,6 @@ export const metadata: Metadata = {
     }
 };
 
-import Banner from "@/app/_components/Banner/Banner";
-import RQProviders from "@/app/_components/RQProvider";
-import TabArea from "@/app/_components/TabArea/TabArea";
-import Footer from "@/app/_components/Footer/Footer";
-import Header from "@/app/_components/Header/Header";
-import type {Metadata} from "next";
-import "../assets/style/tailwind/index.css"
-import "../assets/style/scss/index.scss"
-import {Suspense} from "react";
-
 
 export default function RootLayout({
                                        children
@@ -67,15 +62,7 @@ export default function RootLayout({
         <html lang="ko">
         <body>
         <RQProviders>
-        <Header/>
-        <Suspense fallback={<div>Loading...</div>}>
-            <Banner/>
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-            <TabArea/>
-        </Suspense>
-        {children}
-        <Footer/>
+            {children}
         </RQProviders>
         </body>
         </html>

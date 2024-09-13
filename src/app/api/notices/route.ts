@@ -1,5 +1,5 @@
-import {INoticeFormValue, INoticesResponse} from "@/app/api/queries/notice";
 import {createClient} from "@/supabase/server";
+import {INoticeFormValue, INoticesResponse} from "@/types/notice";
 import {NextResponse} from 'next/server';
 
 

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 // Firestore 컬렉션 이름
-// const CATEGORY_COLLECTION = "categories";
+const CATEGORY_COLLECTION = "categories";
 
 // 카테고리 목록 가져오기
 export async function GET() {

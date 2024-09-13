@@ -334,6 +334,13 @@ body {
     height: 70px;
 }
 
+.enable-transition {
+    @apply transition-all duration-300;
+}
+.btn {
+    @apply enable-transition border border-gray-300 rounded-lg hover:border-brand cursor-pointer;
+}
+
 .theme-color-1 {
     color: $theme-color-1;
 }

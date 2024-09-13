@@ -1,7 +1,7 @@
 "use client";
 
 import {useNotices} from "@/app/(client)/api/queries/notice";
-import {INotice} from "@/app/api/queries/notice";
+import {INotice} from "@/types/notice";
 import {Table, Pagination, TableColumnsType } from 'antd';
 import moment from "moment";
 import { useState } from 'react';
@@ -69,7 +69,7 @@ const NoticesList = () => {
     ];
 
     const handleRowClick = (record:INotice) => {
-        router.push(`/notice-detail/${record.id}`);
+        router.push(`/notice/${record.id}`);
     };
     return (
         <div className="notice-list p-6 max-w-4xl mx-auto">

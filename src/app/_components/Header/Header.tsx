@@ -55,7 +55,7 @@ export default function Header() {
                     <div className={'md:hidden pt-[3px] mr-2'}>
                         <button onClick={showDrawer}><Menu/></button>
                     </div>
-                    <Drawer onClose={onClose} open={open}>
+                    <Drawer onClose={onClose} open={open} >
                         <AntdMenu
                             mode={'inline'}
                             items={menuItems.map((item,idx) => ({
