@@ -1,9 +1,4 @@
-"use client"
-import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import {UploadFile} from "antd";
-import axios from "axios";
-import { fetchApi } from "../app/(client)/api/queries/base";
-const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT
 export interface INotice {
     id: number;
     user_id: number;
