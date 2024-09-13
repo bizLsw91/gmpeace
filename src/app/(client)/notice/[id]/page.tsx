@@ -2,7 +2,6 @@
 
 import Spinner from "@/components/shared/spinner";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import moment from "moment";
