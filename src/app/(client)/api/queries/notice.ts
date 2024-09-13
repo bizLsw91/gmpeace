@@ -1,5 +1,4 @@
 //클라이언트에서 사용하는 쿼리들만 모아놓기
-import {fetchApi} from "@/app/(client)/api/queries/base";
 // import {INoticeFormValue} from "@/types/notice";
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import axios from "axios";
@@ -23,14 +22,6 @@ export const useNotices = (currPage:number) => {
     return useQuery({
         queryKey:['notices'],
         queryFn: ()=>axios.get(`/api/notices?page=${currPage||1}` )});
-};
-
-export const createNotice = (value: INoticeFormValue) => {
-    return fetchApi.post(`api/notices`, { body: JSON.stringify(value) });
-};
-
-export const updateNotice = (id: string, value: INoticeFormValue) => {
-    return fetchApi.put(`api/notices/${id}`, { body: JSON.stringify(value) });
 };
 
 export const useNotice = (param: number) => {
