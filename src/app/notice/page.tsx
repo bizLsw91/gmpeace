@@ -68,7 +68,7 @@ const NoticesList = () => {
     ];
 
     const handleRowClick = (record:INotice) => {
-        router.push(`/notice/${record.id}`);
+        router.push(`/notice-detail/${record.id}`);
     };
     return (
         <div className="notice-list p-6 max-w-4xl mx-auto">
