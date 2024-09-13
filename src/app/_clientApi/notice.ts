@@ -13,10 +13,10 @@ export interface INotice {
     title: string;
     content: string;
     author: string;
-    attachments: string[];
-    photos: string[];
-    createdAt: string;
-    updatedAt: string;
+    attachments: { name:string,url:string }[]|null;
+    photos: string[]|null;
+    created_at: string;
+    updated_at: string;
 }
 
 export interface INoticeFormValue extends Omit<INotice, "id" | "user_id" | "view_count" | "author" | "createdAt" | "updatedAt"> {}

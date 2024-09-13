@@ -1,22 +1,14 @@
 "use client";
 
+import {INotice} from "@/app/_clientApi/notice";
 import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import Spinner from "@/components/shared/spinner";
 import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
-import "react-quill/dist/quill.snow.css";
 import moment from "moment";
 import {Button, Upload, UploadFile} from "antd";
 
 // 공지사항 데이터 타입 정의
-interface INotice {
-    title: string;
-    content: string;
-    created_at: string;
-    updated_at: string;
-    attachments?: { name: string; url: string }[]; // 첨부파일 배열
-}
-
 export default function NoticeDetail({ params }: { params: { id: string } }) {
     const [notice, setNotice] = useState<INotice | null>(null);
     const noticeId = params.id;
