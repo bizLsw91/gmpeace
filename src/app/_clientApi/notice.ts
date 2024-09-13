@@ -3,7 +3,7 @@ import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import {UploadFile} from "antd";
 import axios from "axios";
 import { fetchApi } from "./base";
-
+const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT
 export interface INotice {
     id: number;
     user_id: number;
@@ -56,12 +56,12 @@ export const updateNotice = (id: string, value: INoticeFormValue) => {
 export const useNotices = (currPage:number) => {
     return useQuery({
         queryKey:['notices'],
-        queryFn: ()=>axios.get(`/api/notices?page=${currPage||1}` )});
+        queryFn: ()=>axios.get(endpoint+`/api/notices?page=${currPage||1}` )});
 };
 export const useNotice = (param: number) => {
     return useQuery({
         queryKey:['notices', param],
-        queryFn: ()=>axios.get( `/api/notices/${param}` )});
+        queryFn: ()=>axios.get( endpoint+`/api/notices/${param}` )});
 };
 export const useCreateNotices = () => {
     const queryClient = useQueryClient();
