@@ -62,7 +62,7 @@ export default function TabArea() {
         setValue(path)
     }, [path]);
 
-    if(pathname==='' || pathname==='/' || pathname==='/pre-registration' || pathname==='/notice')
+    if(pathname==='' || pathname==='/' || pathname==='/pre-registration' || pathname==='/notice' || pathname.startsWith('/notice/'))
         return (<></>);
 
     return (

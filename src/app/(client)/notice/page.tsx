@@ -56,7 +56,7 @@ export default function Notice() {
             title: "등록일",
             dataIndex: "created_at",
             align: "center",
-            width: 110,
+            width: 100,
             render: (value: string) => {
                 return (
                     <div className="text-sm flex flex-wrap gap-1.5">
@@ -69,7 +69,7 @@ export default function Notice() {
             title: "수정일",
             dataIndex: "updatedAt",
             align: "center",
-            width: 110,
+            width: 100,
             render: (value: ISO8601DateTime) => {
                 return (
                     <div className="text-sm flex flex-wrap gap-1.5">
@@ -84,7 +84,6 @@ export default function Notice() {
     return (
         <div className="notice pt-10">
             <div className="wrapper">
-                <div className="flex justify-center font-bold text-2xl mb-14">알림</div>
                 <DefaultTable<INotice>
                     columns={columns}
                     dataSource={data?.data?.items || []}
@@ -98,6 +97,11 @@ export default function Notice() {
                     }}
                     className="mt-3"
                     countLabel={data?.data?.page?.totalCount}
+                    onRow={(record,index)=>({
+                        onClick: () => {
+                            router.push(`/notice/${record.id}`);
+                        },
+                    })}
                 />
             </div>
         </div>);
