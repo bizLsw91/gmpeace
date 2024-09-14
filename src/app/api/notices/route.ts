@@ -5,12 +5,9 @@ import {NextResponse} from 'next/server';
 
 // 공지사항 목록을 가져오는 API
 export async function GET(request: Request) {
-    console.log('%c공지사항 목록 GET', "color:blue")
     const supabase = createClient();
     const {searchParams} = new URL(request.url);
-    console.log("searchParams = ", searchParams);
     const page = parseInt(searchParams.get('page') || '1');
-    console.log("page = ", page);
     const pageSize = 5;
 
     const from = (page - 1) * pageSize;
@@ -20,19 +17,17 @@ export async function GET(request: Request) {
         // 공지사항 목록을 페이지네이션하여 가져옵니다.
         const {data, error, count} = await supabase
             .from('NOTICES')
-            .select(`*`, {count: 'exact'})
+            .select(`*,author:USERS(name)`, {count: 'exact'})
             .order('created_at', {ascending: false})
             .range(from, to);
 
-        console.log("data = ", data);
-        // // users 필드를 제거하고 name을 author로 매핑
-        // const noticesWithAuthor = data?.map(notice => {
-        //     const { users, user_id, ...rest } = notice; // users 필드 제외
-        //     return {
-        //         ...rest,
-        //         author: users?.name, // users.name을 author로 매핑
-        //     };
-        // });
+        // users 필드를 제거하고 name을 author로 매핑
+        const noticesWithAuthor = data?.map(notice => {
+            return {
+                ...notice,
+                author: notice?.author?.name || 'Unknown', // users.name을 author로 매핑
+            };
+        });
 
         if (error) {
             return NextResponse.json({error: 'Failed to fetch notices'}, {status: 500});
@@ -41,7 +36,7 @@ export async function GET(request: Request) {
         const totalCount = count ?? 0
         const totalPage = Math.ceil(totalCount / pageSize);
         const response: INoticesResponse = {
-            items: data,
+            items: noticesWithAuthor,
             page: {
                 currentPage: page,
                 pageSize,

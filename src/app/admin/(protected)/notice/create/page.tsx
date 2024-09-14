@@ -25,7 +25,6 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const handleFinish = () => {
         // 이곳에 실제 폼 전송 로직 작성.
 
-
         // 이미지 업로드 처리
         // const photoUrls = await Promise.all(
         //     fileList.map(async (file) => {
