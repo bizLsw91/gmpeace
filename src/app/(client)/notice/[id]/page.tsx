@@ -3,13 +3,25 @@
 import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import Spinner from "@/components/shared/spinner";
 import AntdBtnCustom from "@/components/shared/ui/AntBtnCustom";
-import {INotice} from "@/types/notice";
 import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import moment from "moment";
 import {Upload, UploadFile, Button } from "antd";
 
+// 공지사항 데이터 타입 정의
+interface INotice {
+    id: number;
+    user_id: number;
+    view_count: number;
+    title: string;
+    content: string;
+    author: string;
+    attachments: { name:string,url:string }[]|null;
+    photos: string[]|null;
+    created_at: string;
+    updated_at: string;
+}
 
 export default function NoticeDetail({ params }: { params: { id: string } }) {
     const [notice, setNotice] = useState<INotice | null>(null);
