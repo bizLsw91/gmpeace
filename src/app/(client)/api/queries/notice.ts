@@ -1,4 +1,3 @@
-import {fetchApi} from "@/app/(client)/api/queries/base";
 import {INoticeFormValue} from "@/types/notice";
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import axios from "axios";
@@ -43,7 +42,4 @@ export const useDeleteNotices = () => {
             console.error('Error deleting notices:', error);
         },
     });
-};
-export const apiNoticeViewUp = (id:number) => {
-    return fetchApi.post(`api/notices/${id}/view`);
 };
