@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import {usePathname, useSearchParams} from "next/navigation";
+import {usePathname} from "next/navigation";
 
 export default function Banner() {
     const pathname = usePathname()
@@ -15,7 +15,12 @@ export default function Banner() {
         context = '참여행사'
     }else if(pathname==='/pre-registration'){
         context = '개막식 & 평화도시 광명포럼 사전신청 안내 및 접수'
+    }else if(pathname==='/notice'){
+        context = '알림 목록'
+    }else if(pathname.startsWith('/notice/')){
+        context = '알림 상세'
     }
+
     return (
         <div className={'banner mt-[50px] xs:mt-[70px]'}>
             <div className="wrapper">

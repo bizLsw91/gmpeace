@@ -340,6 +340,25 @@ body {
         font-size: 20px;
     }
 }
+.ant-popover-inner{
+    padding: 0 !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+.ant-popover-inner-content li{
+    font-family: 'Godo M', sans-serif;
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: medium;
+    color: #0d548c;
+}
+
+.enable-transition {
+    @apply transition-all duration-300;
+}
+.btn {
+    @apply enable-transition border border-gray-300 rounded-lg hover:border-brand cursor-pointer;
+}
 
 .theme-color-1 {
     color: $theme-color-1;

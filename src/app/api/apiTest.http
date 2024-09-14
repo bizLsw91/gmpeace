@@ -1,0 +1,35 @@
+### 1. notice 등록
+POST {{domain}}/api/notices
+Content-Type: application/json
+
+{
+  "title": "notice post test",
+  "content": "notice post test content",
+  "author": "관리자"
+}
+
+### 2. notice list
+GET {{domain}}/api/notices
+
+### 2.1 notice list
+GET {{domain}}/api/notices?page=1
+
+### 3 notice detail
+GET {{domain}}/api/notices/1
+
+
+### 3.2 signOut Test
+GET {{domain}}/api/sign/signOut
+
+### 4. delUser
+GET {{domain}}/api/sign/deleteUser
+
+### 5. sendEmailVerification
+POST {{domain}}/api/sign/verifyEmail
+Content-Type: application/json
+
+{
+  "email": "hd98lsu@naver.com",
+  "password": "qwer1234@"
+}
+
