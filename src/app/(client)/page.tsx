@@ -50,7 +50,7 @@ export default function Home() {
                 </div>
                 <div className="home__preRegiBtnArea flex flex-col items-center gap-5">
                     <Link
-                        href={'/winner-check'}>
+                        href={'/notice/1'}>
                         <Button type={'primary'} shape={'round'}>
                             <div>학생미술대회 수상자 확인</div>
                         </Button>
