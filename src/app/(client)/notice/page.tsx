@@ -1,6 +1,6 @@
 "use client";
 
-import {useNotices} from "@/app/(client)/api/queries/notice";
+import {apiNoticeViewUp, useNotices} from "@/app/(client)/api/queries/notice";
 import {INotice} from "@/types/notice";
 import {Table, Pagination, TableColumnsType} from 'antd';
 import moment from "moment";
@@ -14,7 +14,7 @@ const NoticesList = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const {data, isLoading, isError} = useNotices(currentPage);
     const router = useRouter();
-    const isMobile = useMediaQuery({maxWidth: 479});
+    const isMobile = useMediaQuery({maxWidth: 639});
 
     if (isLoading) {
         return <Spin tip="Loading..." className="flex justify-center items-center min-h-screen"/>;
@@ -37,8 +37,9 @@ const NoticesList = () => {
                         <div>
                             <div className="m-title">{record.title}</div>
                             <div className="m-shortbox">작성자: 운영사무국</div>
-                            {/*<div className="m-shortbox">조회수: {record.views}</div>*/}
+                            <div className="m-shortbox">조회수: {record.view_count}</div>
                             <div className="m-shortbox">등록일: {moment(record.created_at).format('YYYY/MM/DD')}</div>
+                            <div className="m-shortbox">수정일: {moment(record.updated_at).format('YYYY/MM/DD')}</div>
                         </div>
                     </a>
                 )
@@ -89,6 +90,18 @@ const NoticesList = () => {
                     </div>
                 ),
             },
+            {
+                title: "수정일",
+                dataIndex: "updated_at",
+                key: "updated_at",
+                align: "center",
+                width: 100,
+                render: (value: any) => (
+                    <div className="text-sm flex flex-wrap gap-1.5">
+                        <span className="block">{moment(value).format("YYYY/MM/DD")}</span>
+                    </div>
+                ),
+            },
         ];
         TableD = <Table
             columns={columns}
@@ -103,6 +116,7 @@ const NoticesList = () => {
     }
 
     const handleRowClick = (record: INotice) => {
+        apiNoticeViewUp(record.id)
         router.push(`/notice/${record.id}`);
     };
 

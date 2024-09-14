@@ -18,8 +18,8 @@ GET {{domain}}/api/notices?page=1
 GET {{domain}}/api/notices/1
 
 
-### 3.2 signOut Test
-GET {{domain}}/api/sign/signOut
+### 4. notice view up
+POST {{domain}}/api/notices/1/view
 
 ### 4. delUser
 GET {{domain}}/api/sign/deleteUser

@@ -3,20 +3,13 @@
 import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import Spinner from "@/components/shared/spinner";
 import AntdBtnCustom from "@/components/shared/ui/AntBtnCustom";
+import {INotice} from "@/types/notice";
 import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import moment from "moment";
 import {Upload, UploadFile, Button } from "antd";
 
-// 공지사항 데이터 타입 정의
-interface INotice {
-    title: string;
-    content: string;
-    created_at: string;
-    updated_at: string;
-    attachments?: { name: string; url: string }[]; // 첨부파일 배열
-}
 
 export default function NoticeDetail({ params }: { params: { id: string } }) {
     const [notice, setNotice] = useState<INotice | null>(null);
@@ -56,11 +49,16 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
         <div className="notice-detail max-w-3xl mx-auto p-5 pb-20">
             <div className="bg-white shadow-md rounded-lg p-6">
                 <h1 className="text-lg xs:text-2xl font-bold mb-4">{notice.title}</h1>
-                <p className="text-sm text-gray-600">작성자: 운영사무국</p>
 
                 <div className="flex justify-between mt-2 flex-wrap gap-3">
+                    <p className="text-sm text-gray-600">작성자: 운영사무국</p>
                     <p className="text-sm text-gray-500">
-                        등록일: {moment(notice.created_at).format("YYYY-MM-DD")}
+                        조회수: {notice.view_count}
+                    </p>
+                </div>
+                <div className="flex justify-between mt-2 flex-wrap gap-3">
+                    <p className="text-sm text-gray-500">
+                    등록일: {moment(notice.created_at).format("YYYY-MM-DD")}
                     </p>
                     <p className="text-sm text-gray-500">
                         수정일: {moment(notice.updated_at).format("YYYY-MM-DD")}

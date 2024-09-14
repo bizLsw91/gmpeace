@@ -1,5 +1,8 @@
 @import "react-quill/dist/quill.snow.css";
 
+.ql-editor {
+  min-height: 200px;
+}
 .ql-toolbar.ql-snow {
   @apply rounded-tl-[6px] rounded-tr-[6px] border-antd-form;
 }

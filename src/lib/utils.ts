@@ -1,6 +1,7 @@
 import {storage} from "@/firebase/firebase.admin.config";
 import {UploadFile} from "antd";
 import { clsx, type ClassValue } from "clsx"
+import moment from "moment";
 import {ReadonlyURLSearchParams} from "next/navigation";
 import { twMerge } from "tailwind-merge"
 const { v4: uuidv4 } = require('uuid');
@@ -54,4 +55,9 @@ async function uploadFileAndGetUrl(file:UploadFile) {
     console.error('Error uploading file:', error);
     throw error;
   }
+}
+
+// utc timestamp to kst
+export function convertToKST_date(timestamp:string) {
+  return moment.utc(timestamp).add(9, 'hours').format('YYYY-MM-DD');
 }
