@@ -3,6 +3,7 @@
 import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import Spinner from "@/components/shared/spinner";
 import AntdBtnCustom from "@/components/shared/ui/AntBtnCustom";
+import axios from "axios";
 import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css";
@@ -29,6 +30,8 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
     const router = useRouter();
 
     useEffect(() => {
+        axios.post(`/api/notices/${noticeId}/view`);
+
         // 공지사항 상세 정보 가져오기 (API 호출)
         const fetchNotice = async () => {
             const res = await fetch(`/api/notices/${noticeId}`);

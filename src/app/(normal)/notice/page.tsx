@@ -1,9 +1,8 @@
 "use client";
 
-import {useNotices} from "@/app/(client)/api/queries/notice";
+import {useNotices} from "@/app/(normal)/api/queries/notice";
 import {INotice} from "@/types/notice";
 import {Table, Pagination, TableColumnsType} from 'antd';
-import axios from "axios";
 import moment from "moment";
 import {useState} from 'react';
 import {useRouter} from 'next/navigation';
@@ -11,7 +10,7 @@ import {Spin} from 'antd';
 import React from "react";
 import {useMediaQuery} from "react-responsive";
 
-const NoticesList = () => {
+export default function NoticesList() {
     const [currentPage, setCurrentPage] = useState(1);
     const {data, isLoading, isError} = useNotices(currentPage);
     const router = useRouter();
@@ -84,7 +83,7 @@ const NoticesList = () => {
                 dataIndex: "created_at",
                 key: "created_at",
                 align: "center",
-                width: 100,
+                width: 93,
                 render: (value: any) => (
                     <div className="text-sm flex flex-wrap gap-1.5">
                         <span className="block">{moment(value).format("YYYY/MM/DD")}</span>
@@ -96,7 +95,7 @@ const NoticesList = () => {
                 dataIndex: "updated_at",
                 key: "updated_at",
                 align: "center",
-                width: 100,
+                width: 93,
                 render: (value: any) => (
                     <div className="text-sm flex flex-wrap gap-1.5">
                         <span className="block">{moment(value).format("YYYY/MM/DD")}</span>
@@ -123,7 +122,6 @@ const NoticesList = () => {
     }
 
     const handleRowClick = (record: INotice) => {
-        axios.post(`/api/notices/${record.id}/view`);
         router.push(`/notice/${record.id}`);
     };
 
@@ -144,6 +142,4 @@ const NoticesList = () => {
             </div>
         </div>
     );
-};
-
-export default React.memo(NoticesList);
+}

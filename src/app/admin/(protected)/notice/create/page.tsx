@@ -1,7 +1,7 @@
 "use client"
 import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import {INoticeAntdFormValue} from "@/types/notice";
-import {useCreateNotices} from "@/app/(client)/api/queries/notice"
+import {useCreateNotices} from "@/app/(normal)/api/queries/notice"
 import {getDefaultLayout, IDefaultLayoutPage} from "@/components/layout/default-layout";
 import QuillEditor from "@/components/shared/form/control/quill-editor";
 import DefaultForm from "@/components/shared/form/ui/default-form";
