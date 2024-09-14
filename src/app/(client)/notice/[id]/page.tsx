@@ -55,10 +55,10 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
     return (
         <div className="notice-detail max-w-3xl mx-auto p-5 pb-20">
             <div className="bg-white shadow-md rounded-lg p-6">
-                <h1 className="text-2xl font-bold mb-4">{notice.title}</h1>
-                <p className="text-gray-600">작성자: 운영사무국</p>
+                <h1 className="text-lg xs:text-2xl font-bold mb-4">{notice.title}</h1>
+                <p className="text-sm text-gray-600">작성자: 운영사무국</p>
 
-                <div className="flex justify-between mt-2">
+                <div className="flex justify-between mt-2 flex-wrap gap-3">
                     <p className="text-sm text-gray-500">
                         등록일: {moment(notice.created_at).format("YYYY-MM-DD")}
                     </p>
@@ -71,7 +71,7 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
 
                 {/* Ant Design Upload 컴포넌트를 이용한 첨부파일 섹션 */}
                 <div className="mb-4">
-                    <h2 className="text-lg font-semibold mb-2">첨부파일</h2>
+                    <h2 className="text-md xs:text-lg font-semibold mb-2">첨부파일</h2>
                     <Upload
                         fileList={fileList} // 기존 첨부파일을 fileList로 표시
                         // listType="picture" // 이미지와 파일을 섞어 표시

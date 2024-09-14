@@ -1,0 +1,48 @@
+.notice-list{
+    .notice-table{
+        &-m{
+            .m{
+                &-titleDiv{
+                    display: flex;
+                }
+                &-star{
+                    font-size: large;
+                }
+                &-title{
+                    width: 100%;
+                    text-align: left;
+                    overflow: hidden;
+                    word-break: break-all;
+                    line-height: 1.4;
+                    box-sizing: border-box;
+                    font-weight: bold;
+                    font-family: "Nanum Gothic",sans-serif;
+                    margin-bottom: 8px;
+                    border-radius: 5px;
+                    padding: 0.5em;
+                    background-color: rgba(229, 229, 231, 0.81);
+                    font-size: 12px;
+                }
+                &-shortbox{
+                    margin-left: 0.2em;
+                    margin-right: 0.4rem;
+                    margin-bottom: 0.2rem;
+                    display: inline-block;
+                    padding: 0.3em;
+                    background-color: rgb(237 238 238 / 44%);
+                    border-radius: 7px;
+                    font-size: 12px;
+                }
+            }
+            .ant-table-tbody{
+                padding: 0 16px;
+            }
+            .ant-table-tbody .ant-table-cell{
+                padding: 8px 5px;
+                border-bottom: 1px solid #cac5c5;
+            }
+        }
+
+    }
+
+}
