@@ -3,13 +3,13 @@
 import {useNotices} from "@/app/(client)/api/queries/notice";
 import {INotice} from "@/types/notice";
 import {Table, Pagination, TableColumnsType} from 'antd';
+import axios from "axios";
 import moment from "moment";
 import {useState} from 'react';
 import {useRouter} from 'next/navigation';
 import {Spin} from 'antd';
 import React from "react";
 import {useMediaQuery} from "react-responsive";
-import { fetchApi } from "../api/queries/base";
 
 const NoticesList = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -117,7 +117,7 @@ const NoticesList = () => {
     }
 
     const handleRowClick = (record: INotice) => {
-        fetchApi.post(`api/notices/${record.id}/view`);
+        axios.post(`/api/notices/${record.id}/view`);
         router.push(`/notice/${record.id}`);
     };
 
