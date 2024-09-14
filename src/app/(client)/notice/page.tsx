@@ -103,6 +103,12 @@ const NoticesList = () => {
                     </div>
                 ),
             },
+            {
+                title: "조회수",
+                dataIndex: "view_count",
+                key: 'view_count',
+                align: 'center',
+            },
         ];
         TableD = <Table
             columns={columns}
