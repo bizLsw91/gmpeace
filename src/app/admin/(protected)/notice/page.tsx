@@ -1,5 +1,5 @@
 "use client"
-import {useDeleteNotices, useNotices} from "@/app/(client)/api/queries/notice";
+import {useDeleteNotices, useNotices} from "@/app/(normal)/api/queries/notice";
 import DefaultTable from "@/components/shared/ui/default-table";
 import {ISO8601DateTime} from "@/types/common";
 import {INotice} from "@/types/notice";
@@ -22,6 +22,7 @@ export default function AdminNotice() {
 
     const page = searchParams.get('page');
     const {data, error, isLoading} = useNotices(page ? Number(page) : 1);
+    console.log("data = ", data);
     const {mutate: deleteNotices, isPending: isDeleting} = useDeleteNotices()
 
     const handleChangePage = useCallback(
@@ -32,7 +33,6 @@ export default function AdminNotice() {
 
             // router.push를 사용해 변경된 URL로 이동
             router.push(`${pathname}?${params.toString()}`);
-            ;
         },
         [router]
     );
@@ -89,11 +89,8 @@ export default function AdminNotice() {
         },
         {
             title: "작성자",
-            width: 150,
-            dataIndex: "user_id",
-            // render: (value: string)=>{
-            //     return (<span>운영사무국</span>)
-            // }
+            dataIndex: "author",
+            width: 110,
         },
         {
             title: "생성일시",
@@ -122,6 +119,12 @@ export default function AdminNotice() {
                     </div>
                 );
             },
+        },
+        {
+            title: "조회수",
+            dataIndex: "view_count",
+            width: 80,
+            align: "center",
         },
     ];
 

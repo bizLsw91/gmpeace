@@ -1,3 +1,4 @@
+import Loading from "@/app/(normal)/loading";
 import Banner from "@/app/_components/Banner/Banner";
 import TabArea from "@/app/_components/TabArea/TabArea";
 import Footer from "@/app/_components/Footer/Footer";
@@ -7,24 +8,26 @@ import "../../assets/style/scss/index.scss"
 import {Suspense} from "react";
 
 export default function ClientLayout({
-                                       children
-                                   }: Readonly<{
+                                         children
+                                     }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <>
             <Header/>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading/>}>
                 <Banner/>
             </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading/>}>
                 <TabArea/>
             </Suspense>
             <div className="min-h-[600px]">
-                {children}
+                <Suspense fallback={<Loading/>}>
+                    {children}
+                </Suspense>
             </div>
             <Footer/>
         </>
-);
+    );
 }
 

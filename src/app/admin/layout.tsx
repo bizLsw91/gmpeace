@@ -1,11 +1,13 @@
 "use client"
 import AdminHeader from "@/app/_components/Header/AdminHeader";
+import Loading from "@/app/admin/loading";
 import AuthProvider from "@/lib/auth/auth-provider";
 import {ConfigProvider} from "antd";
 import {SessionProvider} from "next-auth/react";
 import koKR from "antd/locale/ko_KR";
 
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import {Suspense} from "react";
 
 export default function AdminLayout({
                                         children,
@@ -28,7 +30,9 @@ export default function AdminLayout({
                     <AuthProvider>
                         <AdminHeader/>
                         <div className="pt-[50px] xs:pt-[70px] box-border h-screen">
-                            {children}
+                            <Suspense fallback={<Loading/>}>
+                                {children}
+                            </Suspense>
                         </div>
                     </AuthProvider>
                 </SessionProvider>

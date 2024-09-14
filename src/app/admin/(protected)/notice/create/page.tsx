@@ -1,7 +1,7 @@
 "use client"
 import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import {INoticeAntdFormValue} from "@/types/notice";
-import {useCreateNotices} from "@/app/(client)/api/queries/notice"
+import {useCreateNotices} from "@/app/(normal)/api/queries/notice"
 import {getDefaultLayout, IDefaultLayoutPage} from "@/components/layout/default-layout";
 import QuillEditor from "@/components/shared/form/control/quill-editor";
 import DefaultForm from "@/components/shared/form/ui/default-form";
@@ -24,7 +24,6 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
 
     const handleFinish = () => {
         // 이곳에 실제 폼 전송 로직 작성.
-
 
         // 이미지 업로드 처리
         // const photoUrls = await Promise.all(
