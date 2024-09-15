@@ -1,5 +1,4 @@
 "use client"
-import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import {INoticeAntdFormValue} from "@/types/notice";
 import {useCreateNotices} from "@/app/(normal)/api/queries/notice"
 import {getDefaultLayout, IDefaultLayoutPage} from "@/components/layout/default-layout";
@@ -12,6 +11,7 @@ import {Button, Divider, Form, Input, Upload, UploadFile} from "antd";
 import {useForm} from "antd/es/form/Form";
 import { UploadChangeParam} from "antd/es/upload";
 import {useState} from "react";
+import {storage} from "@/firebase/firebase.admin.config";
 
 const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const [form] = useForm();
@@ -25,15 +25,9 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const handleFinish = () => {
         // 이곳에 실제 폼 전송 로직 작성.
 
-        // 이미지 업로드 처리
-        // const photoUrls = await Promise.all(
-        //     fileList.map(async (file) => {
-        //         if (file.originFileObj) {
-        //             return await uploadFileToFirestore(file.originFileObj as RcFile, "images");
-        //         }
-        //         return null;
-        //     })
-        // );
+        // 파이어스토어에 이미지들 업로드 후 url[] 가져오기
+
+        // 파이어스토어에 파일들 업로드 후 url[] 가져오기
 
         // createNotice(formData);
         form.resetFields();
@@ -76,7 +70,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                             </Form.Item>
                         </FormGroup>
                         <FormGroup title="사진">
-                            <Form.Item name="photos">
+                            <Form.Item name="photos" className={'photos'}>
                                 <Upload
                                     listType="picture-card"
                                     fileList={fileList}
@@ -103,7 +97,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                         {/*    ))}*/}
                         {/*</div>*/}
                         <FormGroup title="첨부파일">
-                            <Form.Item name="attachments">
+                            <Form.Item name="attachments" className={'attachments'}>
                                 <Upload
                                     fileList={attachmentList}
                                     multiple
@@ -121,21 +115,6 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                         </Button>
                     </div>
                 </DefaultForm>
-                <div className="flex justify-center font-bold text-2xl mb-14">미리보기</div>
-                <FormSection>
-                    <FormGroup title="제목">
-                        <div>{formData?.title}</div>
-                    </FormGroup>
-                    <Divider/>
-                    <FormGroup title={"내용"}>
-                        <ReactQuill
-                            value={formData?.content}
-                            readOnly={true} // 읽기 전용 모드 설정
-                            theme="bubble" // 'bubble' 테마는 읽기용 텍스트에 적합
-                        />
-                    </FormGroup>
-                    {/*<Divider/>*/}
-                </FormSection>
             </div>
         </div>
     );

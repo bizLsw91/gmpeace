@@ -10,6 +10,7 @@ const credentialsProviderOption: CredentialsConfig<{}> = {
         password: { label: "Password", type: "password" },
     },
     async authorize(credentials: Record<string, unknown> | undefined) {
+
         if (credentials && credentials.username === "admin" && credentials.password === "admin") {
             return {
                 id: "1",
@@ -25,6 +26,7 @@ const credentialsProviderOption: CredentialsConfig<{}> = {
 };
 
 export const nextAuthOptions: NextAuthOptions = {
+    secret: process.env.NEXTAUTH_SECRET,
     providers: [
         CredentialsProvider(credentialsProviderOption)
     ],

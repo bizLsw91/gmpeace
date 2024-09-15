@@ -26,6 +26,15 @@ export interface INoticeAntdFormValue {
     }|undefined;
 }
 
+export interface INoticeDetail {
+    title: string;
+    content: string;
+    view_count: number;
+    created_at: string;
+    updated_at: string;
+    fileList?: UploadFile[]
+}
+
 export interface INoticesResponse {
     items: INotice[]|any[]|undefined;
     page: {
