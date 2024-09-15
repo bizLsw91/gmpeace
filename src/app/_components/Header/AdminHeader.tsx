@@ -36,14 +36,15 @@ export default function AdminHeader() {
     }, []);
 
     const items: MenuProps['items'] = [
-        // {
-        //     key: '1',
-        //     label: (
-        //         <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-        //             1st menu item
-        //         </a>
-        //     ),
-        // },
+        {
+            key: '1',
+            label: (
+                <div><span className={'font-bold'}>{session?.user.name}</span> 님</div>
+            ),
+        },
+        {
+            type: 'divider',
+        },
         {
             key: '2',
             label: (
@@ -93,7 +94,7 @@ export default function AdminHeader() {
                                         </li>
                                     ))}
                                     <li className={'self-center'}>
-                                        <Dropdown menu={{items}} placement="topRight" arrow>
+                                        <Dropdown className={'admin-header-dropdown'} menu={{items}} placement="topRight" arrow>
                                             <User/>
                                         </Dropdown>
                                     </li>
