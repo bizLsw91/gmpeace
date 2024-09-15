@@ -12,7 +12,7 @@ export interface INotice {
     updated_at: string;
 }
 
-export interface INoticeFormValue extends Omit<INotice, "id" | "user_id" | "view_count" | "author" | "createdAt" | "updatedAt"> {}
+export interface INoticeFormValue extends Omit<INotice, "id" | "user_id" | "view_count" | "author" | "created_at" | "updated_at"> {}
 export interface INoticeAntdFormValue {
     title: string;
     content: string;

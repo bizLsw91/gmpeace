@@ -1,5 +1,5 @@
 "use client"
-import {useDeleteNotices, useNotices} from "@/app/(normal)/api/queries/notice";
+import {useDeleteNotices, useNotices} from "@/app/api/(client)/queries/notice";
 import DefaultTable from "@/components/shared/ui/default-table";
 import {ISO8601DateTime} from "@/types/common";
 import {INotice} from "@/types/notice";
