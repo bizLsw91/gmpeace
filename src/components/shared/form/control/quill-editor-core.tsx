@@ -1,9 +1,13 @@
 // import CodeMirror from "@uiw/react-codemirror";
 import ReactQuill from "react-quill";
 
+type OnChangeType =
+    | ((value: string) => void)
+    | ((content: any, delta: any, source: any, editor: any) => void);
+
 interface IQuillEditorCoreProps {
   value?: string;
-  onChange?: (value: string) => void;
+  onChange?: OnChangeType;
   placeholder?: string;
 }
 

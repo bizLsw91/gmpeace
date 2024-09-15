@@ -1,9 +1,10 @@
 import {createClient} from "@/supabase/server";
 import {INoticeFormValue, INoticesResponse} from "@/types/notice";
-import {NextResponse} from 'next/server';
+import {getSession} from "next-auth/react";
+import {NextRequest, NextResponse} from 'next/server';
 
 
-// 공지사항 목록을 가져오는 API
+// 알림 목록을 가져오는 API
 export async function GET(request: Request) {
     const supabase = createClient();
     const {searchParams} = new URL(request.url);
@@ -14,7 +15,7 @@ export async function GET(request: Request) {
     const to = from + pageSize - 1;
 
     try {
-        // 공지사항 목록을 페이지네이션하여 가져옵니다.
+        // 알림 목록을 페이지네이션하여 가져옵니다.
         const {data, error, count} = await supabase
             .from('NOTICES')
             .select(`*,author:USERS(name)`, {count: 'exact'})
@@ -52,19 +53,19 @@ export async function GET(request: Request) {
     }
 }
 
-// 공지사항을 생성하는 API
-export async function POST(request: Request) {
+// 알림을 생성하는 API
+export async function POST(request: NextRequest) {
     const supabase = createClient();
     try {
         const body: INoticeFormValue = await request.json();
-        const row = {...body, created_at: new Date().toISOString()}
-
+        console.log("createNotice row = ", body);
         const {data, error} = await supabase
             .from('NOTICES')
             .insert([
-                row,
+                body,
             ])
             .select('*')
+            .single();
 
 
         if (error) {
@@ -87,7 +88,7 @@ export async function DELETE(request: Request) {
             return NextResponse.json({error: 'No IDs provided'}, {status: 400});
         }
 
-        // Supabase에서 해당 ID의 공지사항을 삭제
+        // Supabase에서 해당 ID의 알림을 삭제
         const {data, error} = await supabase
             .from('NOTICES')
             .delete()

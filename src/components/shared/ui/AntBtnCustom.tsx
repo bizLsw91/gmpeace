@@ -6,12 +6,12 @@ import { Button, ButtonProps } from 'antd';
 import styled from 'styled-components';
 
 interface CustomButtonProps extends ButtonProps {
-    hoverColor?: string;
-    smallEffectColor?: string;
-    enableHover?: boolean;
+    hovercolor?: string;
+    smalleffectcolor?: string;
+    enablehover?: 'true'|'false';
 }
 
-const StyledButton = styled(Button)<{ hoverColor: string; smallEffectColor:string; dimColor:string; enableHover: boolean }>`
+const StyledButton = styled(Button)<{ hovercolor: string; smalleffectcolor:string; dimcolor:string; enablehover: string }>`
     border-color: #5e5c5c;
     color: #626161;
     font-family: "Nanum Gothic", sans-serif;
@@ -26,26 +26,26 @@ const StyledButton = styled(Button)<{ hoverColor: string; smallEffectColor:strin
         font-size: 16px;
     }
 
-    ${({enableHover, hoverColor, smallEffectColor, dimColor}) => enableHover ? `
+    ${({enablehover, hovercolor, smalleffectcolor, dimcolor}) => enablehover==='true' ? `
         &:hover {
-            background-color: ${hoverColor} !important;
-            border-color: ${hoverColor} !important;
+            background-color: ${hovercolor} !important;
+            border-color: ${hovercolor} !important;
             color: white !important;
         }
     ` : `
         &:hover {
-            background-color: ${dimColor} !important;
-            border-color: ${smallEffectColor} !important;
-            color: ${smallEffectColor} !important;
+            background-color: ${dimcolor} !important;
+            border-color: ${smalleffectcolor} !important;
+            color: ${smalleffectcolor} !important;
         }
     `}
 `;
 
-const AntdBtnCustom: React.FC<CustomButtonProps> = ({ children, hoverColor = '#071934', enableHover = true, ...props }) => {
-    const smallEffectColor = '#404e69'
-    const dimColor = '#f6f7f8'
+const AntdBtnCustom: React.FC<CustomButtonProps> = ({ children, hovercolor = '#071934', enablehover = 'true', ...props }) => {
+    const smalleffectcolor = '#404e69'
+    const dimcolor = '#f6f7f8'
     return (
-        <StyledButton hoverColor={hoverColor} enableHover={enableHover} smallEffectColor={smallEffectColor} dimColor={dimColor} {...props} type="default">
+        <StyledButton hovercolor={hovercolor} enablehover={enablehover} smalleffectcolor={smalleffectcolor} dimcolor={dimcolor} {...props} type="default">
             {children}
         </StyledButton>
     );

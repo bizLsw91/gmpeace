@@ -3,12 +3,13 @@
 import NoticeDetailSheet from "@/app/_components/Notice/NoticeDetailSheet";
 import Spinner from "@/components/shared/spinner";
 import AntdBtnCustom from "@/components/shared/ui/AntBtnCustom";
+import Image from "next/image";
 import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css";
-import { UploadFile } from "antd";
+import {Carousel, UploadFile} from "antd";
 
-// 공지사항 데이터 타입 정의
+// 알림 데이터 타입 정의
 interface INotice {
     id: number;
     user_id: number;
@@ -29,7 +30,7 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
     const router = useRouter();
 
     useEffect(() => {
-        // 공지사항 상세 정보 가져오기 (API 호출)
+        // 알림 상세 정보 가져오기 (API 호출)
         const fetchNotice = async () => {
             const res = await fetch(`/api/notices/${noticeId}`);
             const data = await res.json();
@@ -60,8 +61,15 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
     return (
         <div className="notice-detail max-w-3xl mx-auto p-5 pb-20">
             <NoticeDetailSheet notice={notice} fileList={fileList} />
+            <Carousel effect={'fade'} arrows autoplay>
+                {notice.photos?.map((url, index) => (
+                    <div key={index} >
+                        <Image src={url} alt={`Slide ${index}`} width={1200} height={800}/>
+                    </div>
+                ))}
+            </Carousel>
             <div className="flex justify-center mt-6">
-                <AntdBtnCustom onClick={handleGoToList} enableHover={false}>목록으로 가기</AntdBtnCustom>
+                <AntdBtnCustom onClick={handleGoToList} enablehover={'false'}>목록으로 가기</AntdBtnCustom>
             </div>
         </div>
 )

@@ -1,9 +1,10 @@
 import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
 import AntdBtnCustom from "@/components/shared/ui/AntBtnCustom";
 import {INotice} from "@/types/notice";
-import {Upload, UploadFile} from "antd";
+import {Carousel, Upload, UploadFile} from "antd";
 import moment from "moment/moment";
 import React from "react";
+import Image from "next/image";
 
 export default function NoticeDetailSheet(props: { notice: INotice, fileList?: UploadFile[] }) {
     return (
@@ -30,7 +31,7 @@ export default function NoticeDetailSheet(props: { notice: INotice, fileList?: U
             {/* Ant Design Upload 컴포넌트를 이용한 첨부파일 섹션 */}
             <div className="mb-4">
                 <h2 className="text-md xs:text-lg font-semibold mb-2">첨부파일</h2>
-                {props.fileList ?
+                {props.fileList && props.fileList.length!=0 ?
                     <Upload
                         fileList={props.fileList} // 기존 첨부파일을 fileList로 표시
                         // listType="picture" // 이미지와 파일을 섞어 표시
@@ -43,6 +44,7 @@ export default function NoticeDetailSheet(props: { notice: INotice, fileList?: U
             <hr className="my-4"/>
 
             {/* ReactQuill - 읽기 전용 */}
-            <ReactQuill value={props.notice.content} readOnly={true} theme="bubble" className="bg-gray-50"/>
+            <ReactQuill value={props.notice.content} readOnly={true} theme="bubble" className="bg-gray-dim"/>
+
         </div>);
 }

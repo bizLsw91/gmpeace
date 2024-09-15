@@ -23,7 +23,7 @@ export async function POST(req: Request, { params }: { params: { id: string } })
     // Supabase 클라이언트 생성
     const supabase = createClient();
 
-    // 공지사항의 수정일과 view_count를 가져오기
+    // 알림의 수정일과 view_count를 가져오기
     const { data: notice, error: noticeError } = await supabase
         .from('NOTICES')
         .select('updated_at, view_count')
