@@ -1,7 +1,6 @@
 "use client"
 import AntdBtnCustom from "@/components/shared/ui/AntBtnCustom";
 import {storage} from "@/firebase/firebase.client.config";
-import {useAuth} from "@/lib/auth/auth-provider";
 import {INoticeAntdFormValue, INoticeFormValue} from "@/types/notice";
 import {useCreateNotices} from "@/app/api/(client)/queries/notice"
 import {getDefaultLayout, IDefaultLayoutPage} from "@/components/layout/default-layout";
@@ -40,7 +39,7 @@ async function deleteFolderContents(folderPath: string): Promise<void> {
     }
 }
 
-function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
+function LinearProgressWithLabel(props: LinearProgressProps & { now: number, tot: number }) {
     return (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ width: '100%', mr: 1 }}>
@@ -50,7 +49,7 @@ function LinearProgressWithLabel(props: LinearProgressProps & { value: number })
                 <Typography
                     variant="body2"
                     sx={{ color: 'text.secondary', width:50}}
-                >{`${Math.round(props.value)} %`}</Typography>
+                >{`${props.now}/${props.tot}`}</Typography>
             </Box>
         </Box>
     );
@@ -75,6 +74,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const [imgList, setImgList] = useState<UploadFile[]>([]);
     const [attachmentList, setAttachmentList] = useState<UploadFile[]>([]); // 파일 리스트
     const [uploadCnt, setUploadCnt] = useState(0);
+    const [totCnt, setTotCnt] = useState(0);
     const [progress, setProgress] = useState(0);
     const [editorText, setEditorText] = useState('');
     console.log("status = ", status);
@@ -93,6 +93,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
         console.log("formDataOutput = ", formData);
         const totCntToUpload = (formDataOutput.photos?.fileList?.length || 0) + (formDataOutput.attachments?.fileList?.length || 0)
         console.log("totCntToUpload = ", totCntToUpload);
+        setTotCnt(totCntToUpload)
         const uniqueFolderName = moment().format('YYYYMMDD_HHmmssSSS')
         try {
             // attachments와 photos에 대한 파일 업로드 및 URL 가져오기, progress 세팅
@@ -252,7 +253,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                         progress > 0 &&
                         <div className="flex justify-center mt-4">
                             <Box sx={{width: '60%'}}>
-                                <LinearProgressWithLabel value={progress}/>
+                                <LinearProgressWithLabel now={uploadCnt} tot={totCnt}/>
                             </Box>
                         </div>
                     }
