@@ -1,6 +1,6 @@
+import { appConfig } from "@/appConfig";
 import {createClient} from "@/supabase/server";
 import {INoticeFormValue, INoticesResponse} from "@/types/notice";
-import {getSession} from "next-auth/react";
 import {NextRequest, NextResponse} from 'next/server';
 
 
@@ -17,7 +17,7 @@ export async function GET(request: Request) {
     try {
         // 알림 목록을 페이지네이션하여 가져옵니다.
         const {data, error, count} = await supabase
-            .from('NOTICES')
+            .from(appConfig.db_table.notices)
             .select(`*,author:USERS(name)`, {count: 'exact'})
             .order('created_at', {ascending: false})
             .range(from, to);
@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
         const body: INoticeFormValue = await request.json();
         console.log("createNotice row = ", body);
         const {data, error} = await supabase
-            .from('NOTICES')
+            .from(appConfig.db_table.notices)
             .insert([
                 body,
             ])
@@ -90,7 +90,7 @@ export async function DELETE(request: Request) {
 
         // Supabase에서 해당 ID의 알림을 삭제
         const {data, error} = await supabase
-            .from('NOTICES')
+            .from(appConfig.db_table.notices)
             .delete()
             .in('id', ids); // 'in' 메서드를 사용하여 여러 ID를 삭제
 

@@ -1,3 +1,4 @@
+import {appConfig} from "@/appConfig";
 import {createClient} from "@/supabase/server";
 import {NextResponse} from "next/server";
 
@@ -7,7 +8,7 @@ export async function GET(request: Request, {params}: { params: { id: string } }
 
     // 알림 상세 정보 및 작성자의 이름 가져오기
     const {data, error} = await supabase
-        .from('NOTICES')
+        .from(appConfig.db_table.notices)
         .select(`
             *,
             author:USERS(name)

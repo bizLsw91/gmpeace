@@ -56,21 +56,21 @@ function LinearProgressWithLabel(props: LinearProgressProps & { value: number })
     );
 }
 
+let initialForm = {
+    title: '',
+    content: '',
+    attachments: {
+        fileList: []
+    },
+    photos: {
+        fileList: []
+    }
+};
+
 const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const [form] = useForm();
-    const auth = useAuth();
     const {data:session} = useSession()
     const {mutateAsync: createNotice,isPending,status} = useCreateNotices()
-    let initialForm = {
-        title: '',
-        content: '',
-        attachments: {
-            fileList: []
-        },
-        photos: {
-            fileList: []
-        }
-    };
     const [formData, setFormData] = useState<INoticeAntdFormValue>(initialForm);
     const [imgList, setImgList] = useState<UploadFile[]>([]);
     const [attachmentList, setAttachmentList] = useState<UploadFile[]>([]); // 파일 리스트
@@ -112,7 +112,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                 }) || []
             );
             const photoUrls = await Promise.all(
-                formDataOutput.photos?.fileList?.map(async (uploadFile) => {
+                imgList?.map(async (uploadFile) => {
                     if (uploadFile.originFileObj) {
                         const url = await uploadToFirestore(uploadFile.originFileObj as File, `notices/photos/${uniqueFolderName}/${uploadFile.name}`);
                         setUploadCnt((prevCount) => {
@@ -155,17 +155,6 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
         console.log("allValues = ", allValues);
     };
 
-    // 사진 업로드 핸들러 (미리보기만 제공)
-    const handleUploadChange = (info: UploadChangeParam) => {
-        setImgList(info.fileList); // 파일 리스트 설정 (업로드는 아직 하지 않음)
-        console.log("imgList = ", info.fileList);
-    };
-    // 첨부파일 업로드 핸들러
-    const handleAttachmentChange = (info: UploadChangeParam) => {
-        setAttachmentList(info.fileList); // 첨부파일 리스트 설정
-        console.log("attachmentList = ", info.fileList);
-    };
-
     const openInNewTab = () => {
         window.open('https://www.gmpeace.co.kr/notice', '_blank');
     };
@@ -173,6 +162,24 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const handleEditorChange = (content:any, delta:any, source:any, editor:any) => {
         setEditorText(editor.getText().trim())
     };
+
+    // 사진 업로드 핸들러 (미리보기만 제공) - 유효하지 않은 파일을 목록에서 제거
+    const handleUploadChange = (info: UploadChangeParam) => {
+        const validFiles = info.fileList.filter(file => handleBeforeUpload(file));
+        setImgList(validFiles); // 유효한 파일만 파일 리스트에 추가
+    };
+
+    // 이미지 파일 확장자 제한
+    const handleBeforeUpload = (file: UploadFile) => {
+        console.log('%chandleBeforeUpload',"color:blue")
+        const isImage = file.type === "image/jpeg" || file.type === "image/png" || file.type === "image/gif" || file.type === "image/bmp" || file.type === "image/webp";
+        console.log("isImage = ", isImage);
+        if (!isImage) {
+            alert('이미지 파일만 업로드 가능합니다! (jpg, png, gif, bmp, webp)');
+        }
+        return isImage; // true면 업로드 진행, false면 업로드 방지
+    };
+
 
     return (
         <div className="admin-notice-create pt-10 pb-20">
@@ -200,10 +207,10 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                             <Form.Item name="photos" className={'photos'}>
                                 <Upload
                                     listType="picture-card"
-                                    fileList={formData.photos?.fileList}
+                                    fileList={imgList}
                                     multiple
-                                    // onChange={handleUploadChange} // 미리보기로 파일리스트 업데이트
-                                    beforeUpload={() => false} // 자동 업로드 방지
+                                    onChange={handleUploadChange} // 미리보기로 파일리스트 업데이트
+                                    // beforeUpload={handleBeforeUpload} // 자동 업로드 방지
                                 >
                                     <div>
                                         <PlusOutlined/>
