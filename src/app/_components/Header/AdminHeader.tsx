@@ -3,7 +3,7 @@
 import {adminMenu} from "@/adminMenu";
 import {useAuth} from "@/lib/auth/auth-provider";
 import {Menu, User} from "lucide-react";
-import {signOut} from "next-auth/react";
+import {signOut, useSession} from "next-auth/react";
 import Link from "next/link";
 import {useCallback, useEffect, useState} from "react";
 import Image from "next/image";
@@ -15,12 +15,7 @@ import {BiLogOut} from "react-icons/bi";
 export default function AdminHeader() {
     const [open, setOpen] = useState(false);
     const router = useRouter();
-    let session;
-
-    const auth = useAuth();
-    if (auth) {
-        session = auth.session;
-    }
+    let session = useSession()
 
     const showDrawer = () => {
         setOpen(true);
@@ -39,7 +34,7 @@ export default function AdminHeader() {
         {
             key: '1',
             label: (
-                <div><span className={'font-bold'}>{session?.user.name}</span> 님</div>
+                <div><span className={'font-bold'}>{session?.data?.user.name}</span> 님</div>
             ),
         },
         {

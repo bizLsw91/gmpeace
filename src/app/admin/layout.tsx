@@ -5,8 +5,8 @@ import AuthProvider from "@/lib/auth/auth-provider";
 import {ConfigProvider} from "antd";
 import {SessionProvider} from "next-auth/react";
 import koKR from "antd/locale/ko_KR";
+import "../../assets/style/tailwind/index.css"
 
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import {Suspense} from "react";
 
 export default function AdminLayout({

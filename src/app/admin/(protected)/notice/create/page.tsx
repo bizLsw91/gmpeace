@@ -150,6 +150,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
         setFormData(initialForm)
         setProgress(0)
         setUploadCnt(0)
+        setImgList([])
     };
     const handleChange = (changedValues: any, allValues: any) => {
         setFormData(allValues)
@@ -253,7 +254,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                         progress > 0 &&
                         <div className="flex justify-center mt-4">
                             <Box sx={{width: '60%'}}>
-                                <LinearProgressWithLabel now={uploadCnt} tot={totCnt}/>
+                                <LinearProgressWithLabel value={progress} now={uploadCnt} tot={totCnt}/>
                             </Box>
                         </div>
                     }
