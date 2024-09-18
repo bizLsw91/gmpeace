@@ -79,47 +79,44 @@ export default function Ceremony() {
                             <tbody>
                             <tr>
                                 <td>식전 공연</td>
-                                <td className={'time'}>13:55-14:05 (10’)</td>
+                                <td className={'time'}>14:00-14:10 (10’)</td>
                                 <td>광명시민오케스트라</td>
                             </tr>
                             <tr>
                                 <td>오프닝</td>
-                                <td className={'time'}>14:05~14:08 (3’)</td>
+                                <td className={'time'}>14:10~14:13 (3’)</td>
                                 <td>사회자 인사말</td>
                             </tr>
                             <tr>
                                 <td>퍼포먼스 공연</td>
-                                <td className={'time'}>14:08~14:15 (7’)</td>
+                                <td className={'time'}>14:13~14:20 (7’)</td>
                                 <td>그림자 연극 퍼포먼스 공연</td>
                             </tr>
                             <tr>
                                 <td>공식의례</td>
-                                <td className={'time'}>14:15~14:30 (15’)</td>
+                                <td className={'time'}>14:20~14:35 (15’)</td>
                                 <td>공식의례 및 내빈소개, 개회사, 축사</td>
                             </tr>
                             <tr>
-                                <td>세레모니</td>
-                                <td className={'time'}>14:30~14:38 (8’)</td>
-                                <td>개막 세레모니 / 주제영상 상영</td>
-                            </tr>
-                            <tr>
-                                <td colSpan={3}>브레이크타임 (시민 오케스트라 공연)</td>
+                                <td>주제영상</td>
+                                <td className={'time'}>14:35~14:40 (5’)</td>
+                                <td>제4회 평화주간행사 주제영상 상영</td>
                             </tr>
                             <tr>
                                 <td>포럼안내</td>
-                                <td className={'time'}>14:50~14:55 (5’)</td>
+                                <td className={'time'}>14:40~14:45 (5’)</td>
                                 <td>포럼 소개 및 세션 참가자 소개</td>
                             </tr>
                             <tr>
                                 <td>포럼</td>
-                                <td className={'time'}>14:55~15:40 (45’)</td>
+                                <td className={'time'}>14:45~15:35 (50’)</td>
                                 <td>주제: 국제정세와 독일 통일로 본 평화의 길<br/>
                                     발제: 백준기 교수(한신대학교), 다니엘 린데만(비정상회담)
                                 </td>
                             </tr>
                             <tr>
                                 <td>축하공연</td>
-                                <td className={'time'}>15:40~16:00 (20’)</td>
+                                <td className={'time'}>15:35~16:00 (25’)</td>
                                 <td>크로스오버그룹 ‘포레스텔라’</td>
                             </tr>
                             <tr>
