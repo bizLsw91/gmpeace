@@ -1,6 +1,6 @@
 "use client";
 
-import {useNotices} from "@/app/(normal)/api/queries/notice";
+import {useNotices} from "@/app/api/(client)/queries/notice";
 import {INotice} from "@/types/notice";
 import {Table, Pagination, TableColumnsType} from 'antd';
 import moment from "moment";

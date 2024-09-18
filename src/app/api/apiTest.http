@@ -21,8 +21,8 @@ GET {{domain}}/api/notices/1
 ### 4. notice view up
 POST {{domain}}/api/notices/1/view
 
-### 4. delUser
-GET {{domain}}/api/sign/deleteUser
+### 4. pw update
+POST {{domain}}/api/auth/pw-update
 
 ### 5. sendEmailVerification
 POST {{domain}}/api/sign/verifyEmail

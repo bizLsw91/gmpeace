@@ -2,4 +2,11 @@
     .ant-btn{
         height: 40px;
     }
+    .photos {
+        .ant-upload-list-item-container, .ant-upload-select {
+            width: 220px !important;
+            height: 220px !important;
+        }
+    }
+
 }

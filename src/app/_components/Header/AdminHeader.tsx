@@ -3,7 +3,7 @@
 import {adminMenu} from "@/adminMenu";
 import {useAuth} from "@/lib/auth/auth-provider";
 import {Menu, User} from "lucide-react";
-import {signOut} from "next-auth/react";
+import {signOut, useSession} from "next-auth/react";
 import Link from "next/link";
 import {useCallback, useEffect, useState} from "react";
 import Image from "next/image";
@@ -15,12 +15,7 @@ import {BiLogOut} from "react-icons/bi";
 export default function AdminHeader() {
     const [open, setOpen] = useState(false);
     const router = useRouter();
-    let session;
-
-    const auth = useAuth();
-    if (auth) {
-        session = auth.session;
-    }
+    let session = useSession()
 
     const showDrawer = () => {
         setOpen(true);
@@ -36,14 +31,15 @@ export default function AdminHeader() {
     }, []);
 
     const items: MenuProps['items'] = [
-        // {
-        //     key: '1',
-        //     label: (
-        //         <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-        //             1st menu item
-        //         </a>
-        //     ),
-        // },
+        {
+            key: '1',
+            label: (
+                <div><span className={'font-bold'}>{session?.data?.user.name}</span> 님</div>
+            ),
+        },
+        {
+            type: 'divider',
+        },
         {
             key: '2',
             label: (
@@ -93,7 +89,7 @@ export default function AdminHeader() {
                                         </li>
                                     ))}
                                     <li className={'self-center'}>
-                                        <Dropdown menu={{items}} placement="topRight" arrow>
+                                        <Dropdown className={'admin-header-dropdown'} menu={{items}} placement="topRight" arrow>
                                             <User/>
                                         </Dropdown>
                                     </li>

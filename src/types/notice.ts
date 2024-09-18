@@ -12,18 +12,27 @@ export interface INotice {
     updated_at: string;
 }
 
-export interface INoticeFormValue extends Omit<INotice, "id" | "user_id" | "view_count" | "author" | "createdAt" | "updatedAt"> {}
+export interface INoticeFormValue extends Omit<INotice, "id" | "view_count" | "author" | "created_at" | "updated_at"> {}
 export interface INoticeAntdFormValue {
     title: string;
     content: string;
-    attachments: {
-        file: File;
+    attachments?: {
+        file?: File;
         fileList: UploadFile[];
-    }|undefined;
-    photos: {
-        file: File;
+    }|{fileList: []};
+    photos?: {
+        file?: File;
         fileList: UploadFile[];
-    }|undefined;
+    }|{fileList: []};
+}
+
+export interface INoticeDetail {
+    title: string;
+    content: string;
+    view_count: number;
+    created_at: string;
+    updated_at: string;
+    fileList?: UploadFile[]
 }
 
 export interface INoticesResponse {

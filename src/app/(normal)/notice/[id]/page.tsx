@@ -1,16 +1,16 @@
 "use client";
 
-import {ReactQuill} from "@/components/shared/form/control/ReactQuill";
+import NoticeDetailSheet from "@/app/_components/Notice/NoticeDetailSheet";
 import Spinner from "@/components/shared/spinner";
 import AntdBtnCustom from "@/components/shared/ui/AntBtnCustom";
 import axios from "axios";
+import Image from "next/image";
 import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css";
-import moment from "moment";
-import {Upload, UploadFile, Button } from "antd";
+import {Carousel, UploadFile} from "antd";
 
-// 공지사항 데이터 타입 정의
+// 알림 데이터 타입 정의
 interface INotice {
     id: number;
     user_id: number;
@@ -24,47 +24,6 @@ interface INotice {
     updated_at: string;
 }
 
-function NoticeDetailSheet(props: { notice: INotice, fileList: UploadFile[], onClick: () => void }) {
-    return <div className="notice-detail max-w-3xl mx-auto p-5 pb-20">
-        <div className="bg-white shadow-md rounded-lg p-6">
-            <h1 className="text-lg xs:text-2xl font-bold mb-4">{props.notice.title}</h1>
-
-            <div className="flex justify-between mt-2 flex-wrap gap-3">
-                <p className="text-sm text-gray-600">작성자: 운영사무국</p>
-                <p className="text-sm text-gray-500">
-                    조회수: {props.notice.view_count}
-                </p>
-            </div>
-            <div className="flex justify-between mt-2 flex-wrap gap-3">
-                <p className="text-sm text-gray-500">
-                    등록일: {moment(props.notice.created_at).format("YYYY-MM-DD")}
-                </p>
-                <p className="text-sm text-gray-500">
-                    수정일: {moment(props.notice.updated_at).format("YYYY-MM-DD")}
-                </p>
-            </div>
-
-            <hr className="my-4"/>
-
-            {/* Ant Design Upload 컴포넌트를 이용한 첨부파일 섹션 */}
-            <div className="mb-4">
-                <h2 className="text-md xs:text-lg font-semibold mb-2">첨부파일</h2>
-                <Upload
-                    fileList={props.fileList} // 기존 첨부파일을 fileList로 표시
-                    // listType="picture" // 이미지와 파일을 섞어 표시
-                    showUploadList={{showRemoveIcon: false}} // 파일 제거 버튼 숨김
-                />
-            </div>
-            <hr className="my-4"/>
-
-            {/* ReactQuill - 읽기 전용 */}
-            <ReactQuill value={props.notice.content} readOnly={true} theme="bubble" className="bg-gray-50"/>
-        </div>
-        <div className="flex justify-center mt-6">
-            <AntdBtnCustom onClick={props.onClick} enableHover={false}>목록으로 가기</AntdBtnCustom>
-        </div>
-    </div>;
-}
 
 export default function NoticeDetail({ params }: { params: { id: string } }) {
     const [notice, setNotice] = useState<INotice | null>(null);
@@ -103,6 +62,19 @@ export default function NoticeDetail({ params }: { params: { id: string } }) {
     }
 
     return (
-        <NoticeDetailSheet notice={notice} fileList={fileList} onClick={handleGoToList}/>
-    );
+        <div className="notice-detail max-w-3xl mx-auto p-5 pb-20">
+            <NoticeDetailSheet notice={notice} fileList={fileList} />
+            <Carousel effect={'fade'} arrows autoplay>
+                {notice.photos?.map((url, index) => (
+                    <div key={index} >
+                        <Image src={url} alt={`Slide ${index}`} width={1200} height={800}/>
+                    </div>
+                ))}
+            </Carousel>
+            <div className="flex justify-center mt-6">
+                <AntdBtnCustom onClick={handleGoToList} enablehover={'false'}>목록으로 가기</AntdBtnCustom>
+            </div>
+        </div>
+)
+    ;
 }

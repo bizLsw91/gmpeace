@@ -1,3 +1,4 @@
+import {appConfig} from "@/appConfig";
 import {createClient} from "@/supabase/server";
 import {NextResponse} from "next/server";
 
@@ -5,14 +6,14 @@ export async function GET(request: Request, {params}: { params: { id: string } }
     const supabase = createClient();
     const noticeId = params.id;
 
-    // 공지사항 상세 정보 및 작성자의 이름 가져오기
+    // 알림 상세 정보 및 작성자의 이름 가져오기
     const {data, error} = await supabase
-        .from('NOTICES')
+        .from(appConfig.db_table.notices)
         .select(`
             *,
             author:USERS(name)
         `)
-        .eq('id', noticeId) // 공지사항 ID로 필터링
+        .eq('id', noticeId) // 알림 ID로 필터링
         .single(); // 단일 레코드 가져오기
 
     if (error) {

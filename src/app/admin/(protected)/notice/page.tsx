@@ -1,5 +1,5 @@
 "use client"
-import {useDeleteNotices, useNotices} from "@/app/(normal)/api/queries/notice";
+import {useDeleteNotices, useNotices} from "@/app/api/(client)/queries/notice";
 import DefaultTable from "@/components/shared/ui/default-table";
 import {ISO8601DateTime} from "@/types/common";
 import {INotice} from "@/types/notice";
@@ -132,7 +132,7 @@ export default function AdminNotice() {
     return (
         <div className="admin-notice pt-10">
             <div className="wrapper">
-                <div className="flex justify-center font-bold text-2xl mb-14">공지사항</div>
+                <div className="flex justify-center font-bold text-2xl mb-14">알림</div>
                 <div className="flex justify-between">
                     <div>
                         {

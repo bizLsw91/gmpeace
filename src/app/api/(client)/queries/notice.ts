@@ -16,9 +16,9 @@ export const useNotice = (param: number) => {
 export const useCreateNotices = () => {
     const queryClient = useQueryClient();
     return useMutation( {
-        mutationFn: (body:INoticeFormValue)=> axios.post(`/api/notices`,body),
+        mutationFn: async (body:INoticeFormValue)=> await axios.post(`/api/notices`,body),
         onSuccess: () => {
-            // 공지사항 삭제 후 캐시를 무효화하여 최신 데이터를 가져옵니다.
+            // 알림 삭제 후 캐시를 무효화하여 최신 데이터를 가져옵니다.
             queryClient.invalidateQueries({
                 queryKey: ['notices'],
             });
@@ -33,7 +33,7 @@ export const useDeleteNotices = () => {
     return useMutation( {
         mutationFn: (ids:number[])=> axios.delete(`/api/notices`,{data:{ids}}),
         onSuccess: () => {
-            // 공지사항 삭제 후 캐시를 무효화하여 최신 데이터를 가져옵니다.
+            // 알림 삭제 후 캐시를 무효화하여 최신 데이터를 가져옵니다.
             queryClient.invalidateQueries({
                 queryKey: ['notices'],
             });
@@ -42,4 +42,8 @@ export const useDeleteNotices = () => {
             console.error('Error deleting notices:', error);
         },
     });
+};
+
+export const apiUploadFile = () => {
+
 };
