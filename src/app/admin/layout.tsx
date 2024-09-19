@@ -6,6 +6,7 @@ import {ConfigProvider} from "antd";
 import {SessionProvider} from "next-auth/react";
 import koKR from "antd/locale/ko_KR";
 import "../../assets/style/tailwind/index.css"
+import "../../assets/style/scss/index.scss"
 
 import {Suspense} from "react";
 

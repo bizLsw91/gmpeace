@@ -1,6 +1,7 @@
 import {appConfig} from "@/appConfig";
 import {createClient} from "@/supabase/server";
-import {NextResponse} from "next/server";
+import {INoticeFormValue, INoticeUpdateFormValue} from "@/types/notice";
+import {NextRequest, NextResponse} from "next/server";
 
 export async function GET(request: Request, {params}: { params: { id: string } }) {
     const supabase = createClient();
@@ -27,4 +28,29 @@ export async function GET(request: Request, {params}: { params: { id: string } }
     };
 
     return NextResponse.json(noticeWithAuthor, {status: 200});
+}
+
+export async function PUT(request: NextRequest, {params}: { params: { id: string } }) {
+    const supabase = createClient();
+    const noticeId = params.id;
+    try {
+        const body: INoticeUpdateFormValue = await request.json();
+        console.log("updateNotice row = ", body);
+        const {data, error} = await supabase
+            .from(appConfig.db_table.notices)
+            .update(body)
+            .eq('id', noticeId)
+            .select('*')
+            .single();
+
+
+        if (error) {
+            return NextResponse.json({error: 'Failed to update notice'}, {status: 500});
+        }
+
+        return NextResponse.json({...data});
+    } catch (error) {
+        console.error('Failed to update notice:', error);
+        return NextResponse.json({error: 'An error occurred while updating notice'}, {status: 500});
+    }
 }

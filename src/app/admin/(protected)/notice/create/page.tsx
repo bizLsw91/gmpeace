@@ -16,7 +16,8 @@ import {useForm} from "antd/es/form/Form";
 import { UploadChangeParam} from "antd/es/upload";
 import moment from "moment";
 import {useSession} from "next-auth/react";
-import {useState} from "react";
+import {useRouter} from "next/navigation";
+import React, {useState} from "react";
 
 // firebase의 Storage에 파일 업로드 및 URL 반환
 async function uploadToFirestore(file: File, path: string): Promise<string> {
@@ -77,8 +78,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
     const [totCnt, setTotCnt] = useState(0);
     const [progress, setProgress] = useState(0);
     const [editorText, setEditorText] = useState('');
-    console.log("status = ", status);
-    // Firestore에 파일 업로드 함수 (firebase-admin 사용)
+    const router = useRouter()
 
     const handleFinish = async (formDataOutput:INoticeAntdFormValue) => {
         if(formData.title.length<2) {
@@ -107,7 +107,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                             setProgress((newCount / totCntToUpload) * 100);
                             return newCount;
                         });
-                        return { name: uploadFile.name, url };
+                        return { uid: uploadFile.uid ,name: uploadFile.name, url };
                     }
                     return null;
                 }) || []
@@ -122,7 +122,7 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                             setProgress((newCount / totCntToUpload) * 100);
                             return newCount;
                         });
-                        return url;
+                        return {uid: uploadFile.uid, name:uploadFile.name, url};
                     }
                     return null;
                 }) || []
@@ -133,8 +133,8 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
                 user_id: Number(session?.user?.id) || 0,
                 title: formDataOutput.title,
                 content: formDataOutput.content,
-                attachments: attachmentUrls.filter(Boolean) as { name: string; url: string }[], // Null 값 필터링
-                photos: photoUrls.filter(Boolean) as string[], // Null 값 필터링
+                attachments: attachmentUrls.filter(Boolean) as { uid:string, name: string; url: string }[], // Null 값 필터링
+                photos: photoUrls.filter(Boolean) as { uid:string, name: string; url: string }[], // Null 값 필터링
             };
             console.log("noticeData = ", noticeData);
 
@@ -182,12 +182,20 @@ const AdminNoticeCreate: IDefaultLayoutPage = () => {
         return isImage; // true면 업로드 진행, false면 업로드 방지
     };
 
+    const handleGoToList = () => {
+        router.push('/admin/notice')
+    }
 
     return (
         <div className="admin-notice-create pt-10 pb-20">
             <div className="wrapper">
                 <div className="flex justify-center font-bold text-2xl mb-14">알림 작성</div>
-                <div className="flex justify-end"><AntdBtnCustom onClick={openInNewTab}>새 탭에서 알림 목록 열기</AntdBtnCustom></div>
+                <div className="flex justify-between">
+                    <div className="flex justify-center mt-6">
+                        <AntdBtnCustom onClick={handleGoToList} enablehover={'false'}>목록으로 가기</AntdBtnCustom>
+                    </div>
+                    <AntdBtnCustom onClick={openInNewTab}>새 탭에서 알림 목록 열기</AntdBtnCustom>
+                </div>
                 <DefaultForm<INoticeAntdFormValue>
                     form={form}
                     onFinish={handleFinish}

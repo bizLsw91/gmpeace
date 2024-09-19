@@ -6,8 +6,8 @@ export interface INotice {
     title: string;
     content: string;
     author: string;
-    attachments: { name:string,url:string }[]|null;
-    photos: string[]|null;
+    attachments: { uid:string, name:string, url:string }[]|null;
+    photos: { uid:string, name:string, url:string }[]|null;
     created_at: string;
     updated_at: string;
 }
@@ -25,6 +25,7 @@ export interface INoticeAntdFormValue {
         fileList: UploadFile[];
     }|{fileList: []};
 }
+export interface INoticeUpdateFormValue extends INoticeFormValue {}
 
 export interface INoticeDetail {
     title: string;

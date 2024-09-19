@@ -1,4 +1,4 @@
-import {INoticeFormValue} from "@/types/notice";
+import {INoticeFormValue, INoticeUpdateFormValue} from "@/types/notice";
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import axios from "axios";
 
@@ -17,6 +17,21 @@ export const useCreateNotices = () => {
     const queryClient = useQueryClient();
     return useMutation( {
         mutationFn: async (body:INoticeFormValue)=> await axios.post(`/api/notices`,body),
+        onSuccess: () => {
+            // 알림 삭제 후 캐시를 무효화하여 최신 데이터를 가져옵니다.
+            queryClient.invalidateQueries({
+                queryKey: ['notices'],
+            });
+        },
+        onError: (error) => {
+            console.error('Error creating notices:', error);
+        },
+    });
+};
+export const useUpdateNotices = (param: number) => {
+    const queryClient = useQueryClient();
+    return useMutation( {
+        mutationFn: async (body:INoticeUpdateFormValue)=> await axios.put(`/api/notices/${param}`,body),
         onSuccess: () => {
             // 알림 삭제 후 캐시를 무효화하여 최신 데이터를 가져옵니다.
             queryClient.invalidateQueries({
