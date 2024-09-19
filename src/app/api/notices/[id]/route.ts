@@ -35,10 +35,14 @@ export async function PUT(request: NextRequest, {params}: { params: { id: string
     const noticeId = params.id;
     try {
         const body: INoticeUpdateFormValue = await request.json();
+        const req = {
+            ...body,
+            updated_at: new Date().toISOString(),
+        }
         console.log("updateNotice row = ", body);
         const {data, error} = await supabase
             .from(appConfig.db_table.notices)
-            .update(body)
+            .update(req)
             .eq('id', noticeId)
             .select('*')
             .single();

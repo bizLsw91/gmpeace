@@ -110,7 +110,7 @@ export default function AdminNotice() {
         },
         {
             title: "수정일시",
-            dataIndex: "updatedAt",
+            dataIndex: "updated_at",
             align: "center",
             width: 130,
             render: (value: ISO8601DateTime) => {
