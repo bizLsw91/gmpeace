@@ -17,7 +17,7 @@ const events = [
         contents: [
             '내가 만든 에너지, 돌리자 발전자전거',
             '하늘에서 에너지가 쏟아지는 날',
-            '쓰레기 젠가/빙하수호신',
+            '쓰레기 젠가 / 빙하수호신',
             '폐플라스틱 업사이클 키링 만들기',
             'AI 홀로그램 만들기'
         ]
@@ -34,15 +34,18 @@ const events = [
     {
         title: '광명시 평화정책 Zone',
         contents: [
-            '평화를 향한 발자취'
+            '광명시 고향사랑기부제',
+            '북한이탈주민 인식개선',
+            '하나되는 광명, 그려보는 통일',
+            '자원봉사센터/공익활동지원센터',
+            '소통해요 광명',
+            '광명시 시민인권센터',
         ]
     },
     {
-        title: '탄소중립 체험',
+        title: '워크온 챌린지',
         contents: [
-            '친환경 발전기 체험',
-            '재활용 소품 만들기',
-            '친환경 소품 만들기'
+            '광명시민 건강걷기 프로젝트 건강도 챙기고 커피쿠폰도 받자!',
         ]
     }
 ]
@@ -133,7 +136,7 @@ export default function PeaceGarden() {
                                     height={670}
                                 />
                                 <div className={'movie-profile__info info__subtitle'}>9월 20일(금) 오후 7시: 상영영화 1</div>
-                                {/*<div className={'movie-profile__age'}>15세 관람가, 라이센스 제공: 쇼박스</div>*/}
+                                <div className={'movie-profile__age'}>※ ‘모가디슈’ 관람시 15세 미만자는 보호자와 동반하여 관람할 수 있습니다.</div>
                             </div>
                             <div className="movie-profile">
                                 <Image
@@ -197,7 +200,7 @@ export default function PeaceGarden() {
                                             <div className="info__data-title-small badge-color-7-2">출연진</div>
                                             <div className="info__data-content-col">
                                                 <ul className={'ul-circle'}>
-                                                    <li>안은미 컴퍼니</li>
+                                                    <li>안은미 댄스컴퍼니</li>
                                                     <li>남사당놀이 명인 문진수</li>
                                                     <li>축하공연: 광명시립농악단</li>
                                                 </ul>
@@ -225,6 +228,16 @@ export default function PeaceGarden() {
                                         <div className="info__data">
                                             <div className="info__data-title-small badge-color-3-1">일 시</div>
                                             <div className="info__data-content">9월 21일(토) 12:00</div>
+                                        </div>
+                                        <div className="info__data">
+                                            <div className="info__data-title-small badge-color-3-1">모집대상</div>
+                                            <div className="info__data-content">
+                                                누구나 (광명시민을 대표하여 비빔밥을 맛있게 비벼줄 일꾼을 모집합니다.)
+                                            </div>
+                                        </div>
+                                        <div className="info__data">
+                                            <div className="info__data-title-small badge-color-3-1">모집인원</div>
+                                            <div className="info__data-content">총 300명</div>
                                         </div>
                                     </div>
                                     <Image

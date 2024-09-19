@@ -105,7 +105,9 @@ body {
             margin-left: 30px;
             list-style: circle;
         }
-
+        li {
+            padding-bottom: 10px;
+        }
         &-bold {
             font-weight: bold;
             @media #{$xs} {
