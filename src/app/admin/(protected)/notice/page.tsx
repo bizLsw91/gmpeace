@@ -58,9 +58,11 @@ export default function AdminNotice() {
     const hasSelected = selectedRowKeys.length > 0;
 
     const onNoticeDelete = useCallback(() => {
-        const stringKeys: number[] = selectedRowKeys.map(key => Number(key));
-        console.log("stringKeys = ", stringKeys);
-        deleteNotices(stringKeys)
+        if(confirm(`${selectedRowKeys.length} 개의 알림을 정말 삭제하시겠습니까?`)){
+            const stringKeys: number[] = selectedRowKeys.map(key => Number(key));
+            console.log("stringKeys = ", stringKeys);
+            deleteNotices(stringKeys)
+        }
     }, [selectedRowKeys]);
 
     const columns: ColumnsType<INotice> = [

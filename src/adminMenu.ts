@@ -4,7 +4,7 @@ export const adminMenu = [
         to: '/admin/notice',
         children: [
             { label: '알림', to: '/admin/notice' },
-            { label: 'History', to: '/admin/history' },
+            // { label: 'History', to: '/admin/history' },
         ]
     },
 ]
