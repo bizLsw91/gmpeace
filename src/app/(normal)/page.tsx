@@ -10,7 +10,7 @@ import React from "react";
 import {Suspense} from "react";
 
 export default function Home() {
-    const {isBetween, endTimeUTC, currentTime} = isCurrentWithinKSTRange('20240920 2344','20240921 0132')
+    const {isBetween, endTimeKCT, currentTime} = isCurrentWithinKSTRange('20240920 2344','20240921 0136')
     return (
         <main className="home">
             <h1 className="hidden">평화주간</h1>
@@ -34,7 +34,7 @@ export default function Home() {
                     isBetween: {isBetween ? 'true' : 'false'} <br/>
                     now: {moment().format('YYYYMMDD HHmmss')} <br/>
                     currentTime: {currentTime.format('YYYYMMDD HHmm')} <br/>
-                    endTimeUTC: {endTimeUTC.format('YYYYMMDD HHmm')} <br/>
+                    endTimeUTC: {endTimeKCT.format('YYYYMMDD HHmm')} <br/>
                     {/*<Suspense fallback={<Spin/>}>*/}
                     {/*    <TimeUtil/>*/}
                     {/*</Suspense>*/}
