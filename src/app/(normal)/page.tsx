@@ -73,11 +73,11 @@ export default function Home() {
                 </div>
                 <div className="home__youtube flex flex-col justify-center mt-[20px] xs:mt-[30px]">
                     <div className="video-title flex justify-center info__title text-center ">
-                        <Video className={'video-title-icon mr-2 self-center'}/> 3회 평화주간행사보기
+                        <Video className={'video-title-icon mr-2 self-center'}/> 제4회 광명시 평화주간 영상
                     </div>
                     <div className="video-container flex justify-center">
-                        <video width={1920} height={1080} autoPlay controls>
-                            <source src="/videos/광명평화주간3회.mp4" type="video/mp4"/>
+                        <video width={3840} height={1440} autoPlay controls>
+                            <source src="https://firebasestorage.googleapis.com/v0/b/gmpeace-76b43.appspot.com/o/videos%2F%EC%A0%9C4%ED%9A%8C%ED%8F%89%ED%99%94%EC%A3%BC%EA%B0%84%20%EC%A3%BC%EC%A0%9C%EC%98%81%EC%83%81.mp4?alt=media&token=5534afc1-3e7b-4296-9d29-60c62993a39a" type="video/mp4"/>
                         </video>
                     </div>
                 </div>
