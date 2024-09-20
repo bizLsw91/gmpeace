@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-    const isNow = isCurrentWithinKSTRange('20240920 2344','20240921 0031')
+    const isNow = isCurrentWithinKSTRange('20240920 2344','20240921 0035')
 
     return (
         <main className="home">
