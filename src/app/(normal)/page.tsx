@@ -1,17 +1,16 @@
 import PopupModal from "@/app/_components/Modal/PopupModal";
+import TimeUtil from "@/app/_components/TimeUtil";
 import {isCurrentWithinKSTRange} from "@/lib/utils";
-import {Button} from "antd";
+import {Button, Spin} from "antd";
 import {Video} from "lucide-react";
-import moment from "moment/moment";
+import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+import {Suspense} from "react";
 
 export default function Home() {
-    const isNow = isCurrentWithinKSTRange('20240920 2344','20240921 0055')
-    const currentUTCTime = moment().add(9,'hour').utc();
-    // 시작 시간과 종료 시간을 'YYYYMMDD HHmm' 형식의 한국 시간(KST, UTC+9)으로 변환 후 UTC로 변환
-    const startTimeUTC = moment('20240920 2344', 'YYYYMMDD HHmm').utc();
-    const endTimeUTC = moment('20240921 0040', 'YYYYMMDD HHmm').utc();
+    const {isBetween, endTimeUTC, currentTime} = isCurrentWithinKSTRange('20240920 2344','20240921 0128')
     return (
         <main className="home">
             <h1 className="hidden">평화주간</h1>
@@ -32,22 +31,22 @@ export default function Home() {
             />
             <div className="wrapper">
                 <div className={'mt-[80px]'}>
-                    <>
-                        {currentUTCTime} <br/>
-                        {startTimeUTC} <br/>
-                        {endTimeUTC} <br/>
-                        {currentUTCTime.isBetween(startTimeUTC, endTimeUTC, null, '[)')} <br/>
-                    </>
+                    isBetween: {isBetween ? 'true' : 'false'} <br/>
+                    now: {moment().format('YYYYMMDD HHmmss')} <br/>
+                    currentTime: {currentTime.format('YYYYMMDD HHmm')} <br/>
+                    endTimeUTC: {endTimeUTC.format('YYYYMMDD HHmm')} <br/>
+                    {/*<Suspense fallback={<Spin/>}>*/}
+                    {/*    <TimeUtil/>*/}
+                    {/*</Suspense>*/}
                 </div>
-                {isNow && <div className="home__logo w-full flex justify-center mt-[50px] xs:mt-[70px] pt-4">
+                <div className="home__logo w-full flex justify-center mt-[50px] xs:mt-[70px] pt-4">
                     <Image
                         src={'/images/emblem.png'}
                         alt={'광명시 평화주간 emblem'}
                         width={400}
                         height={200}
                     />
-                </div>}
-
+                </div>
                 <div className="home__signiture-logo w-full flex justify-center mt-[20px] xs:mt-[40px] pt-4">
                     <Image
                         src={'/images/signitureLogo.png'}
