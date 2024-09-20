@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-    const isNow = isCurrentUTCWithinKSTRange('20240920 2344','20240920 2350')
-    
+    const isNow = isCurrentUTCWithinKSTRange('20240920 2344','20240921 0004')
+
     return (
         <main className="home">
             <h1 className="hidden">평화주간</h1>
