@@ -73,7 +73,7 @@ export default function Home() {
                 </div>
                 <div className="home__youtube flex flex-col justify-center mt-[20px] xs:mt-[30px]">
                     <div className="video-title flex justify-center info__title text-center ">
-                        <Video className={'video-title-icon mr-2 self-center'}/> 제4회 광명시 평화주간 영상
+                        <Video className={'video-title-icon mr-2 self-center'}/> 제 4회 광명시 평화주간 주제 영상
                     </div>
                     <div className="video-container flex justify-center">
                         <video width={3840} height={1440} autoPlay controls>

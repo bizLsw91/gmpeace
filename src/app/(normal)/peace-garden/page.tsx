@@ -70,7 +70,10 @@ export default function PeaceGarden() {
                         <div className="info">
                             <div className="info__data">
                                 <div className="info__data-title theme-bg-color-3">일 시</div>
-                                <div className="info__data-content">2024년 9월 21일(토)~22일(일)<br/>13:00~18:00</div>
+                                <div className="info__data-content flex-wrap">
+                                    <div className={'inline-block'}>2024년 9월 21일(토) 14:30</div>
+                                    <div className={'inline-block'}>&nbsp;~ 22일(일) 18:00</div>
+                                </div>
                             </div>
                             <div className="info__data">
                                 <div className="info__data-title theme-bg-color-3">장 소</div>
@@ -162,7 +165,7 @@ export default function PeaceGarden() {
                                             평화음악회&gt;</div>
                                         <div className="info__data">
                                             <div className="info__data-title-small badge-color-7-2">일 시</div>
-                                            <div className="info__data-content">9월 21일(토) 13:00~14:15</div>
+                                            <div className="info__data-content">9월 21일(토) 14:45~16:00</div>
                                         </div>
                                         <div className="info__data">
                                             <div className="info__data-title-small badge-color-7-2">출연진</div>
@@ -194,7 +197,7 @@ export default function PeaceGarden() {
                                             배틀한판&gt;</div>
                                         <div className="info__data">
                                             <div className="info__data-title-small badge-color-7-2">일 시</div>
-                                            <div className="info__data-content">9월 22일(일) 14:30~15:30</div>
+                                            <div className="info__data-content">9월 22일(일) 14:20~15:30</div>
                                         </div>
                                         <div className="info__data">
                                             <div className="info__data-title-small badge-color-7-2">출연진</div>
@@ -227,7 +230,7 @@ export default function PeaceGarden() {
                                         </div>
                                         <div className="info__data">
                                             <div className="info__data-title-small badge-color-3-1">일 시</div>
-                                            <div className="info__data-content">9월 21일(토) 12:00</div>
+                                            <div className="info__data-content">9월 22일(일) 16:40</div>
                                         </div>
                                         <div className="info__data">
                                             <div className="info__data-title-small badge-color-3-1">모집대상</div>
