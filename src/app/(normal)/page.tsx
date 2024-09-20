@@ -1,10 +1,13 @@
 import PopupModal from "@/app/_components/Modal/PopupModal";
+import {isCurrentUTCWithinKSTRange} from "@/lib/utils";
 import {Button} from "antd";
 import {Video} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+    const isNow = isCurrentUTCWithinKSTRange('20240920 2344','20240920 2350')
+    
     return (
         <main className="home">
             <h1 className="hidden">평화주간</h1>
@@ -24,14 +27,15 @@ export default function Home() {
                 }
             />
             <div className="wrapper">
-                <div className="home__logo w-full flex justify-center mt-[50px] xs:mt-[70px] pt-4">
+                {isNow && <div className="home__logo w-full flex justify-center mt-[50px] xs:mt-[70px] pt-4">
                     <Image
                         src={'/images/emblem.png'}
                         alt={'광명시 평화주간 emblem'}
                         width={400}
                         height={200}
                     />
-                </div>
+                </div>}
+
                 <div className="home__signiture-logo w-full flex justify-center mt-[20px] xs:mt-[40px] pt-4">
                     <Image
                         src={'/images/signitureLogo.png'}

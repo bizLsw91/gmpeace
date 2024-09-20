@@ -1,11 +1,7 @@
-import {storage} from "@/firebase/firebase.admin.config";
-import {UploadFile} from "antd";
 import { clsx, type ClassValue } from "clsx"
 import moment from "moment";
 import {ReadonlyURLSearchParams} from "next/navigation";
 import { twMerge } from "tailwind-merge"
-const { v4: uuidv4 } = require('uuid');
-import { RcFile } from 'antd/es/upload';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -23,41 +19,20 @@ export const searchParamsToJson = (searchParams: ReadonlyURLSearchParams) => {
   return params;
 };
 
-/**
- * 파일을 업로드하고 URL을 반환하는 함수
- * @param {UploadFile} file - 업로드할 파일
- * @returns {Promise<string>} - 업로드된 파일의 URL
- */
-async function uploadFileAndGetUrl(file:UploadFile) {
-  try {
-    const fileName = `${uuidv4()}-${file.name}`;
-    const fileUpload = storage.file(fileName);
-
-    const stream = fileUpload.createWriteStream({
-      metadata: {
-        contentType: file.type,
-      },
-    });
-
-    stream.on('error', (error:any) => {
-      throw new Error(`File upload error: ${error.message}`);
-    });
-
-    stream.on('finish', async () => {
-      await fileUpload.makePublic();
-    });
-
-    stream.end(file.originFileObj);
-
-    const publicUrl = `https://storage.googleapis.com/${storage.name}/${fileName}`;
-    return publicUrl;
-  } catch (error) {
-    console.error('Error uploading file:', error);
-    throw error;
-  }
-}
-
 // utc timestamp to kst
 export function convertToKST_date(timestamp:string) {
   return moment.utc(timestamp).add(9, 'hours').format('YYYY-MM-DD');
+}
+
+// 현재 UTC 시간이 주어진 'YYYYMMDD HHmm' 형식의 한국 시간 범위 내에 있는지 확인하는 함수
+export function isCurrentUTCWithinKSTRange(startTime: string, endTime: string): boolean {
+  // 현재 UTC 시간
+  const currentUTCTime = moment.utc();
+
+  // 시작 시간과 종료 시간을 'YYYYMMDD HHmm' 형식의 한국 시간(KST, UTC+9)으로 변환 후 UTC로 변환
+  const startTimeUTC = moment(startTime, 'YYYYMMDD HHmm').utcOffset(9).utc();
+  const endTimeUTC = moment(endTime, 'YYYYMMDD HHmm').utcOffset(9).utc();
+
+  // 현재 UTC 시간이 시작 시간과 종료 시간 범위 안에 있는지 확인
+  return currentUTCTime.isBetween(startTimeUTC, endTimeUTC, null, '[]'); // []는 경계 포함
 }
