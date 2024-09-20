@@ -2,11 +2,16 @@ import PopupModal from "@/app/_components/Modal/PopupModal";
 import {isCurrentUTCWithinKSTRange} from "@/lib/utils";
 import {Button} from "antd";
 import {Video} from "lucide-react";
+import moment from "moment/moment";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-    const isNow = isCurrentUTCWithinKSTRange('20240920 2344','20240921 0004')
+    const isNow = isCurrentUTCWithinKSTRange('20240920 2344','20240921 00013')
+    const currentUTCTime = moment.utc();
+    // 시작 시간과 종료 시간을 'YYYYMMDD HHmm' 형식의 한국 시간(KST, UTC+9)으로 변환 후 UTC로 변환
+    const startTimeUTC = moment('20240920 2344', 'YYYYMMDD HHmm').utcOffset(9).utc();
+    const endTimeUTC = moment('20240921 0013', 'YYYYMMDD HHmm').utcOffset(9).utc();
 
     return (
         <main className="home">
@@ -16,6 +21,9 @@ export default function Home() {
                 title="[공지] 평화정원 영화제(모가디슈) 취소 안내"
                 content={
                     <>
+                        currentUTCTime: {currentUTCTime}
+                        startTimeUTC: {startTimeUTC}
+                        endTimeUTC: {endTimeUTC}
                         안녕하세요, 평화정원 영화제에 관심을 가져주신 여러분께 감사드립니다.
                         <br/><br/>
                         오늘 오후 7시 상영예정이었던 모가디슈는 기상 악화로 인해 부득이하게 취소되었습니다. 양해 부탁드립니다.

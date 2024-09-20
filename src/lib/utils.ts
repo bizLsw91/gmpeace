@@ -34,5 +34,5 @@ export function isCurrentUTCWithinKSTRange(startTime: string, endTime: string): 
   const endTimeUTC = moment(endTime, 'YYYYMMDD HHmm').utcOffset(9).utc();
 
   // 현재 UTC 시간이 시작 시간과 종료 시간 범위 안에 있는지 확인
-  return currentUTCTime.isBetween(startTimeUTC, endTimeUTC, null, '[]'); // []는 경계 포함
+  return currentUTCTime.isBetween(startTimeUTC, endTimeUTC, null, '[)'); // []는 경계 포함
 }
