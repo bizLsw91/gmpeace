@@ -25,13 +25,13 @@ export function convertToKST_date(timestamp:string) {
 }
 
 // 현재 UTC 시간이 주어진 'YYYYMMDD HHmm' 형식의 한국 시간 범위 내에 있는지 확인하는 함수
-export function isCurrentUTCWithinKSTRange(startTime: string, endTime: string): boolean {
+export function isCurrentWithinKSTRange(startTime: string, endTime: string): boolean {
   // 현재 UTC 시간
   const currentUTCTime = moment.utc();
 
   // 시작 시간과 종료 시간을 'YYYYMMDD HHmm' 형식의 한국 시간(KST, UTC+9)으로 변환 후 UTC로 변환
-  const startTimeUTC = moment(startTime, 'YYYYMMDD HHmm').utcOffset(9).utc();
-  const endTimeUTC = moment(endTime, 'YYYYMMDD HHmm').utcOffset(9).utc();
+  const startTimeUTC = moment(startTime, 'YYYYMMDD HHmm').utc();
+  const endTimeUTC = moment(endTime, 'YYYYMMDD HHmm').utc();
 
   // 현재 UTC 시간이 시작 시간과 종료 시간 범위 안에 있는지 확인
   return currentUTCTime.isBetween(startTimeUTC, endTimeUTC, null, '[)'); // []는 경계 포함

@@ -1,5 +1,5 @@
 import PopupModal from "@/app/_components/Modal/PopupModal";
-import {isCurrentUTCWithinKSTRange} from "@/lib/utils";
+import {isCurrentWithinKSTRange} from "@/lib/utils";
 import {Button} from "antd";
 import {Video} from "lucide-react";
 import moment from "moment/moment";
@@ -7,11 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-    const isNow = isCurrentUTCWithinKSTRange('20240920 2344','20240921 00013')
-    const currentUTCTime = moment.utc();
-    // 시작 시간과 종료 시간을 'YYYYMMDD HHmm' 형식의 한국 시간(KST, UTC+9)으로 변환 후 UTC로 변환
-    const startTimeUTC = moment('20240920 2344', 'YYYYMMDD HHmm').utcOffset(9).utc();
-    const endTimeUTC = moment('20240921 0013', 'YYYYMMDD HHmm').utcOffset(9).utc();
+    const isNow = isCurrentWithinKSTRange('20240920 2344','20240921 0031')
 
     return (
         <main className="home">
