@@ -9,20 +9,6 @@ export default function Home() {
         <main className="home">
             <h1 className="hidden">평화주간</h1>
             <h2 className="hidden">광명시 평화주간</h2>
-            <PopupModal
-                title="[공지] 평화정원 영화제(모가디슈) 취소 안내"
-                content={
-                    <>
-                        안녕하세요, 평화정원 영화제에 관심을 가져주신 여러분께 감사드립니다.
-                        <br/><br/>
-                        오늘 오후 7시 상영예정이었던 모가디슈는 기상 악화로 인해 부득이하게 취소되었습니다. 양해 부탁드립니다.
-                        <br/><br/>
-                        불편을 드려 죄송합니다.
-                        <br/><br/>
-                        감사합니다.
-                    </>
-                }
-            />
             <div className="wrapper">
                 <div className="home__logo w-full flex justify-center mt-[50px] xs:mt-[70px] pt-4">
                     <Image
