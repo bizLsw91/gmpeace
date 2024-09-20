@@ -70,9 +70,9 @@ export default function PeaceGarden() {
                         <div className="info">
                             <div className="info__data">
                                 <div className="info__data-title theme-bg-color-3">일 시</div>
-                                <div className="info__data-content flex-wrap">
-                                    <div className={'inline-block'}>2024년 9월 21일(토) 14:30</div>
-                                    <div className={'inline-block'}>&nbsp;~ 22일(일) 18:00</div>
+                                <div className="info__data-content-col">
+                                    <div>9월 21일(토) 14:30 ~ 18:00</div>
+                                    <div>9월 22일(일) 13:00 ~ 18:00</div>
                                 </div>
                             </div>
                             <div className="info__data">

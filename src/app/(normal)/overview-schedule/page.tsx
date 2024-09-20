@@ -140,7 +140,7 @@ export default function OverviewSchedule() {
                                 </div>
                                 <div className={'flex justify-start'}>
                                     <div className={'footer-title'}>특별 행사:</div>
-                                    <div className={'footer-content theme-bg-color-3'}><p>평화비빔밥(9.22.일 16:45~)
+                                    <div className={'footer-content theme-bg-color-3'}><p>평화비빔밥(9.22.일 16:40~)
                                     </p></div>
                                 </div>
                             </div>
@@ -227,9 +227,8 @@ export default function OverviewSchedule() {
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">내 용</div>
                             <div className="info__data-content-col">
-                                <div>- 평화비빔밥, 12:00</div>
-                                <div>- 세계 뮤지션이 함께하는 평화음악회, 13:00</div>
-                                <div>- 광복회장과 청소년이 함께하는 독립운동 이야기, 15:00</div>
+                                <div>- 세계 뮤지션이 함께하는 평화음악회, 14:45</div>
+                                <div>- 광복회장과 청소년이 함께하는 독립운동 이야기, 16:00</div>
                                 <div className={'mt-3'}>탄소중립 체험</div>
                                 <div>평화정책 Zone</div>
                                 <div>사회적기업</div>
@@ -281,8 +280,9 @@ export default function OverviewSchedule() {
                         <div className="info__data">
                             <div className="info__data-title theme-bg-color-3">내 용</div>
                             <div className="info__data-content-col">
-                                <div>- 남한춤과 북한춤의 전통춤 배틀한판, 14:30</div>
+                                <div>- 남한춤과 북한춤의 전통춤 배틀한판, 14:20</div>
                                 <div>- 학생미술대회 시상식, 16:00</div>
+                                <div>- 평화비빔밥, 16:40</div>
                                 <div className={'mt-3'}>탄소중립 체험</div>
                                 <div>평화정책 Zone</div>
                                 <div>사회적기업</div>
