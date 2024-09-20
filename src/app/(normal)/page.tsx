@@ -17,9 +17,6 @@ export default function Home() {
                 title="[공지] 평화정원 영화제(모가디슈) 취소 안내"
                 content={
                     <>
-                        currentUTCTime: {currentUTCTime}
-                        startTimeUTC: {startTimeUTC}
-                        endTimeUTC: {endTimeUTC}
                         안녕하세요, 평화정원 영화제에 관심을 가져주신 여러분께 감사드립니다.
                         <br/><br/>
                         오늘 오후 7시 상영예정이었던 모가디슈는 기상 악화로 인해 부득이하게 취소되었습니다. 양해 부탁드립니다.
